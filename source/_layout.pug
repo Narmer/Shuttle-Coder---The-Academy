@@ -1,25 +1,42 @@
 doctype
 
+include mixins/_favicons.pug
+include mixins/_css.pug
 include mixins/_navigation.pug
-
+include mixins/_pre-footer.pug
+include mixins/_footer.pug
 
 html(dir="ltr" lang="fr")
 	head
 		block meta
+			include ./includes/_metas.pug
 
+		block title
+
+		block favicons
+			+favicons(path)
 		block css
+			+css(path)
 
-	body
+	body(class="has-side-panel side-panel-right fullwidth-page")
+		#wrapper.clearfix
+
 		block top-bar
 
-		block navigation
+		//-block navigation
+			+navigation(path)
 
-		block hero
+		block header
 
 		block content
 
 		block pre-footer
 
 		block footer
+			footer#footer.footer(data-bg-color="#20232E")
+				block prefooter
+					+prefooter(path)
+				block footer-bottom
+					+footer(path)
 
 		block scripts
