@@ -2,8 +2,8 @@ mixin navigation(path)
 	nav(id="menuzord-right" class="menuzord default no-bg")
 		.pull-left.sm-pull-none.mb-sm-15
 			ul(class="menuzord-menu sm-padding")
-				li(class="active")
-					a(href="#home") Home
+				li
+					a(href=path+"index.html") Accueil
 					ul(class="dropdown")
 						li
 							a(href="#") Multipage Layouts
@@ -16,7 +16,7 @@ mixin navigation(path)
 						span(class="label label-danger") New
 
 				li
-					a(href=path+"faq") FAQ
+					a(href=path+"faq.html") FAQ
 
 				a(class="menuzord-brand switchable-logo pull-left flip mb-15" href="index-mp-layout1.html")
 					img(class="logo-default" src="images/logo-wide-white.png" alt="")
