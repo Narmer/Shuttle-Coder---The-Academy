@@ -1,0 +1,19 @@
+mixin navigation(path)
+	nav(id="menuzord-right" class="menuzord default no-bg")
+		a(class="menuzord-brand switchable-logo pull-left flip mb-15" href="index-mp-layout1.html")
+			img(class="logo-default" src="images/logo-wide-white.png" alt="")
+			img(class="logo-scrolled-to-fixed" src="images/logo-wide.png" alt="")
+
+		ul(class="menuzord-menu sm-padding")
+			li(class="active")
+				a(href="#home") Home
+				ul(class="dropdown")
+					li
+						a(href="#") Multipage Layouts
+						ul(class="dropdown")
+							li
+								a(href="index-mp-layout1.html") Layout1
+
+			li
+				a(href="#") Features
+					span(class="label label-danger") New
