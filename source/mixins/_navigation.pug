@@ -6,6 +6,8 @@ mixin navigation(path)
 			li
 				a(href=path+"index.html") Accueil
 			li
+				a(href=path+"methode.html") La méthode
+			li
 				+megamenu(path)
 			li
 				a(href=path+"faq.html") FAQ
@@ -20,4 +22,10 @@ mixin navigation(path)
 				img(class="logo-scrolled-to-fixed" src="images/logo-wide.png" alt="")
 
 		.pull-right.sm-pull-none.mb-sm-15
-			a(class="btn btn-colored btn-flat btn-theme-colored mt-15 mt-sm-10 pt-10 pb-10 ajaxload-popup" href=path+"devenir-etudiant.html") Je m'inscris
+			ul.list-inline
+				li.list-inline-item
+					a(class="btn mt-15 mt-sm-10 pt-10 pb-10" href="https://blog.shuttlecoder.academy") Le blog
+				li.list-inline-item
+					a(class="btn mt-15 mt-sm-10 pt-10 pb-10" href=path+"events.html") Les Events
+				li.list-inline-item
+					a(class="btn btn-colored btn-theme-colored mt-15 mt-sm-10 pt-10 pb-10" href=path+"devenir-etudiant.html") Je m'inscris
