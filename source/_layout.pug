@@ -25,7 +25,11 @@ html(dir="ltr" lang="fr")
 		#wrapper.clearfix
 
 			block header
-				include includes/_header.pug
+				header(id="header" class="header header-floating")
+					.header-nav.navbar-sticky.navbar-sticky-animated
+						.header-nav-wrapper
+							.container
+								+navigation(path)
 
 			block content
 				.main-content
