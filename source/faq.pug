@@ -1,0 +1,27 @@
+extends ./_layout.pug
+
+append meta
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+
+block title
+	title Shuttle Coder - FAQ
+
+prepend favicons
+	- var path = './'
+
+prepend css
+	- var path = './'
+
+prepend header
+	- var path = './'
+
+block header
+	header(id="header" class="header header-floating")
+		.header-nav.navbar-sticky.navbar-sticky-animated
+			.header-nav-wrapper
+				.container
+					+navigation(path)
+
+block content
+	include includes/fr/_faq.pug
