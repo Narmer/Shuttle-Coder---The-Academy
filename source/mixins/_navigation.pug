@@ -5,7 +5,8 @@ mixin navigation(path)
 		ul(class="menuzord-menu sm-padding")
 			li
 				a(href=path+"index.html") Accueil
-			+megamenu(path)
+			li
+				+megamenu(path)
 			li
 				a(href=path+"faq.html") FAQ
 
