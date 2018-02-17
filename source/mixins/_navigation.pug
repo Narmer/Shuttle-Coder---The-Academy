@@ -1,10 +1,6 @@
 mixin navigation(path)
 	nav(id="menuzord-right" class="menuzord default no-bg")
 		.pull-left.sm-pull-none.mb-sm-15
-			//-a(class="menuzord-brand switchable-logo pull-left flip mb-15" href="index-mp-layout1.html")
-				img(class="logo-default" src="images/logo-wide-white.png" alt="")
-				img(class="logo-scrolled-to-fixed" src="images/logo-wide.png" alt="")
-
 			ul(class="menuzord-menu sm-padding")
 				li(class="active")
 					a(href="#home") Home
@@ -21,5 +17,10 @@ mixin navigation(path)
 
 				li
 					a(href=path+"faq") FAQ
+
+				a(class="menuzord-brand switchable-logo pull-left flip mb-15" href="index-mp-layout1.html")
+					img(class="logo-default" src="images/logo-wide-white.png" alt="")
+					img(class="logo-scrolled-to-fixed" src="images/logo-wide.png" alt="")
+
 		.pull-right.sm-pull-none.mb-sm-15
 			a(class="btn btn-colored btn-flat btn-theme-colored mt-15 mt-sm-10 pt-10 pb-10 ajaxload-popup" href=path+"devenir-etudiant.html") Je m'inscris
