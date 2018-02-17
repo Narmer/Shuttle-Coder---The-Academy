@@ -1,26 +1,22 @@
-mixin navigation(path)
-	nav(id="menuzord-right" class="menuzord default no-bg")
-		.pull-left.sm-pull-none.mb-sm-15
-			ul(class="menuzord-menu sm-padding")
-				li
-					a(href=path+"index.html") Accueil
-					ul(class="dropdown")
-						li
-							a(href="#") Multipage Layouts
-							ul(class="dropdown")
-								li
-									a(href="index-mp-layout1.html") Layout1
+include _megamenu.pug
 
-				li
+mixin navigation(path)
+	nav(id="menuzord" class="menuzord default no-bg")
+		ul(class="menuzord-menu sm-padding")
+			li
+				a(href=path+"index.html") Accueil
+			+megamenu(path)
+			li
+				a(href=path+"faq.html") FAQ
+
+				//-li
 					a(href="#") Features
 						span(class="label label-danger") New
 
-				li
-					a(href=path+"faq.html") FAQ
 
-				a(class="menuzord-brand switchable-logo pull-left flip mb-15" href="index-mp-layout1.html")
-					img(class="logo-default" src="images/logo-wide-white.png" alt="")
-					img(class="logo-scrolled-to-fixed" src="images/logo-wide.png" alt="")
+			a(class="menuzord-brand switchable-logo pull-left flip mb-15" href=path+"")
+				img(class="logo-default" src="images/logo-wide-white.png" alt="")
+				img(class="logo-scrolled-to-fixed" src="images/logo-wide.png" alt="")
 
 		.pull-right.sm-pull-none.mb-sm-15
 			a(class="btn btn-colored btn-flat btn-theme-colored mt-15 mt-sm-10 pt-10 pb-10 ajaxload-popup" href=path+"devenir-etudiant.html") Je m'inscris
