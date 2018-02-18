@@ -1,5 +1,7 @@
 extends ./_layout.pug
 
+include mixins/_hero-alt.pug
+
 append meta
 	meta(name="description" content="")
 	meta(name="keywords" content="")
@@ -27,6 +29,7 @@ block header
 					+navigation(path)
 
 block content
+	+hero-alt('FAQ', '1920x1280', 'http://placehold.it/')
 	include includes/fr/_faq.pug
 
 prepend footer
