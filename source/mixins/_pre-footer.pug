@@ -1,95 +1,22 @@
 mixin prefooter(path)
-	<div class="container pt-60 pb-20">
-		<div class="col-sm-6 col-md-3">
-			<div class="widget dark">
-				<img alt="" src="images/logo-footer.png">
-				<p class="mt-20">203, Envato Labs, Behind Alis Steet, Melbourne, Australia.</p>
-				<ul class="list-inline">
-					<li class="m-0 pl-10 pr-10"> <i class="fa fa-phone mr-5"></i> <a href="#">123-456-789</a> </li>
-					<li class="m-0 pl-10 pr-10"> <i class="fa fa-envelope-o mr-5"></i> <a href="#">contact@yourdomain.com</a> </li>
-					<li class="m-0 pl-10 pr-10"> <i class="fa fa-globe mr-5"></i> <a href="#">www.yourdomain.com</a> </li>
-				</ul> <ul class="styled-icons icon-sm icon-dark icon-theme-colored2 icon-circled clearfix mt-10">
-					<li><a href="#"><i class="fa fa-facebook"></i></a></li>
-					<li><a href="#"><i class="fa fa-twitter"></i></a></li>
-					<li><a href="#"><i class="fa fa-vk"></i></a></li>
-					<li><a href="#"><i class="fa fa-instagram"></i></a></li>
-					<li><a href="#"><i class="fa fa-google-plus"></i></a></li>
-				</ul>
-			</div>
-		</div>
-		<div class="col-sm-6 col-md-3">
-			<div class="widget dark">
-				<h4 class="widget-title line-bottom-theme-colored2">Useful Links</h4>
-				<div class="row clearfix">
-					<div class="col-xs-12 col-sm-6 col-md-6">
-						<ul class="footer-link">
-							<li><a href="#">Home</a></li>
-							<li><a href="#">About Us</a></li>
-							<li><a href="#">Services</a></li>
-							<li><a href="#">Latest Works</a></li>
-							<li><a href="#">Our Blog</a></li>
-							<li><a href="#">FAQ</a></li>
-						</ul>
-					</div>
-					<div class="col-xs-12 col-sm-6 col-md-6">
-						<ul class="footer-link">
-							<li><a href="#">Business</a></li>
-							<li><a href="#">Finance</a></li>
-							<li><a href="#">Consulting</a></li>
-							<li><a href="#">Insurance</a></li>
-							<li><a href="#">Professional</a></li>
-						</ul>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-6 col-md-3">
-			<div class="widget dark">
-				<h4 class="widget-title line-bottom-theme-colored2">Latest News</h4>
-				<div class="latest-posts">
-					<article class="post media-post clearfix pb-0 mb-10">
-						<a class="post-thumb" href="#"><img src="http://placehold.it/80x55" alt=""></a>
-						<div class="post-right">
-							<h5 class="post-title mt-0 mb-5"><a href="#">PHP Learning</a></h5>
-							<p class="post-date mb-0 font-12">Mar 08, 2015</p>
-						</div>
-					</article>
-					<article class="post media-post clearfix pb-0 mb-10">
-						<a class="post-thumb" href="#"><img src="http://placehold.it/80x55" alt=""></a>
-						<div class="post-right">
-							<h5 class="post-title mt-0 mb-5"><a href="#">Web Development</a></h5>
-							<p class="post-date mb-0 font-12">Mar 08, 2015</p>
-						</div>
-					</article>
-					<article class="post media-post clearfix pb-0 mb-10">
-						<a class="post-thumb" href="#"><img src="http://placehold.it/80x55" alt=""></a>
-						<div class="post-right">
-							<h5 class="post-title mt-0 mb-5"><a href="#">Spoken English</a></h5>
-							<p class="post-date mb-0 font-12">Mar 08, 2015</p>
-						</div>
-					</article>
-				</div>
-			</div>
-		</div>
-		<div class="col-sm-6 col-md-3">
-			<div class="widget dark">
-				<h4 class="widget-title line-bottom-theme-colored2">Opening Hours</h4>
-				<div class="opening-hours">
-					<ul class="list-border">
-						<li class="clearfix"> <span> Mon - Tues :  </span>
-							<div class="value pull-right"> 6.00 am - 10.00 pm </div>
-						</li>
-						<li class="clearfix"> <span> Wednes - Thurs :</span>
-							<div class="value pull-right"> 8.00 am - 6.00 pm </div>
-						</li>
-						<li class="clearfix"> <span> Fri : </span>
-							<div class="value pull-right"> 3.00 pm - 8.00 pm </div>
-						</li>
-						<li class="clearfix"> <span> Sun : </span>
-							<div class="value pull-right bg-theme-colored2 text-white closed"> Closed </div>
-						</li>
-					</ul>
-				</div>
-			</div>
-		</div>
-	</div>
+	.container.pt-60.pb-20
+		.col-md-12
+			h2.text-center.text-uppercase Devenir développeur en 3 mois
+		.col-md-6.col-md-offset-1
+			.widget-dark
+				p.mt-20
+					| Shuttle Coder vous propose une aventure de 3 mois, soit plus de 700h de formation.
+				p
+					| La formation peut être financée grâce à de nombreux dispositifs : CPF, CIF, AIF de Pôle Emploi, fonds d'assurance formation, régions, etc. Les coûts de la formation sont de 4500 euros, et peuvent être pris en charge partiellement ou intégralement sur étude de votre dossier.
+				p
+					| Pour faire le point sur votre situation, savoir si vous êtes fait pour notre formation et étudier vos possibilités de financement, contactez la team Shuttle Coder.
+		.col-md-4
+			h3 Nos date de formation
+			ul.list-unstyled
+				li
+					span 30 avril 2018 - 3 octobre 2018
+				li
+					span 30 avril 2018 - 3 octobre 2018
+
+		.col-md-12.text-center
+			a(href=path+"devenir-etudiant.html" class="btn btn-colored btn-theme-colored text-uppercase mt-15 mt-sm-10 pt-10 pb-10") ça m'intéresse
