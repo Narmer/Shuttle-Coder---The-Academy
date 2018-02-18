@@ -13,6 +13,9 @@ prepend favicons
 prepend css
 	- var path = './'
 
+prepend head-scripts
+	- var path = './'
+
 prepend header
 	- var path = './'
 
@@ -25,3 +28,8 @@ block header
 
 block content
 	include includes/fr/_faq.pug
+
+prepend footer
+	- var path = './'
+
+//-block scripts
