@@ -1,0 +1,31 @@
+extends ./_layout.pug
+
+append meta
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+
+block title
+	title L'initiation à la programmation pour tous - Shuttle Coder
+
+prepend favicons
+	- var path = './'
+
+prepend css
+	- var path = './'
+
+
+prepend head-scripts
+	- var path = './'
+
+prepend hero
+	- var title = 'iOS / Swift'
+	- var image = '1920x1280'
+	- var path = 'http://placehold.it/'
+
+block maincontent
+	include includes/fr/_journee-type.pug
+	include includes/fr/_programme-ios-swift.pug
+	include includes/fr/_cv.pug
+
+prepend footer
+	- var path = './'
