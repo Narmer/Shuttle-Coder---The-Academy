@@ -28,8 +28,12 @@ block header
 				.container
 					+navigation(path)
 
-block content
-	+hero-alt('FAQ', '1920x1280', 'http://placehold.it/')
+prepend hero
+	- var title = 'FAQ'
+	- var image = '1920x1280'
+	- var path = 'http://placehold.it/'
+
+block maincontent
 	include includes/fr/_faq.pug
 
 prepend footer
