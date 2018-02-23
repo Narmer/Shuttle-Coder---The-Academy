@@ -1,7 +1,18 @@
-mixin hero-alt(title, image, path)
-	section.inner-header.divider.layer-overlay.overlay-theme-colored-7(data-bg-img=path+image)
-		.container.pt-120.pb-60
-			.section-content
-				.row
-					.col-md-6
-						h2.text-theme-colored2.font-36= title
+mixin hero-alt(title, subtitle, image, path)
+	if subtitle
+		section(class="divider" data-bg-img=path+image)
+			.display-table
+				.display-table-cell
+					.container.pt-100.pb-30
+						.row
+							.col-md-12.text-center
+								h1.text-white.text-uppercase.font-54= title
+								p.text-white.font-24= subtitle
+								a(class="btn btn-xl btn-colored btn-theme-colored2 btn-flat smooth-scroll-to-target mt-15" href=path+"devenir-etudiant.html") S'inscrire pour 9 semaines intensives
+	else
+		section.inner-header.divider.layer-overlay.overlay-theme-colored-7(data-bg-img=path+image)
+			.container.pt-120.pb-60
+				.section-content
+					.row
+						.col-md-6
+							h2.text-theme-colored2.font-36= title

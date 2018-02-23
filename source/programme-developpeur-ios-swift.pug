@@ -19,13 +19,14 @@ prepend head-scripts
 
 prepend hero
 	- var title = 'iOS / Swift'
+	- var subtitle = '2 mois pour devenir développeur(se) mobile'
 	- var image = '1920x1280'
-	- var path = 'http://placehold.it/'
+	- var path = './'
 
 block maincontent
-	include includes/fr/_journee-type.pug
 	include includes/fr/_programme-ios-swift.pug
 	include includes/fr/_cv.pug
+	include includes/fr/_journee-type.pug
 
 prepend footer
 	- var path = './'
