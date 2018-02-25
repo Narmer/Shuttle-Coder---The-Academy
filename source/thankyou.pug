@@ -1,0 +1,41 @@
+extends ./_layout.pug
+
+append meta
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+
+block title
+	title L'initiation à la programmation pour tous - Shuttle Coder
+
+prepend favicons
+	- var path = './'
+
+prepend css
+	- var path = './'
+
+
+prepend head-scripts
+	- var path = './'
+
+block header
+
+block content
+	.main-content
+		section#home.fullscreen.bg-lightest
+			.display-table.text-center
+				.display-table-cell
+					.container.pt-0.pb-0
+						.row
+							.col-md-4.col-md-offset-4
+								//-h1.text-theme-colored.font-weight-600.font-100 404
+								i.fab.fa-5x.fa-telegram-plane
+								h2.mt-0.mb-5 Nous venons de t'envoyer un e-mail.
+								p.lead Si toutefois tu ne trouves pas notre message, jettes un oeil dans tes spams
+								hr
+								p.lead Si tu ne trouves pas notre message même dans tes spams, l'adresse a peut être été mal notée.
+								a(class="btn btn-lg btn-default smooth-scroll" href="./devenir-etudiant.html")
+									i(class="far fa-hand-point-left font-16 mr-10")
+									| Retourner sur la page Devenir étudiant
+
+prepend footer
+	- var path = './'

@@ -1,0 +1,42 @@
+extends ./_layout.pug
+
+include mixins/_hero-alt.pug
+
+append meta
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+
+block title
+	title Shuttle Coder - Formation Développeur iOS - Coding Bootcamp Swift
+
+prepend favicons
+	- var path = './'
+
+prepend css
+	- var path = './'
+
+
+prepend head-scripts
+	- var path = './'
+
+prepend header
+	- var path = './'
+
+block header
+	header(id="header" class="header header-floating")
+		.header-nav.navbar-sticky.navbar-sticky-animated
+			.header-nav-wrapper
+				.container
+					+navigation(path)
+
+prepend hero
+	- var title = 'Devenir étudiant'
+	- var image = '1920x1280'
+	- var path = 'http://placehold.it/'
+
+block maincontent
+	include includes/fr/_form-postuler.pug
+
+prepend footer
+	- var path = './'
+	block prefooter

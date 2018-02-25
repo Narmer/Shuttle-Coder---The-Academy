@@ -1,0 +1,19 @@
+mixin footer(path)
+	.footer-bottom(data-bg-color="#1B1D26")
+		.container.pt-20.pb-20
+			.row
+				.col-md-6
+					ul.list-unstyled
+						li
+							img(alt="logo de shuttle coder" src=path+"images/logo-full-white.png")
+						li
+							a(href=path+"mentions-legales") mentions légales
+
+				.col-md-6.text-right
+					.widget.no-border.m-0
+						ul.list-inline.sm-text-center.mt-5.font-14
+							li
+								a(href="" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Pour trouver toutes nos actus")
+									i.fa.fa-2x.fa-facebook
+								a(href="" class="btn btn-secondary" data-toggle="tooltip" data-placement="top" title="Pour nous suivre ? @ShuttleCoder")
+									i.fa.fa-2x.fa-twitter
