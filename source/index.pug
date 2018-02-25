@@ -27,9 +27,11 @@ prepend hero
 	- var image = '1920x1280'
 	- var path = 'http://placehold.it/'
 
-
 block hero
 	+hero(title, image, path)
+
+block maincontent
+	include includes/fr/home/_features.pug
 
 prepend footer
 	- var path = './'
