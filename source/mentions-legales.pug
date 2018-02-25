@@ -26,10 +26,12 @@ prepend hero
 	- var path = 'http://placehold.it/'
 
 block maincontent
-	include includes/fr/mentions-legales/_editeur.pug
-	include includes/fr/mentions-legales/_directeur-publication.pug
-	include includes/fr/mentions-legales/_contact.pug
-	include includes/fr/mentions-legales/_cnil.pug
+	section
+		.container
+			include includes/fr/mentions-legales/_editeur.pug
+			include includes/fr/mentions-legales/_directeur-publication.pug
+			include includes/fr/mentions-legales/_contact.pug
+			include includes/fr/mentions-legales/_cnil.pug
 
 
 prepend footer
