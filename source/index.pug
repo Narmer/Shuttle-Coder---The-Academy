@@ -1,5 +1,7 @@
 extends ./_layout.pug
 
+include mixins/_hero.pug
+
 append meta
 	meta(name="description" content="")
 	meta(name="keywords" content="")
@@ -20,12 +22,14 @@ prepend head-scripts
 prepend header
 	- var path = './'
 
-append content
+prepend hero
+	- var title = 'Mentions légales'
+	- var image = '1920x1280'
+	- var path = 'http://placehold.it/'
+
 
 block hero
-	+hero()
-	//-include includes/fr/_features-home.pug
-	//-include includes/fr/_about-home.pug
+	+hero(title, image, path)
 
 prepend footer
 	- var path = './'
