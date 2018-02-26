@@ -42,7 +42,7 @@ This file contains the common styles of this theme.
 * job.less
 * shop.less
 * blog.less
-* shortcodes.less 
+* shortcodes.less
 	* alerts.less
 	* blockquote.less
 	* buttons.less
@@ -750,8 +750,8 @@ section > .container-fluid {
   color: #eee;
   font-size: 64px;
 }
-/*  
- * extra.less 
+/*
+ * extra.less
  * -----------------------------------------------
 */
 /* -------- Heading Style ---------- */
