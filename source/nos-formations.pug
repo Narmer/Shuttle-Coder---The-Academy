@@ -25,7 +25,11 @@ prepend hero
 	- var path = 'http://placehold.it/'
 
 block maincontent
-	+formation('Développeur', 'description', '10', '360', '360x250', 'http://placehold.it/', 'programme-developpeur-ios-swift.html', '')
+	section(id="courses" class="bg-silver-light")
+		.container
+			.section-content
+				.row
+					+formation('Développeur', 'description', '10', '360', '360x250', 'http://placehold.it/', 'programme-developpeur-ios-swift.html', '')
 
 prepend footer
 	- var path = './'

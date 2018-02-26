@@ -1,25 +1,21 @@
 mixin formation(coursetitle, description, places, hours, imagecourse, pathcourse, link, price)
-	section(id="courses" class="bg-silver-light")
-		.container
-			.section-content
-				.row
-					.col-xs-12.col-sm-6.col-md-6.col-lg-4
-						.course-single-item.bg-white.border-1px.clearfix.mb-md-40
-							.course-thumb
-								a(href=link)
-									img(class="img-fullwidth" alt="" src=pathcourse+imagecourse)
-							.course-details.clearfix.p-20.pt-15
-								.course-top-part
-									a(href=link)
-										h4.mt-5.mb-5= coursetitle
-									//-h5.text-gray.font-12.mt-0 26th JUNE
-								p.course-description.mt-15.mb-0= description
-								//-.author-thumb
-									img(src="http://placehold.it/54x54" alt="" class="img-circle")
-							.course-meta
-								ul.list-inline
-									<li><i class="lnr lnr-users font-20"></i>24 Places</li>
-									<li><i class="ficon-clock font-18"></i>360 Heures</li>
-								if price
-									.course-tag
-										h5= price
+	.col-xs-12.col-sm-6.col-md-6.col-lg-4
+		.course-single-item.bg-white.border-1px.clearfix.mb-md-40
+			.course-thumb
+				a(href=link)
+					img(class="img-fullwidth" alt="" src=pathcourse+imagecourse)
+			.course-details.clearfix.p-20.pt-15
+				.course-top-part
+					a(href=link)
+						h4.mt-5.mb-5= coursetitle
+					//-h5.text-gray.font-12.mt-0 26th JUNE
+				p.course-description.mt-15.mb-0= description
+				//-.author-thumb
+					img(src="http://placehold.it/54x54" alt="" class="img-circle")
+			.course-meta
+				ul.list-inline
+					<li><i class="lnr lnr-users font-20"></i>24 Places</li>
+					<li><i class="ficon-clock font-18"></i>360 Heures</li>
+				if price
+					.course-tag
+						h5= price
