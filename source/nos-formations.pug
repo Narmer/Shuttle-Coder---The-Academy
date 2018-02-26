@@ -1,5 +1,7 @@
 extends ./_layout.pug
 
+include mixins/_formations.pug
+
 append meta
 	meta(name="description" content="")
 	meta(name="keywords" content="")
@@ -19,11 +21,11 @@ prepend head-scripts
 
 prepend hero
 	- var title = 'Nos formations'
-	- var subtitle = '2 mois pour devenir développeur(se) mobile'
 	- var image = '1920x1280'
-	- var path = './'
+	- var path = 'http://placehold.it/'
 
 block maincontent
+	+formation('Développeur', 'description', '10', '360', '360x250', 'http://placehold.it/', 'programme-developpeur-ios-swift.html', '')
 
 prepend footer
 	- var path = './'
