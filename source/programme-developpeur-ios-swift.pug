@@ -1,5 +1,7 @@
 extends ./_layout.pug
 
+include mixins/_course-details.pug
+
 append meta
 	meta(name="description" content="")
 	meta(name="keywords" content="")
@@ -24,9 +26,17 @@ prepend hero
 	- var path = './images/bgs/'
 
 block maincontent
-	include includes/fr/_programme-ios-swift.pug
-	include includes/fr/_cv.pug
-	include includes/fr/_journee-type.pug
+	- var path = "./images/teachers/"
+	- var title = "Développeur d'application modbile iOS/swift"
+	- var formateurs = ["Dominique SIZAM","Formateur Swift/iOS", "dominique-sizam.jpg"]
+	- var sessions = ["15 juin 2018 - 21 septembre 2018", "30 septembre 2018 - 8 octobre 2018"]
+	- var prix = "4500€"
+	- var description = "ceci est une description"
+	- var places = "10"
+	+course-details(path, title, formateurs, prix, description, sessions, places)
+	//include includes/fr/_programme-ios-swift.pug
+	//include includes/fr/_cv.pug
+	//include includes/fr/_journee-type.pug
 
 prepend footer
 	- var path = './'
