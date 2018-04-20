@@ -5,187 +5,186 @@ mixin course-details(path, title, formateurs, prix, description, sessions, place
 				.col-md-8
 					.single-service
 						h3.text-uppercase.mt-0.mb-30= title
-							img(src="http://placehold.it/750x435" alt="")
-							ul.list-inline.mt-20.mb-15
-								li
-									i.pe-7s-user.text-theme-colored2.font-48
-									.pull-right.ml-5
-										span Formateur
-										h5.mt-0= formateurs[0]
-								//- <li>
-								//- 	i.pe-7s-ribbon.text-theme-colored2.font-48
-								//- 	.pull-right.ml-5
-								//- 		<span>Category</span>
-								//- 		<h5 class="mt-0">Web Design</h5>
-								//- 	</div>
-								//- </li>
-								li
-									i.pe-7s-users.text-theme-colored2.font-48
-									.pull-right.ml-10
-										span Nbre de places
-										h5.mt-0= places
-								li
-									i.pe-7s-cash.text-theme-colored2.font-48
-									.pull-right.ml-10
-										span Prix
-										h5.mt-0= prix
-							p= description
-							ul#myTab.nav.nav-tabs.mt-30
-								li.active
-									a(href="#tab1" data-toggle="tab") Description
-								li
-									a(href="#tab2" data-toggle="tab") Infos formation
-								li
-									a(href="#tab3" data-toggle="tab") Formateurs
-							#myTabContent.tab-content
-								.tab-pane.fade.in.active#tab1
-									h4.line-bottom-theme-colored2.mb-15 Détails sur la formation
-									p.font-14= description
-								.tab-pane.fade#tab2
-									h4.line-bottom-theme-colored2.mb-15 Informations pratiques
-									ul.course-info-list.font-14.mt-20
-										li
-											span.course-info-title
-												i.pe-7s-date.font-26.vertical-align-middle.text-theme-colored2.mr-10 Dates des sessions
-											span.course-info-details
-												each session in sessions
-													span= session+" / "
-										//- li
-										//- 	span.course-info-title
-										//- 		i.pe-7s-timer.font-26.vertical-align-middle.text-theme-colored2.mr-10Course Duration
-										//- 	span.course-info-details 3 Month
-										//- li
-										//- 	span.course-info-title
-										//- 		i.pe-7s-diamond.font-26.vertical-align-middle.text-theme-colored2.mr-10Total Credits:
-										//- 	span.course-info-details 135
-										li
-											span.course-info-title
-												i.pe-7s-umbrella.font-26.vertical-align-middle.text-theme-colored2.mr-10Student Nombre de places:
-											span.course-info-details 10
-										li
-											span.course-info-title
-												i.pe-7s-note2.font-26.vertical-align-middle.text-theme-colored2.mr-10Class Schedule:
-											span.course-info-details Saturday, Monday & Wednesday
-										li
-											span.course-info-title
-												i.pe-7s-alarm.font-26.vertical-align-middle.text-theme-colored2.mr-10Class Time:
-											span.course-info-details 9.00 am - 12.00 pm
-								.tab-pane.fade#tab3
-									h4.line-bottom-theme-colored2.mb-15 Les formateurs
-									.row
-										.col-md-3
-											img(src=path+formateurs[2] alt="" class="img-fullwidth")
-											h5.mb-0= formateurs[0]
-											span= formateurs[1]
-							div
-								a(class="btn btn-xl btn-theme-colored2 mt-30 pr-40 pl-40" href="shop-product-details.html") Postuler à cette formation
-					//- <div class="col-sm-12 col-md-4">
-					//- 	<div class="sidebar sidebar-left mt-sm-30 ml-30 ml-sm-0">
-					//- 		<div class="widget border-1px bg-silver-deep p-15">
-					//- 			<h4 class="widget-title line-bottom-theme-colored2">Search box</h4>
-					//- 			<div class="search-form">
-					//- 				<form>
-					//- 					<div class="input-group">
-					//- 						<input type="text" placeholder="Click to Search" class="form-control search-input">
-					//- 						<span class="input-group-btn">
-					//- 						<button type="submit" class="btn search-button"><i class="fa fa-search"></i></button>
-					//- 						</span>
-					//- 					</div>
-					//- 				</form>
-					//- 			</div>
-					//- 		</div>
-					//- 		<div class="widget border-1px bg-silver-deep p-15">
-					//- 			<h4 class="widget-title line-bottom-theme-colored2 mb-10">Categories</h4>
-					//- 			<div class="categories">
-					//- 				<ul class="list-border">
-					//- 					<li><a href="#">Web Development<span>(19)</span></a></li>
-					//- 					<li><a href="#">Php Learning<span>(21)</span></a></li>
-					//- 					<li><a href="#">Database Design<span>(15)</span></a></li>
-					//- 					<li><a href="#">Graphics Design<span>(35)</span></a></li>
-					//- 					<li><a href="#">UI/UX Design<span>(16)</span></a></li>
-					//- 				</ul>
-					//- 			</div>
-					//- 		</div>
-					//- 		<div class="widget border-1px bg-silver-deep p-15">
-					//- 			<h4 class="widget-title line-bottom-theme-colored2">Featured Courses</h4>
-					//- 			<div class="product-list">
-					//- 				<div class="media">
-					//- 					<a class="media-left pull-left flip" href="#">
-					//- 						<img class="media-object thumb" width="80" src="images/course/f-course1.jpg" alt="">
-					//- 					</a>
-					//- 					<div class="media-body">
-					//- 						<h5 class="media-heading product-title mb-0"><a href="#">Machine Learning</a></h5>
-					//- 						<div class="star-rating mt-5 mb-5 ml-0" title="Rated 4.50 out of 5">
-					//- 							<span data-width="90%">4.50</span>
-					//- 						</div>
-					//- 						<span class="price">$37.00</span>
-					//- 					</div>
-					//- 				</div>
-					//- 				<div class="media">
-					//- 					<a class="media-left pull-left flip" href="#">
-					//- 						<img class="media-object thumb" width="80" src="images/course/f-course2.jpg" alt="">
-					//- 					</a>
-					//- 					<div class="media-body">
-					//- 						<h5 class="media-heading product-title mb-0"><a href="#">Organizational Analysis</a></h5>
-					//- 						<div class="star-rating mt-5 mb-5 ml-0" title="Rated 4.50 out of 5">
-					//- 							<span data-width="60%">4.50</span>
-					//- 						</div>
-					//- 						<span class="price">$37.00</span>
-					//- 					</div>
-					//- 				</div>
-					//- 				<div class="media">
-					//- 					<a class="media-left pull-left flip" href="#">
-					//- 						<img class="media-object thumb" width="80" src="images/course/f-course3.jpg" alt="">
-					//- 					</a>
-					//- 					<div class="media-body">
-					//- 						<h5 class="media-heading product-title mb-0"><a href="#">Programming Methodology</a></h5>
-					//- 						<div class="star-rating mt-5 mb-5 ml-0" title="Rated 4.50 out of 5">
-					//- 							<span  data-width="75%">4.50</span>
-					//- 						</div>
-					//- 						<span class="price">$37.00</span>
-					//- 					</div>
-					//- 				</div>
-					//- 			</div>
-					//- 		</div>
-					//- 		<div class="widget border-1px bg-silver-deep p-15">
-					//- 			<h4 class="widget-title line-bottom-theme-colored2">Quick Contact</h4>
-					//- 			<form id="quick_contact_form_sidebar" name="footer_quick_contact_form" class="quick-contact-form" action="includes/quickcontact.php" method="post">
-					//- 				<div class="form-group">
-					//- 					<input name="form_email" class="form-control" type="text" required="" placeholder="Enter Email">
-					//- 				</div>
-					//- 				<div class="form-group">
-					//- 					<textarea name="form_message" class="form-control" required="" placeholder="Enter Message" rows="3"></textarea>
-					//- 				</div>
-					//- 				<div class="form-group">
-					//- 					<input name="form_botcheck" class="form-control" type="hidden" value="" />
-					//- 					<button type="submit" class="btn btn-default btn-flat btn-xs btn-quick-contact text-gray pt-5 pb-5" data-loading-text="Please wait...">Send Message</button>
-					//- 				</div>
-					//- 			</form>
+						img(src="http://placehold.it/750x435" alt="")
+						ul.list-inline.mt-20.mb-15
+							li
+								i.pe-7s-user.text-theme-colored2.font-48
+								.pull-right.ml-5
+									span Formateur
+									h5.mt-0= formateurs[0]
+							//- <li>
+							//- 	i.pe-7s-ribbon.text-theme-colored2.font-48
+							//- 	.pull-right.ml-5
+							//- 		<span>Category</span>
+							//- 		<h5 class="mt-0">Web Design</h5>
+							//- 	</div>
+							//- </li>
+							li
+								i.pe-7s-users.text-theme-colored2.font-48
+								.pull-right.ml-10
+									span Nbre de places
+									h5.mt-0= places
+							li
+								i.pe-7s-cash.text-theme-colored2.font-48
+								.pull-right.ml-10
+									span Prix
+									h5.mt-0= prix
+						p= description
+						ul#myTab.nav.nav-tabs.mt-30
+							li.active
+								a(href="#tab1" data-toggle="tab") Description
+							li
+								a(href="#tab2" data-toggle="tab") Infos formation
+							li
+								a(href="#tab3" data-toggle="tab") Formateurs
+						#myTabContent.tab-content
+							.tab-pane.fade.in.active#tab1
+								h4.line-bottom-theme-colored2.mb-15 Détails sur la formation
+								p.font-14= description
+							.tab-pane.fade#tab2
+								h4.line-bottom-theme-colored2.mb-15 Informations pratiques
+								ul.course-info-list.font-14.mt-20
+									li
+										span.course-info-title
+											i.pe-7s-date.font-26.vertical-align-middle.text-theme-colored2.mr-10
+											| Sessions
+										span.course-info-details
+											each session in sessions
+												span= session+" / "
+									//- li
+									//- 	span.course-info-title
+									//- 		i.pe-7s-timer.font-26.vertical-align-middle.text-theme-colored2.mr-10Course Duration
+									//- 	span.course-info-details 3 Month
+									//- li
+									//- 	span.course-info-title
+									//- 		i.pe-7s-diamond.font-26.vertical-align-middle.text-theme-colored2.mr-10Total Credits:
+									//- 	span.course-info-details 135
+									li
+										span.course-info-title
+											i.pe-7s-note2.font-26.vertical-align-middle.text-theme-colored2.mr-10
+											| Jours:
+										span.course-info-details Lundi au vendredi
+									li
+										span.course-info-title
+											i.pe-7s-alarm.font-26.vertical-align-middle.text-theme-colored2.mr-10
+											| Horaires:
+										span.course-info-details 9:00 - 18:00
+							.tab-pane.fade#tab3
+								h4.line-bottom-theme-colored2.mb-15 Les formateurs
+								.row
+									.col-md-3
+										img(src=path+formateurs[2] alt="" class="img-fullwidth")
+										h5.mb-0= formateurs[0]
+										span= formateurs[1]
+						div
+							a(class="btn btn-xl btn-theme-colored2 mt-30 pr-40 pl-40" href="shop-product-details.html") Postuler à cette formation
+				//- <div class="col-sm-12 col-md-4">
+				//- 	<div class="sidebar sidebar-left mt-sm-30 ml-30 ml-sm-0">
+				//- 		<div class="widget border-1px bg-silver-deep p-15">
+				//- 			<h4 class="widget-title line-bottom-theme-colored2">Search box</h4>
+				//- 			<div class="search-form">
+				//- 				<form>
+				//- 					<div class="input-group">
+				//- 						<input type="text" placeholder="Click to Search" class="form-control search-input">
+				//- 						<span class="input-group-btn">
+				//- 						<button type="submit" class="btn search-button"><i class="fa fa-search"></i></button>
+				//- 						</span>
+				//- 					</div>
+				//- 				</form>
+				//- 			</div>
+				//- 		</div>
+				//- 		<div class="widget border-1px bg-silver-deep p-15">
+				//- 			<h4 class="widget-title line-bottom-theme-colored2 mb-10">Categories</h4>
+				//- 			<div class="categories">
+				//- 				<ul class="list-border">
+				//- 					<li><a href="#">Web Development<span>(19)</span></a></li>
+				//- 					<li><a href="#">Php Learning<span>(21)</span></a></li>
+				//- 					<li><a href="#">Database Design<span>(15)</span></a></li>
+				//- 					<li><a href="#">Graphics Design<span>(35)</span></a></li>
+				//- 					<li><a href="#">UI/UX Design<span>(16)</span></a></li>
+				//- 				</ul>
+				//- 			</div>
+				//- 		</div>
+				//- 		<div class="widget border-1px bg-silver-deep p-15">
+				//- 			<h4 class="widget-title line-bottom-theme-colored2">Featured Courses</h4>
+				//- 			<div class="product-list">
+				//- 				<div class="media">
+				//- 					<a class="media-left pull-left flip" href="#">
+				//- 						<img class="media-object thumb" width="80" src="images/course/f-course1.jpg" alt="">
+				//- 					</a>
+				//- 					<div class="media-body">
+				//- 						<h5 class="media-heading product-title mb-0"><a href="#">Machine Learning</a></h5>
+				//- 						<div class="star-rating mt-5 mb-5 ml-0" title="Rated 4.50 out of 5">
+				//- 							<span data-width="90%">4.50</span>
+				//- 						</div>
+				//- 						<span class="price">$37.00</span>
+				//- 					</div>
+				//- 				</div>
+				//- 				<div class="media">
+				//- 					<a class="media-left pull-left flip" href="#">
+				//- 						<img class="media-object thumb" width="80" src="images/course/f-course2.jpg" alt="">
+				//- 					</a>
+				//- 					<div class="media-body">
+				//- 						<h5 class="media-heading product-title mb-0"><a href="#">Organizational Analysis</a></h5>
+				//- 						<div class="star-rating mt-5 mb-5 ml-0" title="Rated 4.50 out of 5">
+				//- 							<span data-width="60%">4.50</span>
+				//- 						</div>
+				//- 						<span class="price">$37.00</span>
+				//- 					</div>
+				//- 				</div>
+				//- 				<div class="media">
+				//- 					<a class="media-left pull-left flip" href="#">
+				//- 						<img class="media-object thumb" width="80" src="images/course/f-course3.jpg" alt="">
+				//- 					</a>
+				//- 					<div class="media-body">
+				//- 						<h5 class="media-heading product-title mb-0"><a href="#">Programming Methodology</a></h5>
+				//- 						<div class="star-rating mt-5 mb-5 ml-0" title="Rated 4.50 out of 5">
+				//- 							<span  data-width="75%">4.50</span>
+				//- 						</div>
+				//- 						<span class="price">$37.00</span>
+				//- 					</div>
+				//- 				</div>
+				//- 			</div>
+				//- 		</div>
+				//- 		<div class="widget border-1px bg-silver-deep p-15">
+				//- 			<h4 class="widget-title line-bottom-theme-colored2">Quick Contact</h4>
+				//- 			<form id="quick_contact_form_sidebar" name="footer_quick_contact_form" class="quick-contact-form" action="includes/quickcontact.php" method="post">
+				//- 				<div class="form-group">
+				//- 					<input name="form_email" class="form-control" type="text" required="" placeholder="Enter Email">
+				//- 				</div>
+				//- 				<div class="form-group">
+				//- 					<textarea name="form_message" class="form-control" required="" placeholder="Enter Message" rows="3"></textarea>
+				//- 				</div>
+				//- 				<div class="form-group">
+				//- 					<input name="form_botcheck" class="form-control" type="hidden" value="" />
+				//- 					<button type="submit" class="btn btn-default btn-flat btn-xs btn-quick-contact text-gray pt-5 pb-5" data-loading-text="Please wait...">Send Message</button>
+				//- 				</div>
+				//- 			</form>
 
-					//- 			<!-- Quick Contact Form Validation-->
-					//- 			<script type="text/javascript">
-					//- 				$("#quick_contact_form_sidebar").validate({
-					//- 					submitHandler: function(form) {
-					//- 						var form_btn = $(form).find('button[type="submit"]');
-					//- 						var form_result_div = '#form-result';
-					//- 						$(form_result_div).remove();
-					//- 						form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
-					//- 						var form_btn_old_msg = form_btn.html();
-					//- 						form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
-					//- 						$(form).ajaxSubmit({
-					//- 							dataType:  'json',
-					//- 							success: function(data) {
-					//- 								if( data.status == 'true' ) {
-					//- 									$(form).find('.form-control').val('');
-					//- 								}
-					//- 								form_btn.prop('disabled', false).html(form_btn_old_msg);
-					//- 								$(form_result_div).html(data.message).fadeIn('slow');
-					//- 								setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
-					//- 							}
-					//- 						});
-					//- 					}
-					//- 				});
-					//- 			</script>
-					//- 		</div>
-					//- 	</div>
-					//- </div>
+				//- 			<!-- Quick Contact Form Validation-->
+				//- 			<script type="text/javascript">
+				//- 				$("#quick_contact_form_sidebar").validate({
+				//- 					submitHandler: function(form) {
+				//- 						var form_btn = $(form).find('button[type="submit"]');
+				//- 						var form_result_div = '#form-result';
+				//- 						$(form_result_div).remove();
+				//- 						form_btn.before('<div id="form-result" class="alert alert-success" role="alert" style="display: none;"></div>');
+				//- 						var form_btn_old_msg = form_btn.html();
+				//- 						form_btn.html(form_btn.prop('disabled', true).data("loading-text"));
+				//- 						$(form).ajaxSubmit({
+				//- 							dataType:  'json',
+				//- 							success: function(data) {
+				//- 								if( data.status == 'true' ) {
+				//- 									$(form).find('.form-control').val('');
+				//- 								}
+				//- 								form_btn.prop('disabled', false).html(form_btn_old_msg);
+				//- 								$(form_result_div).html(data.message).fadeIn('slow');
+				//- 								setTimeout(function(){ $(form_result_div).fadeOut('slow') }, 6000);
+				//- 							}
+				//- 						});
+				//- 					}
+				//- 				});
+				//- 			</script>
+				//- 		</div>
+				//- 	</div>
+				//- </div>
