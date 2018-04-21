@@ -1,4 +1,4 @@
-mixin course-details(path, title, formateurs, prix, description, sessions, places)
+mixin course-details(path, title, formateurs, prix, description, detailformation, sessions, places)
 	section
 		.container.mt-30.mb-30.pt-30.pb-30
 			.row
@@ -34,23 +34,19 @@ mixin course-details(path, title, formateurs, prix, description, sessions, place
 							li.active
 								a(href="#tab1" data-toggle="tab") Description
 							li
-								a(href="#tab2" data-toggle="tab") Infos formation
+								a(href="#tab2" data-toggle="tab") Informations pratiques
 							li
 								a(href="#tab3" data-toggle="tab") Formateurs
+							li
+								a(href="#tab4" data-toggle="tab") Dates de sessions
 						#myTabContent.tab-content
 							.tab-pane.fade.in.active#tab1
 								h4.line-bottom-theme-colored2.mb-15 Détails sur la formation
-								p.font-14= description
+								each detail in detailformation
+									p.font-14= detail
 							.tab-pane.fade#tab2
 								h4.line-bottom-theme-colored2.mb-15 Informations pratiques
 								ul.course-info-list.font-14.mt-20
-									li
-										span.course-info-title
-											i.pe-7s-date.font-26.vertical-align-middle.text-theme-colored2.mr-10
-											| Sessions
-										span.course-info-details
-											each session in sessions
-												span= session+" / "
 									//- li
 									//- 	span.course-info-title
 									//- 		i.pe-7s-timer.font-26.vertical-align-middle.text-theme-colored2.mr-10Course Duration
@@ -76,6 +72,18 @@ mixin course-details(path, title, formateurs, prix, description, sessions, place
 										img(src=path+formateurs[2] alt="" class="img-fullwidth")
 										h5.mb-0= formateurs[0]
 										span= formateurs[1]
+							.tab-pane.fade#tab4
+								h4.line-bottom-theme-colored2.mb-15 Les dates des sessions
+								ul.course-info-list.font-14.mt-20
+									each session in sessions
+										li
+											span= session
+										//- span.course-info-title
+										//- 	i.pe-7s-date.font-26.vertical-align-middle.text-theme-colored2.mr-10
+										//- 	| Sessions
+										//- span.course-info-details
+										//- 	each session in sessions
+										//- 		span= session+" / "
 						div
 							a(class="btn btn-xl btn-theme-colored2 mt-30 pr-40 pl-40" href="shop-product-details.html") Postuler à cette formation
 				//- <div class="col-sm-12 col-md-4">
