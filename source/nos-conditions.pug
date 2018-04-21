@@ -1,0 +1,55 @@
+extends ./_layout.pug
+
+include mixins/_hero.pug
+
+append meta
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+
+block title
+	title L'initiation à la programmation pour tous - Shuttle Coder
+
+prepend favicons
+	- var path = './'
+
+prepend css
+	- var path = './'
+
+
+prepend head-scripts
+	- var path = './'
+
+prepend header
+	- var path = './'
+
+block maincontent
+	<section>
+		<div class="container mt-30 mb-30 pt-30 pb-30">
+			<div class="row">
+				<div class="col-md-8 col-md-offset-2">
+					<div class="blog-posts single-post">
+						<article class="post clearfix mb-0">
+							<div class="entry-content">
+								//- <p class="mt-20 mb-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+								//- <p class="mb-15">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+
+								<div class="bg-light media border-bottom p-15">
+									<div class="media-left">
+										<i class="fa fa-download text-theme-colored2 font-24 mt-5"></i>
+									</div>
+									<div class="media-body">
+										<h5 class="mt-0 mb-0">Consulter nos conditions:</h5>
+										<a href="./files/cgv-formation.pdf" class="text-underline"><i class="fa fa-file-pdf-o mr-5"></i>Conditions Générales de Ventes</a>
+									</div>
+								</div>
+
+							</div>
+						</article>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+prepend footer
+	- var path = './'
