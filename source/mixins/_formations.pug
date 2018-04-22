@@ -14,8 +14,12 @@ mixin formation(coursetitle, description, places, hours, imagecourse, pathcourse
 					img(src="http://placehold.it/54x54" alt="" class="img-circle")
 			.course-meta
 				ul.list-inline
-					<li><i class="lnr lnr-users font-20"></i>24 Places</li>
-					<li><i class="ficon-clock font-18"></i>360 Heures</li>
+					li
+						i.lnr.lnr-users.font-20
+						strong= places+" Places"
+					li
+						i.lnr.lnr-users.font-20
+						strong= hours+" Heures"
 				if price
 					.course-tag
 						h5= price

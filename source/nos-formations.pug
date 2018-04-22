@@ -21,8 +21,11 @@ prepend head-scripts
 
 prepend hero
 	- var title = 'Nos formations'
-	- var image = '1920x1280'
-	- var path = 'http://placehold.it/'
+	- var image = 'cover.jpg'
+	- var path = './images/bgs/'
+
+prepend maincontent
+	- var path_courses = "./images/courses/"
 
 block maincontent
 	section(id="courses" class="bg-silver-light")
@@ -34,7 +37,7 @@ block maincontent
 							h5.font-16.mt-5 Nos formations intensives en présentiel
 			.section-content
 				.row
-					+formation('Développeur', 'description', '10', '360', '360x250', 'http://placehold.it/', 'programme-developpeur-ios-swift.html', '')
+					+formation("Développeur d'application iOS/Swift", "Le bootcamp pour acquérir les bases du développement iOS en Swift et lancer votre projet.", '10', '360', 'ios-swift.jpg', "./images/courses/", 'programme-developpeur-ios-swift.html', '')
 	//-section(id="courses" class="bg-silver-light")
 		.container
 			.section-title.mb-40

@@ -24,11 +24,11 @@ prepend header
 
 prepend hero
 	- var title = 'Mentions légales'
-	- var image = '1920x1280'
-	- var path = 'http://placehold.it/'
+	- var image = 'home-cover.jpg'
+	- var path = './images/bgs/'
 
 block hero
-	+hero(title, image, path)
+	+hero(title, 'home-cover.jpg', './images/bgs/')
 
 block maincontent
 	include includes/fr/home/_features.pug
