@@ -1,5 +1,7 @@
 extends ./_layout.pug
 
+include mixins/_hero.pug
+
 append meta
 	meta(name="description" content="")
 	meta(name="keywords" content="")
@@ -20,12 +22,16 @@ prepend head-scripts
 prepend header
 	- var path = './'
 
-append content
+prepend hero
+	- var title = 'Mentions légales'
+	- var image = 'home-cover.jpg'
+	- var path = './images/bgs/'
 
 block hero
-	+hero()
-	//-include includes/fr/_features-home.pug
-	//-include includes/fr/_about-home.pug
+	+hero(title, 'home-cover.jpg', './images/bgs/')
+
+block maincontent
+	include includes/fr/home/_features.pug
 
 prepend footer
 	- var path = './'

@@ -1,0 +1,53 @@
+extends ./_layout.pug
+
+include mixins/_formations.pug
+
+append meta
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+
+block title
+	title Shuttle Coder - Nos formations
+
+prepend favicons
+	- var path = './'
+
+prepend css
+	- var path = './'
+
+
+prepend head-scripts
+	- var path = './'
+
+prepend hero
+	- var title = 'Nos formations'
+	- var image = 'cover.jpg'
+	- var path = './images/bgs/'
+
+prepend maincontent
+	- var path_courses = "./images/courses/"
+
+block maincontent
+	section(id="courses" class="bg-silver-light")
+		.container
+			.section-title.mb-40
+				.row
+					.col-md-12
+						h2(class="title text-uppercase mb-5") Coding #[span.text-theme-colored2 Bootcamps]
+							h5.font-16.mt-5 Nos formations intensives en présentiel
+			.section-content
+				.row
+					+formation("Développeur d'application iOS/Swift", "Le bootcamp pour acquérir les bases du développement iOS en Swift et lancer votre projet.", '10', '360', 'ios-swift.jpg', "./images/courses/", 'programme-developpeur-ios-swift.html', '')
+	//-section(id="courses" class="bg-silver-light")
+		.container
+			.section-title.mb-40
+				.row
+					.col-md-12
+						h2(class="title text-uppercase mb-5") Coding #[span.text-theme-colored2 Bootcamps]
+							h5.font-16.mt-5 Nos formations intensives en présentiel
+			.section-content
+				.row
+					+formation('Développeur', 'description', '10', '360', '360x250', 'http://placehold.it/', 'programme-developpeur-ios-swift.html', '')
+
+prepend footer
+	- var path = './'

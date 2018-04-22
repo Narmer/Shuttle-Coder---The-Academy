@@ -10,11 +10,16 @@
     <meta name="description" content="">
     <meta name="keywords" content="">
     <title>Shuttle Coder - Formation Développeur iOS - Coding Bootcamp Swift</title>
-    <link href="./images/favicon.png" rel="shortcut icon" type="image/png">
-    <link href="./images/apple-touch-icon.png" rel="apple-touch-icon">
-    <link href="./images/apple-touch-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">
-    <link href="./images/apple-touch-icon-114x114.png" rel="apple-touch-icon" sizes="114x114">
-    <link href="./images/apple-touch-icon-144x144.png" rel="apple-touch-icon" sizes="144x144">
+    <link rel="apple-touch-icon" sizes="57x57" href="./images/favicons/apple-icon-57x57.png">
+    <link rel="apple-touch-icon" sizes="60x60" href="./images/favicons/apple-icon-60x60.png">
+    <link rel="apple-touch-icon" sizes="76x76" href="./images/favicons/apple-icon-76x76.png">
+    <link rel="apple-touch-icon" sizes="114x114" href="./images/favicons/apple-icon-114x114.png">
+    <link rel="apple-touch-icon" sizes="120x120" href="./images/favicons/apple-icon-120x120.png">
+    <link rel="apple-touch-icon" sizes="152x152" href="./images/favicons/apple-icon-152x152.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="96x96" href="./images/favicons/favicon-96x96.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="./images/favicons/favicon-16x16.png">
+    <link rel="manifest" href="./images/favicons/manifest.json">
     <link href="./css/bootstrap.min.css" rel="stylesheet" type="text/css">
     <link href="./css/jquery-ui.min.css" rel="stylesheet" type="text/css">
     <link href="./css/animate.css" rel="stylesheet" type="text/css">
@@ -25,7 +30,7 @@
     <link href="./css/preloader.css" rel="stylesheet" type="text/css">
     <link href="./css/custom-bootstrap-margin-padding.css" rel="stylesheet" type="text/css">
     <link href="./css/responsive.css" rel="stylesheet" type="text/css">
-    <link href="./css/colors/theme-skin-color-set4.css" rel="stylesheet" type="text/css">
+    <link href="./css/colors/theme-skin-color-set2.css" rel="stylesheet" type="text/css">
     <script src="./js/jquery-2.2.4.min.js"></script>
     <script src="./js/jquery-ui.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
@@ -40,10 +45,9 @@
         <div class="header-nav navbar-sticky navbar-sticky-animated">
           <div class="header-nav-wrapper">
             <div class="container">
-              <nav class="menuzord default no-bg" id="menuzord">
+              <nav class="menuzord default no-bg" id="menuzord-right"><a class="menuzord-brand switchable-logo pull-left flip mb-15" href="./"><img class="logo-default" src="./images/logo-white.png" alt=""><img class="logo-scrolled-to-fixed" src="./images/logo-color.png" alt=""></a>
                 <ul class="menuzord-menu sm-padding">
-                  <li><a href="./index.html">Accueil</a></li>
-                  <li><a href="./methode.html">La méthode</a></li>
+                  <li><a class="hvr-underline-reveal" href="./index.html">Accueil</a></li>
                   <li><a href="javascript:void(0)">Les programmes</a>
 <div class="megamenu">
 <div class="megamenu-row">
@@ -53,7 +57,7 @@
                         <li>
                           <h4 class="text-uppercase">En présentiel</h4>
                         </li>
-                        <li><a class="btn btn-colored btn-flat btn-theme-colored mt-15 mt-sm-10 pt-10 pb-10 ajaxload-popup" href="./programme-developpeur-ios-swift.html">iOS/Swift (9 semaines)</a></li>
+                        <li><a class="btn btn-xl btn-flat btn-dark mt-15 mt-sm-10 pt-10 pb-10" href="./programme-developpeur-ios-swift.html">iOS/Swift (9 semaines)</a></li>
                       </ul>
                     </div>
                     <div class="col3">
@@ -72,24 +76,19 @@
                       </ul>
                     </div>
                     <div class="col1"></div></div>
-</div>
+                    <div class="megamenu-row">
+                      <div class="col12 text-center"><a class="btn btn-xl btn-flat btn-blue mt-15 mt-sm-10 pt-10 pb-10" href="./nos-formations.html">Toutes nos formations</a></div>
+                    </div></div>
                   </li>
-                  <li><a href="./faq.html">FAQ</a></li><a class="menuzord-brand switchable-logo pull-left flip mb-15" href="./"><img class="logo-default" src="./images/logo-white.png" alt=""><img class="logo-scrolled-to-fixed" src="./images/logo-color.png" alt=""></a>
+                  <li class="list-inline-item"><a class="btn btn-xl btn-colored btn-theme-colored" href="./devenir-etudiant.html">Je m'inscris</a></li>
                 </ul>
-                <div class="pull-right sm-pull-none mb-sm-15">
-                  <ul class="list-inline">
-                    <li class="list-inline-item"><a class="btn mt-15 mt-sm-10 pt-10 pb-10" href="https://blog.shuttlecoder.academy">Le blog</a></li>
-                    <li class="list-inline-item"><a class="btn mt-15 mt-sm-10 pt-10 pb-10" href="./events.html">Les Events</a></li>
-                    <li class="list-inline-item"><a class="btn btn-colored btn-theme-colored mt-15 mt-sm-10 pt-10 pb-10" href="./devenir-etudiant.html">Je m'inscris</a></li>
-                  </ul>
-                </div>
               </nav>
             </div>
           </div>
         </div>
       </header>
       <div class="main-content">
-        <section class="inner-header divider layer-overlay overlay-theme-colored-7" data-bg-img="http://placehold.it/1920x1280">
+        <section class="inner-header divider layer-overlay overlay-theme-colored-7" data-bg-img="./images/bgs/cover.jpg">
           <div class="container pt-120 pb-60">
             <div class="section-content">
               <div class="row">
@@ -156,19 +155,18 @@
               <div class="col-md-6">
                 <ul class="list-unstyled">
                   <li><img alt="logo de shuttle coder" src="./images/logo-full-white.png"></li>
-                  <li><a href="./mentions-legales">mentions légales</a></li>
                 </ul>
               </div>
               <div class="col-md-6 text-right">
                 <div class="widget no-border m-0">
                   <ul class="list-inline sm-text-center mt-5 font-14">
-                    <li><a class="btn btn-secondary" href="" data-toggle="tooltip" data-placement="top" title="Pour trouver toutes nos actus"><i class="fa fa-2x fa-facebook"></i></a><a class="btn btn-secondary" href="" data-toggle="tooltip" data-placement="top" title="Pour nous suivre ? @ShuttleCoder"><i class="fa fa-2x fa-twitter"></i></a></li>
+                    <li><a class="btn btn-secondary" href="" data-toggle="tooltip" data-placement="top" title="Pour trouver toutes nos actus"><i class="fab fa-facebook-f fa-2x"></i></a><a class="btn btn-secondary" href="" data-toggle="tooltip" data-placement="top" title="Pour nous suivre ? @ShuttleCoder"><i class="fab fa-twitter fa-2x"></i></a></li>
                   </ul>
                 </div>
               </div>
             </div>
           </div>
-        </div><a class="scrollToTop" href="#"><i class="fa fa-angle-up"></i></a>
+        </div><a class="scrollToTop" href="#"><i class="fas fa-angle-up fa-2x" data-fa-transform="down-5"></i></a>
       </footer>
     </div>
     <script src="./js/custom.js"></script>

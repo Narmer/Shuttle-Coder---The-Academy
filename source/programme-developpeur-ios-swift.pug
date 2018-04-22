@@ -1,5 +1,7 @@
 extends ./_layout.pug
 
+include mixins/_course-details.pug
+
 append meta
 	meta(name="description" content="")
 	meta(name="keywords" content="")
@@ -20,13 +22,22 @@ prepend head-scripts
 prepend hero
 	- var title = 'iOS / Swift'
 	- var subtitle = '2 mois pour devenir développeur(se) mobile'
-	- var image = '1920x1280'
-	- var path = './'
+	- var image = 'cover.jpg'
+	- var path = './images/bgs/'
 
 block maincontent
-	include includes/fr/_programme-ios-swift.pug
-	include includes/fr/_cv.pug
-	include includes/fr/_journee-type.pug
+	- var path = "./images/teachers/"
+	- var title = "Développeur d'application mobile iOS/swift"
+	- var formateurs = ["Dominique SIZAM","Formateur Swift/iOS", "dominique-sizam.jpg"]
+	- var sessions = ["9 juillet 2018 - 7 septembre 2018", "1 octobre 2018 - 30 novembre 2018"]
+	- var prix = "4500€"
+	- var description = ["Cette formation vous permettra d'acquérir les bases du développement iOS en Swift. A l'issue des 9 semaines, vous aurez les connaissances nécessaires pour démarrer le développement d'une application sur iOS, des principes de base, jusqu'à la présentation de certaines bibliothèques ou outils qui font partie des *must-have* (Cocoapods, Alamofire, SwiftyJSON, etc.) et à la persistance de données."]
+	- var detailformation = ["Au cours de cette formation mêlant théorie et beaucoup de pratique vous réaliserez plusieurs applications iOS dont la votre, développée sous la forme d'un projet personnel.", "Vous serez dans une salle de classe vivante où les élèves apprennent ensemble le métier de développeur. Après chaque cours, les étudiants aiguisent leurs compétences avec des challenges, en autonomie comme en groupe. Ils s'entraînent, s’entraident et sont encadrés constamment par une équipe pédagogique expérimentée.", "2 mois d'aventure intense avec Le socle, où on apprend tout ce qu’un bon développeur doit maîtriser. Les bases.", "La spécialisation, on verra ls différents SDKs  tels que ARKit, CoreML, MapKit, etc pour que les étudiants aient une idée des possibilités", "Et on finit en beauté avec le projet personnel: pendant 2 semaines non-stop, les étudiants sont plongés dans la réalisation d'un projet pour le présenter au public. C'est le début de votre aventure professionnelle."]
+	- var places = "10"
+	+course-details(path, title, formateurs, prix, description, detailformation, sessions, places)
+	//include includes/fr/_programme-ios-swift.pug
+	//include includes/fr/_cv.pug
+	//include includes/fr/_journee-type.pug
 
 prepend footer
 	- var path = './'
