@@ -1,19 +1,19 @@
 include _megamenu.pug
 
 mixin navigation(path)
-	nav(id="menuzord-right" class="menuzord none no-bg")
+	nav(id="menuzord-right" class="menuzord default no-bg")
 		a(class="menuzord-brand switchable-logo pull-left flip mb-15" href=path+"")
 			img(class="logo-default" src=path+"images/logo-white.png" alt="")
 			img(class="logo-scrolled-to-fixed" src=path+"images/logo-color.png" alt="")
 		ul(class="menuzord-menu sm-padding")
 			li
 				a(href=path+"index.html" class="hvr-underline-reveal") Accueil
-			li
-				a(href=path+"methode.html" class="hvr-underline-reveal") La méthode
+			//- li
+			//- 	a(href=path+"methode.html" class="hvr-underline-reveal") La méthode
 			li
 				+megamenu(path)
-			li
-				a(href=path+"faq.html" class="hvr-underline-reveal") FAQ
+			//- li
+			//- 	a(href=path+"faq.html" class="hvr-underline-reveal") FAQ
 			li.list-inline-item
 				a(class="btn btn-xl btn-colored btn-theme-colored" href=path+"devenir-etudiant.html") Je m'inscris
 
