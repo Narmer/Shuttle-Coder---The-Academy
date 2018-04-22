@@ -90,10 +90,10 @@ Colored Skin
 .menuzord.orange { background: #ff670f; }
 .menuzord.orange .menuzord-brand{ color: #fff; }
 .menuzord.orange .menuzord-menu > li > a{ color: #fff; }
-.menuzord.orange .menuzord-menu > li.active > a, 
-.menuzord.orange .menuzord-menu > li:hover > a, 
-.menuzord.orange .menuzord-menu ul.dropdown li:hover > a{ 
-	background: #ff853f; 
+.menuzord.orange .menuzord-menu > li.active > a,
+.menuzord.orange .menuzord-menu > li:hover > a,
+.menuzord.orange .menuzord-menu ul.dropdown li:hover > a{
+	background: #ff853f;
 	color: #fff;
 }
 .menuzord.orange .showhide em{
@@ -103,17 +103,17 @@ Colored Skin
 	color: #fff;
 }
 .menuzord.orange .menuzord-menu > li.search form input[type="text"]{
-	background: #ff853f; 
+	background: #ff853f;
 	color: #fff;
 }
 /* yellow */
 .menuzord.yellow { background: #F6BB42; }
 .menuzord.yellow .menuzord-brand{ color: #fff; }
 .menuzord.yellow .menuzord-menu > li > a{ color: #fff; }
-.menuzord.yellow .menuzord-menu > li.active > a, 
-.menuzord.yellow .menuzord-menu > li:hover > a, 
-.menuzord.yellow .menuzord-menu ul.dropdown li:hover > a{ 
-	background: #FFCE54; 
+.menuzord.yellow .menuzord-menu > li.active > a,
+.menuzord.yellow .menuzord-menu > li:hover > a,
+.menuzord.yellow .menuzord-menu ul.dropdown li:hover > a{
+	background: #FFCE54;
 	color: #fff;
 }
 .menuzord.yellow .showhide em{
@@ -130,10 +130,10 @@ Colored Skin
 .menuzord.purple { background: #967ADC; }
 .menuzord.purple .menuzord-brand{ color: #fff; }
 .menuzord.purple .menuzord-menu > li > a{ color: #fff; }
-.menuzord.purple .menuzord-menu > li.active > a, 
-.menuzord.purple .menuzord-menu > li:hover > a, 
-.menuzord.purple .menuzord-menu ul.dropdown li:hover > a{ 
-	background: #AC92EC; 
+.menuzord.purple .menuzord-menu > li.active > a,
+.menuzord.purple .menuzord-menu > li:hover > a,
+.menuzord.purple .menuzord-menu ul.dropdown li:hover > a{
+	background: #AC92EC;
 	color: #fff;
 }
 .menuzord.purple .showhide em{
@@ -150,10 +150,10 @@ Colored Skin
 .menuzord.pink { background: #D770AD; }
 .menuzord.pink .menuzord-brand{ color: #fff; }
 .menuzord.pink .menuzord-menu > li > a{ color: #fff; }
-.menuzord.pink .menuzord-menu > li.active > a, 
-.menuzord.pink .menuzord-menu > li:hover > a, 
-.menuzord.pink .menuzord-menu ul.dropdown li:hover > a{ 
-	background: #EC87C0; 
+.menuzord.pink .menuzord-menu > li.active > a,
+.menuzord.pink .menuzord-menu > li:hover > a,
+.menuzord.pink .menuzord-menu ul.dropdown li:hover > a{
+	background: #EC87C0;
 	color: #fff;
 }
 .menuzord.pink .showhide em{
@@ -173,7 +173,7 @@ Colored Skin
 	.menuzord-responsive .menuzord-menu > li > a{
 		padding: 12px 20px !important;
 	}
-	
+
 	/* Color schemes */
 	/* blue */
 	.menuzord.blue.menuzord-responsive .menuzord-menu > li > a,
