@@ -1,0 +1,35 @@
+extends ./_layout.pug
+
+append meta
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+
+block title
+	title Coaching - Shuttle Coder
+
+prepend favicons
+	- var path = './'
+
+prepend css
+	- var path = './'
+
+
+prepend head-scripts
+	- var path = './'
+
+prepend header
+	- var path = './'
+
+prepend hero
+	- var title = 'Coaching'
+	- var image = 'cover.jpg'
+	- var path = './images/bgs/'
+
+block maincontent
+	include includes/fr/coaching/_main-content.pug
+	include includes/fr/coaching/_whats-in.pug
+	//- include includes/fr/coaching/_is-for-you.pug
+	include includes/fr/coaching/_packages.pug
+
+prepend footer
+	- var path = './'
