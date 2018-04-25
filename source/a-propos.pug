@@ -20,6 +20,11 @@ prepend head-scripts
 prepend header
 	- var path = './'
 
+prepend hero
+	- var title = 'A Propos'
+	- var image = 'cover.jpg'
+	- var path = './images/bgs/'
+
 block maincontent
 	include includes/fr/a-propos/_features.pug
 	include includes/fr/a-propos/_our-story.pug
