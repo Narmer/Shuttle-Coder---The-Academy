@@ -1,0 +1,34 @@
+extends ./_layout.pug
+
+append meta
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+
+block title
+	title A propos - Shuttle Coder
+
+prepend favicons
+	- var path = './'
+
+prepend css
+	- var path = './'
+
+
+prepend head-scripts
+	- var path = './'
+
+prepend header
+	- var path = './'
+
+prepend hero
+	- var title = 'A Propos'
+	- var image = 'cover.jpg'
+	- var path = './images/bgs/'
+
+block maincontent
+	include includes/fr/a-propos/_features.pug
+	include includes/fr/a-propos/_our-story.pug
+	include includes/fr/a-propos/_manifesto.pug
+
+prepend footer
+	- var path = './'
