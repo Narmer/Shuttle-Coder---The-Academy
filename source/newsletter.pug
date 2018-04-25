@@ -1,0 +1,31 @@
+extends ./_layout.pug
+
+append meta
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+
+block title
+	title L'initiation à la programmation pour tous - Shuttle Coder
+
+prepend favicons
+	- var path = './'
+
+prepend css
+	- var path = './'
+
+
+prepend head-scripts
+	- var path = './'
+
+prepend header
+	- var path = './'
+
+block maincontent
+	include includes/fr/newsletter/_title.pug
+	include includes/fr/newsletter/_content.pug
+	include includes/fr/newsletter/_form.pug
+	include includes/fr/newsletter/_not-so-sure.pug
+	include includes/fr/newsletter/_testimonials.pug
+
+prepend footer
+	- var path = './'
