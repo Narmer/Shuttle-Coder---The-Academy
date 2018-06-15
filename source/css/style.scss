@@ -53,6 +53,31 @@
 	}
 }
 
+.bottom-footer {
+	background-color: #e1e1e1;
+	h4 {
+		color: #1592b4;
+		font-weight: normal;
+		font-size: 1em;
+		text-transform: uppercase;
+		&::before {
+				content: "Coded with love ";
+		}
+		&::after {
+			content: " in Paris";
+		}
+		i,
+		svg {
+			color: #f4b737;
+		}
+	}
+}
+
+.copyright {
+	font-size: 0.8em;
+	max-width: 130px;
+}
+
 .separator {
 	height: 2px;
 	margin: 10px auto;
