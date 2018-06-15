@@ -75,7 +75,10 @@
 
 .copyright {
 	font-size: 0.8em;
-	max-width: 130px;
+	text-align: right;
+	span {
+		max-width: 130px;
+	}
 }
 
 .separator {
@@ -117,6 +120,9 @@
 			}
 		}
 	}
+	.copyright {
+		text-align: center;
+	}
 }
 
 @media only screen and (max-width: 992px) {
@@ -134,5 +140,9 @@
 				width: 50%;
 			}
 		}
+	}
+
+	.copyright {
+		text-align: center;
 	}
 }
