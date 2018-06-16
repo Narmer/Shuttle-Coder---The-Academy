@@ -1,0 +1,224 @@
+/* custom css codes start here: */
+.footer {
+
+}
+
+.top-footer {
+	background-color: #fcfcfc;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+	-webkit-flex-direction: row;
+	-ms-flex-direction: row;
+	flex-direction: row;
+	-webkit-flex-wrap: nowrap;
+	-ms-flex-wrap: nowrap;
+	flex-wrap: nowrap;
+	-webkit-justify-content: space-around;
+	-ms-flex-pack: distribute;
+	justify-content: space-around;
+	-webkit-align-content: flex-start;
+	-ms-flex-line-pack: start;
+	align-content: flex-start;
+	-webkit-align-items: flex-start;
+	-ms-flex-align: start;
+	align-items: flex-start;
+}
+
+.top-footer:last-child {
+	-webkit-order: 0;
+	-ms-flex-order: 0;
+	order: 0;
+	-webkit-flex: 1 1 auto;
+	-ms-flex: 1 1 auto;
+	flex: 1 1 auto;
+	-webkit-align-self: auto;
+	-ms-flex-item-align: auto;
+	align-self: auto;
+}
+
+.footer-section {
+	-webkit-order: 0;
+	-ms-flex-order: 0;
+	order: 0;
+	-webkit-flex: 0 1 auto;
+	-ms-flex: 0 1 auto;
+	flex: 0 1 auto;
+	-webkit-align-self: auto;
+	-ms-flex-item-align: auto;
+	align-self: auto;
+}
+
+
+
+.tuts,
+.trainings,
+.aboutus,
+.terms,
+.community,
+.newsletter {
+	h4 {
+		font-size: 12px;
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+}
+
+.tuts,
+.trainings,
+.aboutus,
+.terms,
+.community {
+	ul {
+		li {
+			a {
+				line-height: 1.2rem;
+				padding: 0.2rem 0;
+				&:link,
+				&:visited {
+					color: gray;
+				}
+			}
+		}
+	}
+}
+
+.tuts {
+	h4 {
+		color: #f4b737;
+	}
+	li {
+		a {
+			&:hover,
+			&:active {
+				color: #f4b737;
+			}
+		}
+	}
+}
+
+.trainings {
+	h4 {
+		color: #ff5607
+	}
+	li {
+		a {
+			&:hover,
+			&:active {
+				color: #1592b4;
+			}
+		}
+	}
+}
+.aboutus {
+	h4 {
+		color: #f4b737;
+	}
+	li {
+		a {
+			&:hover,
+			&:active {
+				color: #f4b737;
+			}
+		}
+	}
+}
+.terms {
+	h4 {
+		color: #1592b4;
+	}
+	li {
+		a {
+			&:hover,
+			&:active {
+				color: #1592b4;
+			}
+		}
+	}
+}
+
+.community {
+	h4 {
+		color: #6236ff;
+	}
+	li {
+		a {
+			&:hover,
+			&:active {
+				color: #6236ff;
+			}
+		}
+	}
+}
+
+.bottom-footer {
+	background-color: #e1e1e1;
+	h4 {
+		color: #1592b4;
+		font-weight: normal;
+		font-size: 1em;
+		text-transform: uppercase;
+		&::before {
+				content: "Coded with love ";
+		}
+		&::after {
+			content: " in Paris";
+		}
+		i,
+		svg {
+			color: #f4b737;
+		}
+	}
+}
+
+.copyright {
+	font-size: 0.8em;
+	text-align: right;
+	span {
+		max-width: 130px;
+	}
+}
+
+
+@media (max-width: 640px) {
+	.footer {
+		.top-footer {
+			flex-direction: column;
+			-moz-flex-direction: column;
+			-webkit-flex-direction: column;
+			.social,
+			.product,
+			.company,
+			.support {
+				margin-bottom: 20px;
+				margin-top: 20px;
+				width: auto;
+			}
+		}
+	}
+	.copyright {
+		text-align: center;
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.footer {
+		.top-footer {
+			.social,
+			.product,
+			.company,
+			.support {
+				flex-grow: 0;
+				-moz-flex-grow: 0;
+				-webkit-flex-grow: 0;
+				margin-bottom: 30px;
+				margin-top: 30px;
+				width: 50%;
+			}
+		}
+	}
+
+	.copyright {
+		text-align: center;
+	}
+}
