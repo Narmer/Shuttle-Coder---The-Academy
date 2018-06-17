@@ -36,8 +36,7 @@
   color: #fff !important;
 }
 .menuzord.default .menuzord-menu > li.active > a,
-.menuzord.default .menuzord-menu > li:hover > a,
-.menuzord.default .menuzord-menu ul.dropdown li:hover > a {
+.menuzord.default .menuzord-menu > li:hover > a {
   background: #1592B4;
   color: #fff;
 }

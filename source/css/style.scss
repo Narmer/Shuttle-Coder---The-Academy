@@ -5,16 +5,25 @@
 
 .menuzord-menu {
 	li {
-		a {
-			text-transform: uppercase;
-		}
 		a.btn {
+			background-color: #1592b4;
+			color: #fff;
 			text-transform: capitalize;
 			font-weight: bold;
 			font-size: 1.2rem;
 			line-height: 1.2rem;
 		}
 	}
+}
+
+// .menuzord-menu > li > a.btn {
+//   background: #1592B4;
+//   color: #fff;
+// }
+
+.link-nav {
+	text-transform: uppercase;
+
 }
 
 //
