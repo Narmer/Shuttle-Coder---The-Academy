@@ -2,31 +2,13 @@ include _megamenu.pug
 
 mixin navigation(path)
 	nav(id="menuzord-right" class="menuzord default no-bg")
-		a(class="menuzord-brand switchable-logo pull-left flip mb-15" href=path+"")
+		a(class="menuzord-brand switchable-logo pull-left flip mb-15" href=path+"index.html")
 			img(class="logo-default" src=path+"images/logo-white.png" alt="")
 			img(class="logo-scrolled-to-fixed" src=path+"images/logo-color.png" alt="")
 		ul(class="menuzord-menu sm-padding")
 			li
-				a(href=path+"index.html" class="hvr-underline-reveal") Accueil
-			//- li
-			//- 	a(href=path+"methode.html" class="hvr-underline-reveal") La méthode
+				a(href=path+"nos-formations.html" class="link-nav") Formations
 			li
-				+megamenu(path)
-			//- li
-			//- 	a(href=path+"faq.html" class="hvr-underline-reveal") FAQ
+				a(href=path+"faq.html" class="link-nav") Faq
 			li.list-inline-item
-				a(class="btn btn-xl btn-colored btn-theme-colored" href=path+"devenir-etudiant.html") Je m'inscris
-
-				//-li
-					a(href="#") Features
-						span(class="label label-danger") New
-
-
-
-		//- .pull-right.sm-pull-none.mb-sm-15
-		//- 	ul.list-inline
-		//- 		li.list-inline-item
-		//- 			a(class="btn btn-flat mt-15 mt-sm-10 pt-10 pb-10 hvr-underline-reveal" href="https://blog.shuttlecoder.academy") Le blog
-		//- 		li.list-inline-item
-		//- 			a(class="btn btn-flat mt-15 mt-sm-10 pt-10 pb-10 hvr-underline-reveal" href=path+"events.html") Les Events
-
+				a(class="btn btn-xl btn-colored" href=path+"devenir-etudiant.html") Je m'inscris
