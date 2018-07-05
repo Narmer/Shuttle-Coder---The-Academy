@@ -182,6 +182,41 @@
 	}
 }
 
+// FORM NEWSLETTER
+//
+#mc_embed_signup_newsletter {
+	form {
+		text-align: left;
+	}
+}
+#mc_embed_signup_scroll_newsletter {
+	input.email {
+		border: 1px solid #eee;
+		display: inline-block;
+		height: 45px;
+		vertical-align: middle;
+		width: auto;
+	}
+	.clear {
+		display: inline-block;
+	}
+	.button {
+		background-color: #1592b4;
+		border-color: darken(#1592b4, 10%);
+		border-radius: 6px;
+		color: #fff;
+		font-size: 14px;
+		font-weight: bold;
+		line-height: 1.38;
+		padding: 10px 26px;
+		&:hover {
+			background-color: darken(#1592b4, 10%);
+			border-color: darken(#1592b4, 10%);
+			color: darken(#fff, 10%);
+		}
+	}
+}
+
 .bottom-footer {
 	background-color: #e1e1e1;
 	h4 {
