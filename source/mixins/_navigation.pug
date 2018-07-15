@@ -1,14 +1,16 @@
 include _megamenu.pug
 
 mixin navigation(path)
-	nav(id="menuzord-right" class="menuzord default no-bg")
-		a(class="menuzord-brand switchable-logo pull-left flip mb-15" href=path+"index.html")
-			img(class="logo-default" src=path+"images/logo-white.png" alt="")
-			img(class="logo-scrolled-to-fixed" src=path+"images/logo-color.png" alt="")
-		ul(class="menuzord-menu sm-padding")
-			li
-				a(href=path+"nos-formations.html" class="link-nav") Formations
-			li
-				a(href=path+"faq.html" class="link-nav") Faq
-			li.list-inline-item
-				a(class="btn btn-xl btn-colored" href=path+"devenir-etudiant.html") Je m'inscris
+  nav(id="menuzord" class="menuzord no-bg")
+    a(class="menuzord-brand switchable-logo pull-left flip mb-15" href=path+"index.html")
+      img(class="logo-default" src=path+"images/logo-white.png" alt="")
+      img(class="logo-scrolled-to-fixed" src=path+"images/logo-color.png" alt="")
+    ul(class="menuzord-menu")
+      li
+        a(href=path+"nos-formations.html" class="link-nav") Formations
+      li
+        a(href=path+"faq.html" class="link-nav") Faq
+      //-li.list-inline-item
+        a(class="btn btn-xl btn-colored" href=path+"devenir-etudiant.html") Je m'inscris
+    .pull-right.sm-pull-none.mb-sm-15
+      a(class="btn btn-xl btn-colored btn-theme-colored mt-15 mr-15 ml-15" href="devenir-etudiant.html") Je Postule
