@@ -1,13 +1,20 @@
 /* custom css codes start here: */
 
+$main-color: #1592B4;
+
 //
 // NAVIGATION
 //
 
 .menuzord-menu {
 	li {
+		&:hover {
+			a {
+				background-color: $main-color;
+			}
+		}
 		a.btn {
-			background-color: #1592b4;
+			background-color: $main-color;
 			color: #fff;
 			text-transform: capitalize;
 			font-weight: bold;
@@ -16,11 +23,6 @@
 		}
 	}
 }
-
-// .menuzord-menu > li > a.btn {
-//   background: #1592B4;
-//   color: #fff;
-// }
 
 .link-nav {
 	text-transform: uppercase;
