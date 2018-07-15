@@ -4699,7 +4699,6 @@ fieldset[disabled] .btn-gray.focus {
 /* -------- Btn-transparent ---------- */
 .btn-transparent {
   background-color: transparent;
-  color: #fff;
 }
 .hvr-shutter-out-horizontal::before {
   background: #000;

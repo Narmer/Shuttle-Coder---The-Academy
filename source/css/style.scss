@@ -3,30 +3,15 @@
 $main-color: #1592B4;
 
 //
-// NAVIGATION
+//	BUTTONS
 //
 
-.menuzord-menu {
-	li {
-		&:hover {
-			a {
-				background-color: $main-color;
-			}
-		}
-		a.btn {
-			background-color: $main-color;
-			color: #fff;
-			text-transform: capitalize;
-			font-weight: bold;
-			font-size: 1.2rem;
-			line-height: 1.2rem;
-		}
-	}
-}
 
+//
+//	NAVIGATION
+//
 .link-nav {
 	text-transform: uppercase;
-
 }
 
 //
@@ -288,5 +273,28 @@ $main-color: #1592B4;
 
 	.copyright {
 		text-align: center;
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.menuzord-menu {
+		li {
+			&:hover {
+				a {
+					background-color: transparent;
+					border-bottom: solid 3px $main-color;
+					padding-bottom: 2px;
+					//text-transform: underline;
+				}
+			}
+			a.btn {
+				background-color: $main-color;
+				color: #fff;
+				text-transform: capitalize;
+				font-weight: bold;
+				font-size: 1.2rem;
+				line-height: 1.2rem;
+			}
+		}
 	}
 }
