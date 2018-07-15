@@ -1,3 +1,13 @@
+/* --------------------------------------
+COLOR CODE1: #10252E
+COLOR CODE2: #48C7EC
+----------------------------------------- */
+/*
+ * background: theme-color
+ * -----------------------------------------------
+*/
+$main-color: #1592B4;
+
 .post .entry-meta.meta-absolute {
   background-color: rgba(40, 67, 88, 0.9) !important;
 }
@@ -36,7 +46,8 @@
   color: #fff !important;
 }
 .menuzord.default .menuzord-menu > li.active > a,
-.menuzord.default .menuzord-menu > li:hover > a {
+.menuzord.default .menuzord-menu > li:hover > a,
+.menuzord.default .menuzord-menu ul.dropdown li:hover > a {
   background: #1592B4;
   color: #fff;
 }
@@ -343,17 +354,17 @@ fieldset[disabled] .btn-default.btn-theme-colored:focus,
 .btn-default.btn-theme-colored[disabled].focus,
 fieldset[disabled] .btn-default.btn-theme-colored.focus {
   background-color: #fff;
-  border-color: #284358;
+  border-color: $main-color;
 }
 .btn-default.btn-theme-colored .badge {
   color: #fff;
-  background-color: #284358;
+  background-color: $main-color;
 }
 .btn-default.btn-theme-colored:hover,
 .btn-default.btn-theme-colored:active,
 .btn-default.btn-theme-colored:focus {
-  background-color: #284358;
-  border-color: #284358;
+  background-color: $main-color;
+  border-color: $main-color;
   color: #fff;
 }
 /*
@@ -363,7 +374,7 @@ fieldset[disabled] .btn-default.btn-theme-colored.focus {
 .btn-border.btn-theme-colored {
   color: #284358;
   background-color: #fff;
-  border-color: #284358;
+  border-color: $main-color;
 }
 .btn-border.btn-theme-colored:focus,
 .btn-border.btn-theme-colored.focus {
@@ -411,11 +422,11 @@ fieldset[disabled] .btn-border.btn-theme-colored:focus,
 .btn-border.btn-theme-colored[disabled].focus,
 fieldset[disabled] .btn-border.btn-theme-colored.focus {
   background-color: #fff;
-  border-color: #284358;
+  border-color: $main-color;
 }
 .btn-border.btn-theme-colored .badge {
   color: #fff;
-  background-color: #284358;
+  background-color: $main-color;
 }
 .btn-border.btn-theme-colored:hover,
 .btn-border.btn-theme-colored:active,
@@ -430,7 +441,7 @@ fieldset[disabled] .btn-border.btn-theme-colored.focus {
 */
 .btn-dark.btn-theme-colored {
   color: #fff;
-  background-color: #284358;
+  background-color: $main-color;
   border-color: #284358;
 }
 .btn-dark.btn-theme-colored:focus,
@@ -552,26 +563,30 @@ fieldset[disabled] .btn-gray.btn-theme-colored.focus {
 */
 .btn-theme-colored {
   color: #fff;
-  background-color: #284358;
-  border-color: #284358;
+  background-color: $main-color;
+  border-color: $main-color;
+  font-weight: bold;
 }
 .btn-theme-colored:focus,
 .btn-theme-colored.focus {
   color: #fff;
-  background-color: #182835;
-  border-color: #000000;
+  background-color: darken($main-color, 10%);
+  border-color: darken($main-color, 10%);
+  font-weight: bold;
 }
 .btn-theme-colored:hover {
   color: #fff;
-  background-color: #182835;
-  border-color: #15232e;
+  background-color: darken($main-color, 10%);
+  border-color: darken($main-color, 10%);
+  font-weight: bold;
 }
 .btn-theme-colored:active,
 .btn-theme-colored.active,
 .open > .dropdown-toggle.btn-theme-colored {
   color: #fff;
-  background-color: #182835;
-  border-color: #15232e;
+  background-color: darken($main-color, 15%);
+  border-color: darken($main-color, 15%);
+  font-weight: bold;
 }
 .btn-theme-colored:active:hover,
 .btn-theme-colored.active:hover,
@@ -583,8 +598,8 @@ fieldset[disabled] .btn-gray.btn-theme-colored.focus {
 .btn-theme-colored.active.focus,
 .open > .dropdown-toggle.btn-theme-colored.focus {
   color: #fff;
-  background-color: #0d161c;
-  border-color: #000000;
+  background-color: darken($main-color, 15%);
+  border-color: darken($main-color, 15%);
 }
 .btn-theme-colored:active,
 .btn-theme-colored.active,
@@ -612,7 +627,6 @@ fieldset[disabled] .btn-theme-colored.focus {
  * -----------------------------------------------
 */
 .btn-transparent {
-  background-color: transparent;
   color: #fff;
 }
 .btn-transparent.btn-theme-colored {
