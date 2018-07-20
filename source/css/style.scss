@@ -19,6 +19,8 @@ $community-color: #6236ff;
 	text-transform: uppercase;
 }
 
+
+
 //
 //	SEPARATORS
 //
@@ -120,6 +122,12 @@ $community-color: #6236ff;
 				&:link,
 				&:visited {
 					color: gray;
+				}
+			}
+			a.disabled {
+				color: #eee;
+				&:hover {
+					color: #aaa;
 				}
 			}
 		}
