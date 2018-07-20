@@ -1,6 +1,11 @@
 /* custom css codes start here: */
 
 $main-color: #1592B4;
+$aboutus-color: #7ED321;
+$tutorials-color: #f4b737;
+$trainings-color: #ff5607;
+$terms-color: #1592b4;
+$community-color: #6236ff;
 
 //
 //	BUTTONS
@@ -13,6 +18,8 @@ $main-color: #1592B4;
 .link-nav {
 	text-transform: uppercase;
 }
+
+
 
 //
 //	SEPARATORS
@@ -80,6 +87,11 @@ $main-color: #1592B4;
 	-webkit-align-self: auto;
 	-ms-flex-item-align: auto;
 	align-self: auto;
+	ul {
+		&:nth-child(2n+0) {
+			margin-top: 20px;
+		}
+	}
 }
 
 
@@ -112,19 +124,25 @@ $main-color: #1592B4;
 					color: gray;
 				}
 			}
+			a.disabled {
+				color: #eee;
+				&:hover {
+					color: #aaa;
+				}
+			}
 		}
 	}
 }
 
 .tuts {
 	h4 {
-		color: #f4b737;
+		color: $tutorials-color;
 	}
 	li {
 		a {
 			&:hover,
 			&:active {
-				color: #f4b737;
+				color: $tutorials-color;
 			}
 		}
 	}
@@ -132,39 +150,39 @@ $main-color: #1592B4;
 
 .trainings {
 	h4 {
-		color: #ff5607
+		color: $trainings-color;
 	}
 	li {
 		a {
 			&:hover,
 			&:active {
-				color: #ff5607;
+				color: $trainings-color;
 			}
 		}
 	}
 }
 .aboutus {
 	h4 {
-		color: #f4b737;
+		color: $aboutus-color;
 	}
 	li {
 		a {
 			&:hover,
 			&:active {
-				color: #f4b737;
+				color: $aboutus-color;
 			}
 		}
 	}
 }
 .terms {
 	h4 {
-		color: #1592b4;
+		color: $terms-color;
 	}
 	li {
 		a {
 			&:hover,
 			&:active {
-				color: #1592b4;
+				color: $terms-color;
 			}
 		}
 	}
@@ -172,13 +190,13 @@ $main-color: #1592B4;
 
 .community {
 	h4 {
-		color: #6236ff;
+		color: $community-color;
 	}
 	li {
 		a {
 			&:hover,
 			&:active {
-				color: #6236ff;
+				color: $community-color;
 			}
 		}
 	}
