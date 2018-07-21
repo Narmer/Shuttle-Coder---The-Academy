@@ -1,6 +1,7 @@
 extends ./_layout.pug
 
 include mixins/_hero.pug
+include mixins/_testimonials.pug
 
 append meta
 	meta(name="description" content="")
@@ -30,8 +31,12 @@ prepend hero
 block hero
 	+hero(title, 'home-cover.jpg', './images/bgs/')
 
+prepend maincontent
+	- var array[["Premier text", "Hary Govindin", "Graphiste", ""], ["Deuxième texte", "Hervé Rabenjason", "chef de projets Java", ""], ["troisième", "Ursula", "Chargée de comm", ""]]
+
 block maincontent
 	include includes/fr/home/_features.pug
+	+testimonials(array)
 
 prepend footer
 	- var path = './'
@@ -44,8 +49,8 @@ prepend footer
 	//<script src="js/custom.js"></script>
 
 	//- SLIDER REVOLUTION 5.0 EXTENSIONS
-			(Load Extensions only on Local File Systems !
-				The following part can be removed on Server for On Demand Loading) -->
+			//-(Load Extensions only on Local File Systems !
+			//-The following part can be removed on Server for On Demand Loading) -->
 	//-<script src="js/revolution-slider/js/extensions/revolution.extension.actions.min.js"></script>
 	//-<script src="js/revolution-slider/js/extensions/revolution.extension.carousel.min.js"></script>
 	//-<script src="js/revolution-slider/js/extensions/revolution.extension.kenburn.min.js"></script>

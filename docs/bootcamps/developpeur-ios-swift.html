@@ -1,0 +1,789 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta name="apple-mobile-web-app-capable" content="yes" />
+    <title>Bootcamp Développeur iOS/Swift</title>
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700|Material+Icons" rel="stylesheet" type="text/css">
+    <link href="css/slides.css" rel="stylesheet" type="text/css">
+    <link href="css/custom.css" rel="stylesheet" type="text/css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="js/slides.min.js" type="text/javascript" name="main-scripts"></script>
+  </head>
+  <body class="slides scroll noPreload"><svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+<symbol id="logo" viewBox="0 0 267 32" xmlns="http://www.w3.org/2000/svg"><text transform="translate(-1 0)" font-size="32" font-family="Righteous-Regular, Righteous"><tspan x="0" y="41">Shuttle Coder</tspan></text></symbol>
+<symbol id="logo-icon" viewBox="0 0 86 78" xmlns="http://www.w3.org/2000/svg"><text font-family="Ubuntu" font-size="80" transform="translate(-386 -104) translate(383 92)"><tspan x="0" y="75">{</tspan></text><text font-family="Ubuntu" font-size="80" transform="translate(-386 -104) translate(383 92)"><tspan x="65" y="75">}</tspan></text><g><path d="M44.083 59c.177.409.283.935.283 1.613 0 2.414-1.867 5.487-1.867 5.487s-1.863-3.073-1.863-5.487c0-.678.104-1.205.282-1.613-1.113.676-1.917 2.127-1.917 4.7 0 4.531 3.499 10.3 3.499 10.3s3.501-5.769 3.501-10.3c0-2.573-.803-4.025-1.917-4.7z"/><path d="M42.5 17c2.486 0 4.5 2.014 4.5 4.5 0 2.485-2.014 4.5-4.5 4.5-2.485 0-4.5-2.016-4.5-4.5 0-2.485 2.015-4.5 4.5-4.5z"/><path d="M52.884 51.263l2.948 5.704 3.403.058 3.87-18.586-7.194-6.478c-1.105 9.513-2.574 17.078-3.027 19.302"/><path d="M21.895 38.438l3.868 18.587 3.405-.058 2.948-5.704c-.454-2.225-1.924-9.79-3.027-19.302l-7.194 6.477"/><path d="M48.156 58l1.844-6h-15l1.846 6h11.31"/><path d="M42.5 31c1.934 0 3.5 1.567 3.5 3.5s-1.566 3.5-3.5 3.5c-1.933 0-3.5-1.568-3.5-3.5 0-1.933 1.567-3.5 3.5-3.5zm.045-15.992c3.572 0 6.465 2.894 6.465 6.465 0 3.57-2.893 6.466-6.465 6.466-3.571 0-6.466-2.896-6.466-6.466 0-3.571 2.895-6.465 6.466-6.465zm8.612 35.175c1.824-5.009 2.934-11.614 2.934-18.858 0-15.643-5.17-28.325-11.546-28.325-6.376 0-11.545 12.682-11.545 28.325 0 7.244 1.11 13.849 2.932 18.858h17.225z"/></g></symbol>
+<symbol id="close" viewBox="0 0 30 30"><path d="M15 0c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15zm5.7 19.3c.4.4.4 1 0 1.4-.2.2-.4.3-.7.3s-.5-.1-.7-.3l-4.3-4.3-4.3 4.3c-.2.2-.4.3-.7.3s-.5-.1-.7-.3c-.4-.4-.4-1 0-1.4l4.3-4.3-4.3-4.3c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l4.3 4.3 4.3-4.3c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-4.3 4.3 4.3 4.3z"/></symbol>
+<symbol id="close-small" viewBox="0 0 11 11"><path d="M6.914 5.5l3.793-3.793c.391-.391.391-1.023 0-1.414s-1.023-.391-1.414 0l-3.793 3.793-3.793-3.793c-.391-.391-1.023-.391-1.414 0s-.391 1.023 0 1.414l3.793 3.793-3.793 3.793c-.391.391-.391 1.023 0 1.414.195.195.451.293.707.293s.512-.098.707-.293l3.793-3.793 3.793 3.793c.195.195.451.293.707.293s.512-.098.707-.293c.391-.391.391-1.023 0-1.414l-3.793-3.793z"/></symbol>
+<symbol id="arrow-left" viewBox="0 0 31 72"><path d="M30 72c-.3 0-.6-.1-.8-.4l-29-34c-.3-.4-.3-.9 0-1.3l29-36c.3-.4 1-.5 1.4-.2.4.3.5 1 .2 1.4l-28.5 35.5 28.5 33.4c.4.4.3 1.1-.1 1.4-.2.1-.5.2-.7.2z"/></symbol>
+<symbol id="arrow-right" viewBox="0 0 31 72"><path d="M1 0c.3 0 .6.1.8.4l29 34c.3.4.3.9 0 1.3l-29 36c-.3.4-1 .5-1.4.2-.4-.3-.5-1-.2-1.4l28.5-35.5-28.5-33.4c-.4-.4-.3-1.1.1-1.4.2-.1.5-.2.7-.2z"/></symbol>
+<symbol id="back" viewBox="0 0 20 20"><path d="M2.3 10.7l5 5c.4.4 1 .4 1.4 0s.4-1 0-1.4l-3.3-3.3h11.6c.6 0 1-.4 1-1s-.4-1-1-1h-11.6l3.3-3.3c.4-.4.4-1 0-1.4-.2-.2-.4-.3-.7-.3s-.5.1-.7.3l-5 5c-.2.2-.3.5-.3.7 0 .2.1.5.3.7z"/></symbol>
+<symbol id="menu" viewBox="0 0 22 22"><path d="M1 5h20c.6 0 1-.4 1-1s-.4-1-1-1h-20c-.6 0-1 .4-1 1s.4 1 1 1zm20 5h-20c-.6 0-1 .4-1 1s.4 1 1 1h20c.6 0 1-.4 1-1s-.4-1-1-1zm0 7h-20c-.6 0-1 .4-1 1s.4 1 1 1h20c.6 0 1-.4 1-1s-.4-1-1-1z"/></symbol>
+<symbol id="share" viewBox="0 0 22 22"><path d="M21 10c-.6 0-1 .4-1 1v7h-18v-7c0-.6-.4-1-1-1s-1 .4-1 1v7c0 1.1.9 2 2 2h18c1.1 0 2-.9 2-2v-7c0-.6-.4-1-1-1zM5.5 7.5c.3 0 .5-.1.7-.3l3.8-3.8v9.6c0 .6.4 1 1 1s1-.4 1-1v-9.6l3.8 3.8c.2.2.5.3.7.3s.5-.1.7-.3c.4-.4.4-1 0-1.4l-5.5-5.5c-.1-.1-.2-.2-.3-.2-.2-.1-.5-.1-.8 0l-.3.2-5.5 5.5c-.4.4-.4 1 0 1.4.2.2.4.3.7.3z"/></symbol>
+<symbol id="arrow-down" viewBox="0 0 24 24"><path d="M12 18c-.2 0-.5-.1-.7-.3l-11-10c-.4-.4-.4-1-.1-1.4.4-.4 1-.4 1.4-.1l10.4 9.4 10.3-9.4c.4-.4 1-.3 1.4.1.4.4.3 1-.1 1.4l-11 10c-.1.2-.4.3-.6.3z"/></symbol>
+<symbol id="arrow-up" viewBox="0 0 24 24"><path d="M11.9 5.9c.2 0 .5.1.7.3l11 10c.4.4.4 1 .1 1.4-.4.4-1 .4-1.4.1l-10.4-9.4-10.3 9.4c-.4.4-1 .3-1.4-.1-.4-.4-.3-1 .1-1.4l11-10c.1-.2.4-.3.6-.3z"/></symbol>
+<symbol id="arrow-top" viewBox="0 0 24 24"><path d="M20.7 10.3l-8-8c-.4-.4-1-.4-1.4 0l-8 8c-.4.4-.4 1 0 1.4s1 .4 1.4 0l6.3-6.3v15.6c0 .6.4 1 1 1s1-.4 1-1v-15.6l6.3 6.3c.2.2.5.3.7.3s.5-.1.7-.3c.4-.4.4-1 0-1.4z"/></symbol>
+<symbol id="drop-down" viewBox="0 0 16 16"><polyline stroke-width="2" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" points="1,5 8,12 15,5" fill="none"></polyline></symbol>
+<symbol id="play" viewBox="0 0 30 30"><path d="M7 30v-30l22 15z"/></symbol>
+<symbol id="login" viewBox="0 0 22 22"><path d="M13 2c0 .6.4 1 1 1h6v16h-6c-.6 0-1 .4-1 1s.4 1 1 1h6c1.1 0 2-.9 2-2v-16c0-1.1-.9-2-2-2h-6c-.6 0-1 .4-1 1zm-6.5 3.5c0 .3.1.5.3.7l3.8 3.8h-9.6c-.6 0-1 .4-1 1s.4 1 1 1h9.6l-3.8 3.8c-.2.2-.3.5-.3.7s.1.5.3.7c.4.4 1 .4 1.4 0l5.5-5.5c.1-.1.2-.2.2-.3.1-.2.1-.5 0-.8l-.2-.3-5.5-5.5c-.4-.4-1-.4-1.4 0-.2.2-.3.4-.3.7z"/></symbol>
+<symbol id="chat" viewBox="0 0 22 22"><path d="M11 22c-.1 0-.3 0-.4-.1-.4-.1-.6-.5-.6-.9v-4h-7.8c-1.2 0-2.2-1-2.2-2.2v-11.6c0-1.2 1-2.2 2.2-2.2h17.7c1.1 0 2.1 1 2.1 2.2v11.7c0 1.2-1 2.2-2.2 2.2h-3.4l-4.7 4.7c-.2.1-.4.2-.7.2zm-8.8-19c-.1 0-.2.1-.2.2v11.7s.1.1.2.1h8.8c.6 0 1 .4 1 1v2.6l3.3-3.3c.2-.2.4-.3.7-.3h3.8c.1 0 .2-.1.2-.2v-11.6c0-.1-.1-.2-.2-.2h-17.6zM5 6h6v2h-6zM5 10h10v2h-10z"/></symbol>
+<symbol id="mail" viewBox="0 0 22 22"><path d="M19.8 2h-17.6c-1.2 0-2.2 1-2.2 2.2v13.5c0 1.3 1 2.3 2.2 2.3h17.5c1.2 0 2.2-1 2.2-2.2v-13.6c.1-1.2-.9-2.2-2.1-2.2zm-17.6 2h17.5c.2 0 .3.1.3.2v.3l-9 6.3-9-6.3v-.3c0-.1.1-.2.2-.2zm17.6 14h-17.6c-.1 0-.2-.1-.2-.2v-10.9l8.1 5.7c.3.2.6.3.9.3.3 0 .6-.1.9-.3l8.1-5.7v10.9c0 .1-.1.2-.2.2z"/></symbol>
+<symbol id="sound-on" viewBox="0 0 22 22"><path d="M15 15c-.2 0-.4-.1-.6-.2-.4-.3-.5-1-.2-1.4.5-.7.8-1.5.8-2.4s-.3-1.7-.8-2.4c-.3-.4-.2-1.1.2-1.4.4-.3 1.1-.2 1.4.2.8 1 1.2 2.3 1.2 3.6s-.4 2.6-1.2 3.6c-.2.3-.5.4-.8.4zm4 2.3c-.2 0-.5-.1-.7-.2-.4-.4-.5-1-.1-1.4 1.2-1.3 1.8-3 1.8-4.7 0-1.8-.7-3.5-1.9-4.8-.4-.4-.4-1 0-1.4s1-.4 1.4 0c1.6 1.7 2.5 3.9 2.5 6.2 0 2.2-.8 4.3-2.2 6-.2.2-.5.3-.8.3zm-9 2.7c-.2 0-.4-.1-.6-.2l-4.8-3.8h-2.1c-1.4 0-2.5-1.1-2.5-2.5v-5c0-1.4 1.1-2.5 2.5-2.5h2.2l4.7-3.8c.3-.2.7-.3 1.1-.1.3.2.5.5.5.9v16c0 .4-.2.7-.6.9-.1.1-.3.1-.4.1zm-7.5-12c-.3 0-.5.2-.5.5v5c0 .3.2.5.5.5h2.5c.2 0 .4.1.6.2l3.4 2.7v-11.8l-3.4 2.7c-.2.1-.4.2-.6.2h-2.5z"/></symbol>
+<symbol id="sound-off" viewBox="0 0 22 22"><path d="M10.434 2.098c-.347-.165-.758-.119-1.058.121l-4.726 3.781h-2.154c-1.376 0-2.496 1.12-2.496 2.496v5.009c0 1.376 1.12 2.495 2.496 2.495h2.153l4.726 3.781c.181.145.402.219.625.219.147 0 .295-.032.433-.099.347-.167.567-.516.567-.901v-16c0-.384-.22-.735-.566-.902zm-1.434 14.821l-3.375-2.7c-.178-.142-.398-.219-.625-.219h-2.504c-.274 0-.496-.222-.496-.495v-5.009c0-.274.222-.496.496-.496h2.504c.227 0 .447-.077.625-.219l3.375-2.7v11.838zM19.414 11l2.293-2.293c.391-.391.391-1.023 0-1.414s-1.023-.391-1.414 0l-2.293 2.293-2.293-2.293c-.391-.391-1.023-.391-1.414 0s-.391 1.023 0 1.414l2.293 2.293-2.293 2.293c-.391.391-.391 1.023 0 1.414.195.195.451.293.707.293s.512-.098.707-.293l2.293-2.293 2.293 2.293c.195.195.451.293.707.293s.512-.098.707-.293c.391-.391.391-1.023 0-1.414l-2.293-2.293z"/></symbol>
+<!-- social -->
+<symbol id="apple" viewBox="-1 1 24 24"><path d="M17.6 13.8c0-3 2.5-4.5 2.6-4.6-1.4-2.1-3.6-2.3-4.4-2.4-1.9-.2-3.6 1.1-4.6 1.1-.9 0-2.4-1.1-4-1-2 0-3.9 1.2-5 3-2.1 3.7-.5 9.1 1.5 12.1 1 1.5 2.2 3.1 3.8 3 1.5-.1 2.1-1 3.9-1s2.4 1 4 1 2.7-1.5 3.7-2.9c1.2-1.7 1.6-3.3 1.7-3.4-.1-.1-3.2-1.3-3.2-4.9zm-3.1-9c.8-1 1.4-2.4 1.2-3.8-1.2 0-2.7.8-3.5 1.8-.8.9-1.5 2.3-1.3 3.7 1.4.1 2.8-.7 3.6-1.7z"/></symbol>
+<symbol id="dribbble" viewBox="0 0 24 24"><path d="M12 0c-6.7 0-12 5.3-12 12s5.3 12 12 12 12-5.3 12-12-5.3-12-12-12zm7.9 5.7c1.3 1.7 2.1 3.9 2.3 6.1-.4-.1-2.4-.4-4.7-.4-.8 0-1.5 0-2.3.1 0-.1-.1-.3-.3-.5l-.7-1.5c3.7-1.4 5.3-3.4 5.7-3.8zm-7.9-3.8c2.5 0 4.9.9 6.7 2.5-.3.4-1.9 2.3-5.2 3.6-1.6-2.9-3.3-5.3-3.7-5.9.6-.1 1.4-.2 2.2-.2zm-4.4 1c.4.6 2.1 3 3.7 5.8-4.4 1.2-8.2 1.2-9.2 1.2h-.1c.8-3.1 2.9-5.6 5.6-7zm-5.7 9.1v-.3h.3c1.2 0 5.6-.1 10.1-1.5l.8 1.6c-.1 0-.3 0-.4.1-5.1 1.6-7.9 6-8.3 6.7-1.6-1.7-2.5-4.1-2.5-6.6zm10.1 10.1c-2.3 0-4.4-.8-6.1-2.1.3-.5 2.4-4.4 7.9-6.3 1.3 3.6 2 6.7 2.1 7.6-1.2.6-2.6.8-3.9.8zm5.7-1.8c-.1-.8-.7-3.6-2-7.1.7-.1 1.3-.1 2-.1 2.1 0 3.7.4 4.1.5-.3 2.8-1.8 5.2-4.1 6.7z"/></symbol>
+<symbol id="facebook" viewBox="0 0 24 24"><path d="M24 1.3v21.3c0 .7-.6 1.3-1.3 1.3h-6.1v-9.3h3.1l.5-3.6h-3.6v-2.2c0-1.1.3-1.8 1.8-1.8h1.9v-3.2c-.3 0-1.5-.1-2.8-.1-2.8 0-4.7 1.7-4.7 4.8v2.7h-3.1v3.6h3.1v9.2h-11.5c-.7 0-1.3-.6-1.3-1.3v-21.4c0-.7.6-1.3 1.3-1.3h21.3c.8 0 1.4.6 1.4 1.3z"/></symbol>
+<symbol id="fb-like" viewBox="0 0 20 20"><path d="M0 8v12h5v-12h-5zm2.5 10.8c-.4 0-.8-.3-.8-.8 0-.4.3-.8.8-.8s.8.3.8.8c0 .4-.4.8-.8.8zm3.5-.8h9.5c1.1 0 1.7-1 1.7-1.7 0-.3-.4-1-.4-1 1.4-.3 1.7-1.2 1.7-1.7-.1-.5-.3-.9-.5-1 1-.4 1.5-1.1 1.4-1.9-.1-.8-1-1.5-1-1.5 1-.6.9-1.5.9-1.5-.3-1.3-1.5-1.7-1.7-1.7h-5.6s.3-.5.3-2.4-1.3-3.6-2.6-3.6c0 0-.7.1-1 .3v3.5l-2.7 4.4v9.8z"/></symbol>
+<symbol id="googlePlus" viewBox="0 1 24 24"><path d="M7.8 13.5h4.6c-.6 2-2.5 3.4-4.6 3.4-2.7 0-4.9-2.2-4.9-4.9s2.2-4.9 4.9-4.9c1.1 0 2.1.3 3 1l1.8-2.4c-1.4-1.1-3-1.6-4.8-1.6-4.3 0-7.9 3.5-7.9 7.9s3.5 7.9 7.9 7.9 7.9-3.5 7.9-7.9v-1.5h-7.9v3zM21.7 11v-2.2h-2v2.2h-2.2v2h2.2v2.2h2v-2.2h2.2v-2z"/></symbol>
+<symbol id="instagram" viewBox="0 0 24 24"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1.1.4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1.1.4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1.1-.4-2.2-.1-1.3-.1-1.6-.1-4.8s0-3.6.1-4.8c0-1.2.2-1.9.3-2.3.2-.6.5-1 .9-1.4.5-.4.9-.6 1.4-.9.4-.1 1.1-.3 2.3-.4h4.8m0-2.2c-3.3 0-3.7 0-4.9.1-1.3 0-2.2.2-3 .5-.7.3-1.4.7-2.1 1.4-.7.7-1.1 1.4-1.4 2.1-.3.8-.5 1.7-.5 3-.1 1.2-.1 1.6-.1 4.9 0 3.3 0 3.7.1 4.9.1 1.3.3 2.1.6 2.9.2.8.6 1.5 1.3 2.2.7.7 1.3 1.1 2.1 1.4.8.3 1.6.5 2.9.6h5s3.7 0 4.9-.1c1.3-.1 2.1-.3 2.9-.6.8-.3 1.5-.7 2.1-1.4.7-.7 1.1-1.3 1.4-2.1.3-.8.5-1.6.6-2.9.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.1-.6-2.9-.2-.8-.6-1.5-1.3-2.2-.7-.7-1.3-1.1-2.1-1.4-.8-.3-1.6-.5-2.9-.6h-5zM12 5.8c-3.4 0-6.2 2.8-6.2 6.2s2.8 6.2 6.2 6.2 6.2-2.8 6.2-6.2-2.8-6.2-6.2-6.2zm0 10.2c-2.2 0-4-1.8-4-4s1.8-4 4-4 4 1.8 4 4-1.8 4-4 4z"/><circle class="st0" cx="18.4" cy="5.6" r="1.4"/></symbol>
+<symbol id="linkedin" viewBox="0 0 24 24"><path d="M22.2 0h-20.4c-1 0-1.8.8-1.8 1.7v20.7c0 1 .8 1.7 1.8 1.7h20.5c1 0 1.8-.8 1.8-1.7v-20.7c-.1-.9-.9-1.7-1.9-1.7zm-14.9 20.2h-3.6v-10.9h3.6v10.9zm-1.8-12.4c-1.2 0-2-.8-2-1.9 0-1.1.8-1.9 2.1-1.9 1.2 0 2 .8 2 1.9-.1 1.1-.9 1.9-2.1 1.9zm14.8 12.4h-3.6v-5.8c0-1.5-.5-2.5-1.8-2.5-1 0-1.6.7-1.9 1.3-.1.2-.1.6-.1.9v6.1h-3.6v-10.9h3.6v1.5c.5-.7 1.3-1.8 3.3-1.8 2.4 0 4.2 1.6 4.2 4.9v6.3z"/></symbol>
+<symbol id="medium" viewBox="0 0 24 24"><path d="M7.601 5.357c-2.305-1.137-4.6-2.294-6.899-3.444-.577-.289-.694-.216-.694.43-.001 5.147.005 10.294-.008 15.441-.001.57.224.911.726 1.158 2.126 1.047 4.242 2.116 6.362 3.176l.326.151c.308.115.494-.016.562-.315.032-.14.02-.283.02-.438l.009-15.482c.002-.337-.091-.523-.404-.677zm15.983-.001c-2.369-1.184-4.74-2.366-7.101-3.565-.368-.187-.559-.114-.769.231-1.431 2.356-2.876 4.703-4.328 7.046-.144.233-.15.4-.004.637 1.605 2.593 3.198 5.193 4.795 7.79l.238.36.107-.138c2.426-3.948 4.848-7.898 7.283-11.841.204-.33.01-.405-.221-.52zm.413 16.185c.001-4.694.001-9.387.001-14.081v-.38l-.076-.023-7.257 11.812.257.156c2.095 1.05 4.191 2.098 6.287 3.146l.219.097c.314.112.489-.032.554-.329.027-.128.015-.265.015-.398zm-15.273-14.526c-.001 2.547.003 5.093-.008 7.64-.001.234.105.321.285.411 2.204 1.1 4.405 2.205 6.608 3.307l.333.12-7.183-11.692-.035.214z"/></symbol>
+<symbol id="pinterest" viewBox="0 0 24 24"><path d="M5.9 13.9c1.2-2-.4-2.5-.6-4-1-6.1 7.1-10.2 11.4-6 2.9 2.9 1 12-3.7 11-4.6-.9 2.2-8.1-1.4-9.5-3-1.1-4.6 3.6-3.2 5.9-.8 4-2.5 7.7-1.8 12.7 2.3-1.7 3.1-4.8 3.7-8.1 1.2.7 1.8 1.4 3.3 1.5 5.5.4 8.6-5.4 7.8-10.7-.7-4.7-5.5-7.1-10.6-6.6-4.1.4-8.1 3.7-8.3 8.3-.1 2.8.7 4.9 3.4 5.5z"/></symbol>
+<symbol id="stumbleupon" viewBox="0 0 24 24"><path d="M13.3 9.6l1.6.8 2.5-.8v-1.4c0-3-2.4-5.4-5.4-5.4s-5.4 2.4-5.4 5.4v7.5c0 .7-.6 1.3-1.3 1.3s-1.3-.6-1.3-1.3v-3.2h-4v3.2c0 3 2.4 5.4 5.4 5.4s5.4-2.4 5.4-5.4v-7.5c0-.7.6-1.3 1.3-1.3s1.3.6 1.3 1.3l-.1 1.4zm6.6 2.9v3.2c0 .7-.6 1.3-1.3 1.3s-1.3-.6-1.3-1.3v-3.2l-2.5.8-1.6-.8v3.2c0 3 2.4 5.4 5.4 5.4s5.4-2.4 5.4-5.4v-3.2h-4.1z"/></symbol>
+<symbol id="twitter" viewBox="0 1 24 23"><path d="M21.5 7.6v.6c0 6.6-5 14.1-14 14.1-2.8 0-5.4-.8-7.6-2.2l1.2.1c2.3 0 4.4-.8 6.1-2.1-2.2 0-4-1.5-4.6-3.4.3.1.6.1.9.1.5 0 .9-.1 1.3-.2-2.1-.6-3.8-2.6-3.8-5 .7.4 1.4.6 2.2.6-1.3-.9-2.2-2.4-2.2-4.1 0-.9.2-1.8.7-2.5 2.4 3 6.1 5 10.2 5.2-.1-.4-.1-.7-.1-1.1 0-2.7 2.2-5 4.9-5 1.4 0 2.7.6 3.6 1.6 1-.3 2.1-.7 3-1.3-.4 1.2-1.1 2.1-2.2 2.7 1-.1 1.9-.4 2.8-.8-.6 1.1-1.4 2-2.4 2.7z"/></symbol>
+<symbol id="tumblr" viewBox="0 0 23 23"><path d="M12.573 4.94v-4.94h-3.188c-.072.183-.11.4-.11.622-.034.107-.072.184-.072.293-.328 1.829-1.28 3.11-2.892 3.807-.476.218-.914.253-1.39.218v3.987h2.342c.039 5.603.039 8.493.039 8.64v.332c.294 2.449 1.573 3.914 3.843 4.463.914.257 1.901.366 2.892.366 1.279-.036 2.525-.256 3.771-.659v-4.685c-.731.22-1.395.402-1.977.583-1.135.333-2.087.113-2.857-.619-.073-.11-.183-.257-.221-.403-.106-.586-.178-1.206-.178-1.795v-6.222h5.083v-3.988h-5.085z"/></symbol>
+<symbol id="xing" viewBox="0 0 24 24"><path d="M3.647 4.74c-.208 0-.384.073-.472.216-.091.148-.077.338.02.531l2.34 4.051v.02l-3.678 6.49c-.096.191-.091.383 0 .531.088.142.244.236.452.236h3.461c.518 0 .767-.349.944-.669l3.737-6.608-2.38-4.15c-.172-.307-.433-.649-.964-.649h-3.46zm14.542-4.74c-.517 0-.741.326-.927.659l-7.702 13.658 4.918 9.023c.172.307.437.659.967.659h3.457c.208 0 .371-.079.459-.221.092-.148.09-.343-.007-.535l-4.88-8.915v-.023l7.664-13.551c.096-.191.098-.386.007-.534-.088-.142-.252-.221-.46-.221h-3.496z"/></symbol>
+<symbol id="youtube" viewBox="0 0 24 24"><path d="M23.6 6.3c-.3-1.2-1.4-2.2-2.6-2.3-3-.3-6-.3-9-.3s-6 0-9 .3c-1.2.1-2.3 1.1-2.6 2.3-.4 1.8-.4 3.8-.4 5.7 0 1.9 0 3.9.4 5.7.3 1.2 1.4 2.2 2.6 2.3 3 .3 6 .3 9 .3s6 0 9-.3c1.3-.1 2.3-1.1 2.6-2.4.4-1.7.4-3.7.4-5.6 0-1.9 0-3.9-.4-5.7zm-14.1 9v-6.6l6.5 3.3-6.5 3.3z"/></symbol>
+</svg><nav class="side small">
+<div class="navigation">
+<ul></ul>
+</div>
+</nav>
+<nav class="panel top small fixed forceMobileView" style="background: rgb(0, 0, 0, 0.2);">
+<div class="sections desktop">
+<div class="left">
+<a href="../index.html" title="Brand Name">
+<svg style="width:187px;height:41px">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
+</svg>
+</a>
+</div>
+<div class="right">
+<ul class="menu uppercase">
+<li><a href="#leprogramme">Le programme</a></li>
+<li><a href="#sessions-dates">Les dates</a></li>
+<li><a href="#faq">Faq</a></li>
+</ul>
+<a class="button menuButton round orange uppercase" href="#inscription">Je m'inscris</a>
+</div>
+</div>
+<div class="sections compact hidden">
+<div class="left">
+<a href="#" title="Brand Name">
+<svg style="width:107px;height:31px">
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use>
+</svg>
+</a>
+</div>
+<div class="right">
+<span class="button actionButton sidebarTrigger" data-sidebar-id="1">
+<svg>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#menu"></use>
+</svg>
+</span>
+</div>
+</div>
+</nav><nav class="sidebar deepPurple" data-sidebar-id="1">
+<div class="close"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use></svg></div>
+<div class="content">
+<a href="#" title="Brand Name" class="logo"><svg width="120" height="50"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo"></use></svg></a>
+<ul class="mainMenu uppercase">
+<li><a href="#leprogramme">Le programme</a></li>
+<li><a href="#sessions-dates">Les dates</a></li>
+</ul>
+<ul class="social">
+<li><a target="_blank" href="https://www.facebook.com/ShuttleCoder/"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use></svg></a></li>
+<li><a target="_blank" href="https://twitter.com/ShuttleCoder"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use></svg></a></li>
+</ul>
+</div>
+</nav><section class="slide fade kenBurns">
+<div class="content">
+<div class="container">
+<div class="wrap">
+<div class="fix-10-12">
+<h1 class="huge ae-1">Formation développeur iOS/Swift</h1>
+<div class="ae-2">
+<p class="hero">Embarquez pour 9 semaines intensives et devenir développeur d'application mobile.</p>
+</div>
+<a class="button orange ae-5 fromCenter cropBottom" href="#leprogramme">Le programme</a>
+</div>
+</div>
+</div>
+</div>
+<div class="background" style="background-image:url(../assets/img/bootcamp-classe.jpg)"></div>
+</section><section class="slide fade kenBurns">
+<div class="content">
+<div class="container">
+<div class="wrap">
+<div class="fix-10-12 toCenter">
+<h2 class="ae-1">Un seul objectif : faire de vous un développeur compétent d'application mobile sur iOS</h2>
+<div class="ae-2">
+<p>Deux mois intenses vers une nouvelle vie. L'aventure Shuttle Coder c'est une formation vivante où les élèves apprennent ensemble le métier de développeur <br>et c'est aussi…</p>
+</div>
+</div>
+<div class="fix-12-12">
+<ul class="flex grid-49 later equal">
+<li class="col-4-12">
+<div class="fix-4-12">
+<h2 class="huge ae-3">360</h2>
+<h3 class="equalElement ae-4">heures de formation</h3>
+<p class="small ae-5">Une formation complète pour maitrisez Swift et l'environnement de développement Apple. Apprendre à designer, créer et vendre vos applications.</p>
+</div>
+</li>
+<li class="col-4-12">
+<div class="fix-4-12 ae-4 fromCenter">
+<h2 class="huge">+10</h2>
+<h3 class="equalElement ae-5">projets à réaliser</h3>
+<p class="small ae-6">Le bootcamp, c'est plus de 10 projets sur des thèmes différents. Pour vous permettre de voir les innombrables possibilités qui s'offrent à vous. Réalité Augmentée, Machine Learning…</p>
+</div>
+</li>
+<li class="col-4-12">
+<div class="fix-4-12 ae-5 fromCenter">
+<h2 class="huge">1</h2>
+<h3 class="equalElement ae-6">projet personnel, le vôtre</h3>
+<p class="small ae-7">La création de votre projet. Du prototypage au développement, 2 semaines où vous serez autonome.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="background" style="background-image:url(assets/img/img-49.jpg)"></div>
+</section><section class="slide" data-name="leprogramme">
+<div class="content">
+<div class="container">
+<div class="wrap">
+<div class="fix-12-12">
+<h2 class="huge ae-1 fromCenter margin-bottom-6">La formation en détails</h2>
+<div class="left cropBottom ae-3">
+    <h3 class="uppercase">L'apprentissage par la pratique</h3>
+    <p class="light">Vous apprendrez la programmation en pratiquant. Tous les jours nous commençons avec la partie théorique et un live code des formateurs projeté sur grand écran. On passe ensuite par un quizz pour vérifier que vous avez assimilé les notions du matin et on poursuit avec un challenge en binôme sur le thème du jour.</p>
+    <p class="light">Vous apprendrez les bases de la programmation avec Swift, un langage moderne, simple et puissant…<br>La réalisation de l'interface utilisateur de vos applications dans Xcode, travailler avec les contrôleurs de vue (View controller), concevoir des interfaces utilisateur adaptatives Auto Layout, et bien plus encore.</p>
+    <h3 class="uppercase">Des classes à taille humaine</h3>
+    <p class="light">La taille de chaque session est réduite afin de maximiser les interactions entre les instructeurs et les étudiants. Chaque bootcamp est <strong>limité à 16 places</strong>.</p>
+    <h3 class="uppercase">Apportez votre Mac</h3>
+    <p class="light">Tout ce dont vous avez besoin est d'<strong>apporter votre propre Mac</strong> avec la <strong>dernière version de Xcode installée</strong> pour assister à la formation. Vous ne savez pas comment installer Xcode ? Pas de soucis, nous vous fournirons un guide simple pour vous aider à démarrer avant la formation et <strong>la première heure de la formation est consacrée à l'installation des outils</strong>.</p></div>
+<a class="button small rounded stroke orange ae-5 fromCenter cropBottom" href="#leprogramme">Une journée type chez Shuttle Coder</a>
+</div>
+</div>
+</div>
+</div>
+<div class="background" style="background-image:url(../assets/img/img-25.jpg)"></div>
+</section><section class="slide fade kenBurns">
+<div class="content">
+<div class="container">
+<div class="wrap">
+<div class="fix-12-12">
+<h2 class="ae-1 fromLeft margin-bottom-3">A qui s'adresse cette formation ?</h2>
+<ul class="flex later margin-top-4 left">
+<li class="col-6-12 box-89">
+<div class=" ae-4 fromLeft">
+    <p class="cropBottom light">La formation est <strong>conçue pour les débutants</strong> qui souhaitent apprendre le développement d'applications Swift et iOS. <strong>Même si vous n'avez aucune expérience en programmation</strong>, vous apprendrez à créer des application pour iPhone et iPad, et à comprendre les bases de Swift</p>
+    <p class="cropBottom light margin-top-3">Tout le monde peut postuler! Les développeurs avancés en Objective-C ou Swift pourront suivre le bootcamp un peu plus rapidement, mais la formation est conçue essentiellement pour les parfaits débutants.</p></div>
+</li>
+<li class="col-6-12">
+    <p class="light">…quelques exemples de profils :</p><ul class="flex fromBottomRight fixedSpaces">
+<li class="col-6-12 ae-6">
+<h3>Débutants</h3>
+</li>
+<li class="col-6-12 ae-6">
+<h3>…et faux-débutants</h3>
+</li>
+<li class="col-6-12 ae-7">
+<h3>Entrepreneurs Tech</h3>
+</li>
+<li class="col-6-12 ae-8">
+<h3>Founders</h3>
+</li>
+<li class="col-6-12 ae-9">
+<h3>Designers</h3>
+</li>
+<li class="col-6-12 ae-9">
+<h3>Demandeurs d'emploi</h3>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="background" style="background-image:url(assets/img/img-89.jpg)"></div>
+</section><section class="slide fade kenBurns whiteSlide">
+<div class="content">
+<div class="container">
+<div class="wrap">
+<div class="fix-10-12 toCenter">
+<h1 class="ae-1 margin-bottom-6">Ce que vous allez apprendre</h1>
+</div>
+<div class="fix-12-12">
+<ul class="grid grid-77 later equal left">
+<li class="col-4-12">
+<a href="#" class="box-67 ae-5 fromCenter">
+<div class="thumbnail-67">
+<img src="../assets/img/git-banner.jpg" alt="git banner" class="wide"/>
+</div>
+<div class="details-77 equalElement">
+<div class="table wide">
+<div class="cell">
+<div class="title-67">Git</div>
+<div class="description-77">Vous apprendrez à travailler en équipe et versionner votre travail avec git</div>
+<div class="author-77">
+<div class="name-77 right">Semaine 1</div>
+</div>
+</div>
+</div>
+</div>
+</a>
+</li>
+<li class="col-4-12">
+<a href="#" class="box-67 ae-3 fromCenter">
+<div class="thumbnail-67">
+<img src="../assets/img/design-pattern-banner.jpg" alt="Architecture logicielle" class="wide"/>
+</div>
+<div class="details-77 equalElement">
+<div class="table wide">
+<div class="cell">
+<div class="title-77">Architecture logicielle</div>
+<div class="description-77">Plongez dans la programmation orientée-objet et orientée-protocle. Apprenez à utiliser le modèle du MVC.</div>
+<div class="author-77">
+<div class="name-77 right">Semaine 2</div>
+</div>
+</div>
+</div>
+</div>
+</a>
+</li>
+<li class="col-4-12">
+<a href="#" class="box-67 ae-6 fromCenter">
+<div class="thumbnail-67">
+<img src="../assets/img/tdd-banner.jpg" alt="tdd banner" class="wide"/>
+</div>
+<div class="details-77 equalElement">
+<div class="table wide">
+<div class="cell">
+<div class="title-77">TDD, les tests unitaires</div>
+<div class="description-77">Vous allez apprendre à coder comme dans les meilleurs startups, dont le développement par les tests.</div>
+<div class="author-77">
+<div class="name-77 right">Semaine 3</div>
+</div>
+</div>
+</div>
+</div>
+</a>
+</li>
+<li class="col-4-12">
+<a href="#" class="box-67 ae-5 fromCenter">
+<div class="thumbnail-67">
+<img src="../assets/img/cocoapods-banner.jpg" alt="CocoaPods banner" class="wide"/>
+</div>
+<div class="details-77 equalElement">
+<div class="table wide">
+<div class="cell">
+<div class="title-77">CocoaPods</div>
+<div class="description-77">Apprenez à gérer des bibliothèques tierces à l'aide de CocoaPods</div>
+<div class="author-77">
+<div class="name-77 right">Semaine 3</div>
+</div>
+</div>
+</div>
+</div>
+</a>
+</li>
+<li class="col-4-12">
+<a href="#" class="box-67 ae-4 fromCenter">
+<div class="thumbnail-67">
+<img src="../assets/img/ar-exemple.jpg" alt="augmented reality banner" class="wide"/>
+</div>
+<div class="details-77 equalElement">
+<div class="table wide">
+<div class="cell">
+<div class="title-77">La Réalité Augmentée</div>
+<div class="description-77">Créer et animer des objets 2D et 3D, voir de véritables mondes dans l'espace en utilisant ARKit, SpriteKit et SceneKit.</div>
+<div class="author-77">
+<div class="name-77 right">Semaine 5</div>
+</div>
+</div>
+</div>
+</div>
+</a>
+</li>
+<li class="col-4-12">
+<a href="#" class="box-67 ae-6 fromCenter">
+<div class="thumbnail-67">
+<img src="../assets/img/core-ml-banner.jpg" alt="Machine Learning" class="wide"/>
+</div>
+<div class="details-77 equalElement">
+<div class="table wide">
+<div class="cell">
+<div class="title-77">Machine Learning</div>
+<div class="description-77">Mettez un peu d'intelligence dans vos applications.</div>
+<div class="author-77">
+<div class="name-77 right">Semaine 5</div>
+</div>
+</div>
+</div>
+</div>
+</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="background" style="background-image:url(assets/img/img-77.jpg)"></div>
+</section><section class="slide fade kenBurns">
+<div class="content">
+<div class="container">
+<div class="wrap">
+<div class="fix-10-12 toCenter">
+<h1 class="ae-1">Des outils et workflows puissants pour le développement d'apps sur iOS</h1>
+</div>
+<div class="fix-10-12">
+<ul class="grid later">
+<li class="col-4-12">
+<img class="ae-3 fromCenter margin-bottom-3 margin-top-5" src="../assets/img/xcode.png" height="200" alt="Xcode logo"/>
+<div class="fix-3-12 ae-4">
+    <h3 class="center">Xcode 10</h3><p class="small center">Vous vous familiariserez avec les outils de développement pour iOS qui incluent <strong>Xcode</strong>, <strong>Interface Builder</strong> pour créer vos interfaces visuelles et <strong>Playgrounds</strong></p>
+</div>
+</li>
+<li class="col-4-12">
+<img class="ae-6 fromCenter margin-bottom-3 margin-top-5" src="../assets/img/swift-logo.png" height="200" alt="Apple Swift logo"/>
+<div class="fix-3-12 ae-7">
+    <h3 class="center">Swift 4.x</h3><p class="small center">Apprenez le développement d'apps sur iOS avec le nouveau langage de programmation moderne d'Apple. On utilisera la dernière version de Swift.</p>
+</div>
+</li>
+<li class="col-4-12">
+<img class="ae-8 fromCenter margin-bottom-3 margin-top-5" src="../assets/img/git-tower3-logo.png" height="200" alt="App 3"/>
+<div class="fix-3-12 ae-9">
+    <h3 class="center">Tower</h3><p class="small center">Vous apprendrez à versionner vos projets avec <strong>git</strong> et <strong>Tower</strong> l'un des meilleurs client git sur Mac, et à collaborer en utilisant des pull-requests sur <strong>GitHub</strong></p>
+</div>
+</li>
+</ul>
+</div>
+<div class="fix-10-12">
+<ul class="grid later">
+<li class="col-4-12">
+<img class="ae-3 fromCenter margin-bottom-3 margin-top-5" src="../assets/img/sketch-logo.png" height="200" alt="Sketchapp logo"/>
+<div class="fix-3-12 ae-4">
+    <h3 class="center">Sketch</h3><p class="small center">Vous utiliserez Sketch, l'outil de conception le plus populaire pour prototyper l'interface utilisateur (UI) de vos applications.</p>
+</div>
+</li>
+<li class="col-4-12">
+<img class="ae-6 fromCenter margin-bottom-3 margin-top-5" src="../assets/img/slack-logo.png" height="200" alt="Slack logo"/>
+<div class="fix-3-12 ae-7">
+    <h3 class="center">Slack</h3><p class="small center">L'outil collaboratif pour communiquer en équipe. Idéal pour organiser et sécuriser les conversations et garder les historiques.</p>
+</div>
+</li>
+<li class="col-4-12">
+<img class="ae-8 fromCenter margin-bottom-3 margin-top-5" src="../assets/img/test-flight.png" height="200" alt="Test Flight logo"/>
+<div class="fix-3-12 ae-9">
+    <h3 class="center">Test Flight</h3><p class="small center">Vous utiliserez Test Flight pour mettre votre projet personnel entre les mains de vos futurs utilisateurs, collecter leurs remarques et émliorer votre app.</p>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="background" style="background-image:url(assets/img/img-45.jpg)"></div>
+</section><section class="slide whiteSlide">
+<div class="content">
+<div class="container">
+<div class="wrap">
+<div class="fix-12-12">
+<ul class="flex verticalCenter">
+<li class="col-6-12 left ae-1">
+<img class="macbook-61 margin-bottom-3" src="../assets/img/swift-on-macbook.png" data-action="zoom" width="1200" alt="Macbook Image"/>
+</li>
+<li class="col-6-12 left">
+<h1 class="ae-2">Pourquoi apprendre le langage Swift ?</h1>
+<div class="ae-3">
+<p>Swift est le nouveau langage de programmation d'Apple pour iOS. Il est facile à apprendre et accessible aux débutants. Plus important encore, c'est une compétence de plus en plus demandée. Ce bootcamp vous apprendra tous les éléments essentiels de Swift.</p>
+</div>
+<ul class="flex grid-61 later">
+<li class="col-6-12 ae-4">
+<i class="material-icons"></i>
+<h3>Les bases en Swift</h3>
+<p class="small">Apprenez la syntaxe de Swift et maitrisez les variables, tableaux, classes, structures, enumerations, etc.</p>
+</li>
+<li class="col-6-12 ae-5">
+<i class="material-icons"></i>
+<h3>Playgrounds</h3>
+<p class="small">Vous apprendrez à utiliser Playgrounds, un nouvel outil de Xcode, pour tester votre code Swift et accélérer votre apprentissage.</p>
+</li>
+<li class="col-6-12 ae-6">
+<i class="material-icons"></i>
+<h3>Optionnels</h3>
+<p class="small">Vous travaillerez avec les optionnels, un nouveau concept de programmation introduit dans Swift.</p>
+</li>
+<li class="col-6-12 ae-7">
+<i class="material-icons"></i>
+<h3>POO et la POP</h3>
+<p class="small">Vous découvrirez la Programmation Orientée Objet et la Programmation Orientée Protocole.</p>
+</li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide">
+<div class="content">
+<div class="container">
+<div class="wrap">
+<div class="fix-12-12">
+<ul class="flex verticalCenter reverse">
+<li class="col-6-12 left">
+<h1 class="ae-2">Designer les interfaces utilisateur de vos apps</h1>
+<div class="ae-3"><p>Personne ne vous apprendra à designer des apps comme nous le faisons à Shuttle Coder.</p></div>
+<ul class="flex grid-62 later">
+<li class="col-6-12 ae-4">
+<h3>Prototyper son app</h3>
+<p class="small">Vous apprendrez à utiliser Sketch et à prototyper vos apps.</p>
+</li>
+<li class="col-6-12 ae-5">
+<h3>Auto layout</h3>
+<p class="small">Vous travaillerez avec Auto Layout pour créer des interfaces qui s'adaptent à toutes les tailles d'écran</p>
+</li>
+<li class="col-6-12 ae-6">
+<h3>Icones d'app</h3>
+<p class="small">Vous comprendrez à designer vos icones et comment intégrer des images</p>
+</li>
+<li class="col-6-12 ae-7">
+<h3>Stack Views</h3>
+<p class="small">Vous apprendrez à utiliser les stack views d'iOS pour organiser vos user interfaces</p>
+</li>
+</ul>
+</li>
+<li class="col-6-12 left ae-1 image-62">
+<img class="macbook-62 margin-bottom-3" src="../assets/img/app-design-macbook.png" data-action="zoom" width="1200" alt=""/>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="background" style="background-image:url(../assets/img/ui-design.jpg)"></div>
+</section><section class="slide fade kenBurns">
+<div class="content">
+<div class="container">
+<div class="wrap">
+<div class="fix-12-12">
+<ul class="flex verticalCenter reverse">
+<li class="col-7-12 left">
+<h2 class="ae-1 fromLeft">Créez votre CV développeur</h2>
+<div class="ae-2 fromLeft">
+<p>Apprendre par la pratique est la meilleure façon d'apprendre la programmation. En 9 semaines seulement vous allez coder des applications natives iOS à partir de zéro, dont votre projet. A la fin de la formation vous aurez un sérieux portfolio pour démarcher des entreprises.</p>
+</div>
+</li>
+<li class="col-5-12 cell-28 ae-1">
+<img src="../assets/img/iphone-dark-app.png" class="iphone-28" alt="iPhone Thumbnail" data-action="zoom"/>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="background" style="background-image:url(../assets/img/github-contribution-graph.jpg)"></div>
+</section><section class="slide fade kenBurns" data-name="sessions-dates">
+<div class="content">
+<div class="container">
+<div class="wrap">
+<div class="fix-10-12 toCenter">
+<h1 class="ae-1">Vous êtes dispo ?</h1>
+<div class="ae-2 fix-9-12"><p>Toutes les dates de nos formations</p></div>
+</div>
+<div class="fix-12-12">
+<ul class="grid grid-77 later equal left">
+<li class="col-4-12">
+<a href="#" class="box-77 ae-3 fromCenter">
+<div class="thumbnail-77" data-popup-id="77">
+<img src="../assets/img/paris.jpg" alt="Picture" class="wide"/>
+</div>
+<div class="details-77 equalElement">
+<div class="table wide">
+<div class="cell">
+<div class="title-77">Paris</div>
+    <ul class="description-77 center">
+      <li>15 octobre 2018 — 14 décembre 2018</li>
+      <li>14 janvier 2019 — 15 mars 2019</li>
+      <li>14 mai 2018 — 15 juillet 2019</li>
+      <li>15 octobre 2019 — 14 décembre 2019</li>
+    </ul><div class="author-77">
+<img width="30" class="avatar-77 fromCenter" src="../assets/img/sizam.jpg" alt="Paul Rand">
+<div class="name-77">Dominique Sizam</div>
+<p class="specs-77">Développeur mobile iOS/Swift</p>
+</div>
+</div>
+</div>
+</div>
+</a>
+</li>
+<li class="col-4-12">
+<a href="#" class="box-77 ae-4 fromCenter">
+<div class="thumbnail-77">
+<img src="../assets/img/guadeloupe.jpg" alt="Picture" class="wide"/>
+</div>
+<div class="details-77 equalElement">
+<div class="table wide">
+<div class="cell">
+<div class="title-77">Guadeloupe</div>
+    <ul class="description-77 center">
+      <li class="uppercase">Bientôt disponible</li>
+      <li>—</li>
+      <li>—</li>
+      <li>—</li>
+    </ul><div class="author-77">
+<img width="30" class="avatar-77 fromCenter" src="../assets/img/sizam.jpg" alt="Dominique Sizam">
+<div class="name-77">Dominique Sizam</div>
+<p class="specs-77">Développeur mobile iOS/Swift</p>
+</div>
+</div>
+</div>
+</div>
+</a>
+</li>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="background" style="background-image:url(../assets/img/img-45.jpg)"></div>
+</section><section class="slide whiteSlide" data-name="inscription">
+<div class="content">
+<div class="container">
+<div class="wrap">
+<h2 class="ae-1">Prêt à vous inscrire ?</h2>
+<div class="ae-2">
+    <p>Toutes nos formations peuvent être financées grâce à de nombreux dispositifs : Pôle Emploi, OPCA, régions, etc. Les coûts de la formation peuvent être pris en charge partiellement ou intégralement sur étude de votre dossier.</p></div>
+<div class="fix-10-12">
+<ul class="flex later verticalCenter">
+<li class="col-6-12">
+<div class="fix-4-12">
+<div class="pad shadow tint-86 ae-3">
+<div class="price sourceSans ae-5"><span class="currency sourceSans">€</span>4000</div>
+<div class="ae-7 done">
+<p class="small">
+<strike>Prix normal: €4500</strike>
+</p>
+</div>
+<h3 class="big ae-5">Formation sur Paris</h3>
+    <ul>
+      <li>
+        <p>Accès exclusif à notre slack</p>
+      </li>
+      <li>
+        <p>Coaching individuel 1h/mois pendant 3 mois</p>
+      </li>
+      <li>
+        <p>
+          —<br>—</p>
+      </li>
+    </ul><button class="button teal crop wide ae-7 popupTrigger" data-popup-id="redirect-form-inscription">Postulez à paris</button>
+</div>
+</div>
+</li>
+    <li class="col-6-12"><div class="fix-4-12">
+<div class="pad shadow ae-4">
+<div class="price sourceSans ae-5"><span class="currency sourceSans">€</span>8500</div>
+<div class="ae-7 done">
+<p class="small">
+<strike>Prix normal: €10000</strike>
+</p>
+</div>
+<h3 class="big ae-6">Formation sur Paris</h3>
+<div class="ae-7">
+      <ul>
+        <li>
+          <p>Accès exclusif à notre slack</p>
+        </li>
+        <li>
+          <p>Coaching individuel 1h/mois pendant 12 mois</p>
+        </li>
+        <li>
+          <p>Votre place réservée dans les workshops</p>
+        </li>
+      </ul></div>
+<button class="button orange crop wide ae-8 popupTrigger" data-popup-id="redirect-form-inscription"">Je postule</button>
+</div>
+</div>
+    </li></ul>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide" data-name="faq">
+<div class="content">
+<div class="container">
+<div class="wrap">
+<div class="fix-12-12">
+<div class="fix-10-12 toCenter">
+<h1 class=" big ae-1">FAQ</h1>
+    <div class="ae-2">
+      <p>Vous avez certainement de nombreuses questions. Nous avons pris la liberté de répondre à plusieurs d'entre elles ci-dessous. Si vous souhaitez en discuter en personne, n'hésitez pas à nous contacter directement.</p>
+    </div></div>
+<ul class="flex left margin-top-6">
+<li class="col-12-12 margin-bottom-1 ae-5">
+<h3 class="sourceSans">Je suis un vrai débutant, est-ce que le programme est fait pour moi ?</h3>
+<p class="small">Aucune connaissance du code n'est requise pour venir à Shuttle Coder, mais vous devez avoir 3 qualités essentielles : de la motivation, de la curiosité et un bon sens relationnel.</p>
+</li>
+    <li class="col-12-12 margin-bottom-1">
+      <h3 class="sourceSans">Comment puis-je me préparer au mieux avant le début de la formation ?</h3>
+      <p class="small">Nous vous conseillons de commencer votre préparation grâce à notre tuto <a class="underline-orange" target="_blank" href="https://ondemand.shuttlecoder.academy/p/preparation-au-bootcamp-ios-swift/">Bien démarrer le Bootcamp iOS/Swift</a>, vous pourrez poursuivre votre préparation grâce à notre chaine Youtube avec <a class="underline-orange" target="_blank" href="https://www.youtube.com/playlist?list=PLcgJ_X4Y_DwWXXZJpKW72jsmqhcWwk5r7">cette playlist</a>.</p>
+    </li>
+    <li class="col-12-12 margin-bottom-1">
+      <h3 class="sourceSans">Shuttle Coder est-il un organisme de formations ?</h3>
+      <p class="small">Shuttle Coder est un organisme de formation, les élèves peuvent demander à se faire rembourser une partie ou la totalité des frais de la formation (ils doivent cependant avancer les frais). Les élèves peuvent aussi se faire financer partiellement ou intégralement sur étude de leur dossier.</p>
+    </li>
+    <li class="col-12-12 margin-bottom-1">
+      <h3 class="sourceSans">OPCA</h3>
+      <p class="small">Nous sommes enregistrés au Datadock et donc notre formation est validée par les OPCA. Vous pouvez donc, en fonction de votre branche d'activité contacter le AFDAS, FAFIEC, FIFPL, FAFIEH, FONGECIF… et leur demander le financement de la formation. Vous pouvez utiliser le code NAF qui est sur votre fiche de paie pour savoir de quelle OPCA vous dépendez <a class="underline-orange" href="http://www.le-compte-personnel-formation.com/trouver-mon-opca-pour-mon-compte-formation-avec-le-code-naf-ou-ape/" target="_blank">ici</a>.</p>
+    </li>
+    <li class="col-12-12 margin-bottom-1">
+      <h3 class="sourceSans">Pôle Emploi / Obtention d'un devis</h3>
+      <p class="small">Concernant les financements Pole Emploi, si vous n'en avez pas encore discuté avec votre conseiller je vous invite à lui présenter votre projet professionnel et les raisons pour lesquelles vous voudriez faire Shuttle Coder avant de lui amener un devis. Si c'est votre conseiller Pole Emploi qui vous a demandé le devis nous serons ravis de vous en faire un si vous êtes sélectionnés.</p>
+    </li>
+    <li class="col-12-12 margin-bottom-1">
+      <h3 class="sourceSans">Paiement / Échéancier</h3>
+      <p class="small">Nous demandons à la signature du contrat un acompte de 30%, un second versement de 30% à la moitié de la formation et enfin le solde de 40% à la fin de cette dernière.</p>
+    </li>
+    <li class="col-12-12 margin-bottom-1">
+      <h3 class="sourceSans">J'ai moins de 18 ans, puis-je postuler ?</h3>
+      <p class="small">Cette formation est exclusivement réservée aux majeurs. Cependant nous vous conseillons de vous tenir informé de la sortie de nos nouveaux projets.</p>
+    </li>
+    <li class="col-12-12 margin-bottom-1">
+      <h3 class="sourceSans">Est-ce vous faîtes du TDD (Test Driven Development) ?</h3>
+      <p class="small">Oui ! Chaque jour, après le cours, vous travaillerez avec la méthodologie <a class="underline-orange" href="" target="_blank">red / green / refactor</a> sur des exercices et un challenge. Chaque exercice vous permet de coder dans le contexte du développement par les tests. Le soir, en livecode, la classe démarre d'une feuille blanche et utilise TDD pour résoudre le challenge proposé.</p>
+    </li>
+    <li class="col-12-12 margin-bottom-1">
+      <h3 class="sourceSans">Pourquoi enseigner Swift ?</h3>
+      <p class="small">L'objectif de cette formation est de vous donner toutes les compétences dont vous pourriez avoir besoin afin de lancer votre produit / application mobile. Que vous souhaitiez intégrer une équipe de développeur ou lancer votre startup, l'idée est surtout de vous transmettre les bons outils afin d'être autonome le plus rapidement possible. C'est pourquoi nous avons fait le choix d'enseigner Swift et les SDKs.<br>Swift est un langage moderne et puissant. Sa syntaxe est nettement plus facile à apprendre que la plupart de ses concurrents tels que Java, Objective-C, JavaScript par exemple. Il permet de programmer des applications sur iOS, macOS, tvOS, watchOS ainsi que Linux… et bientôt Android.<br>Donc à l'issue du bootcamp vous aurez de solides bases pour développer sur les plateformes d'Apple et plus tard développer pour Android ou faire du développement Back-End.</p>
+    </li>
+    <li class="col-12-12 margin-bottom-1">
+      <h3 class="sourceSans">Que serais je capable de faire au bout des 9 semaines ?</h3>
+      <p class="small">Vous aurez acquis la compétence de développeur junior d'application mobile pour iOS. Cela veut dire que vous serez capable de prototyper rapidement vos idées en créant de manière autonome une application native pour la plateforme iOS. Vous saurez comment intégrer Siri à vos applications et les rendre plus intelligentes grâce au Machine Learning, créer des objets en Réalité Augmentée… Vous aurez appris les bonnes pratiques de développement utilisées par les meilleures startups.<br>Vous aurez alors le choix : continuer votre projet entrepreneurial, ou bien candidater comme junior developer dans une startup ou une société Grand compte !</p>
+    </li>
+    <li class="col-12-12 margin-bottom-1">
+      <h3 class="sourceSans">Est-ce que je dois venir avec mon ordi ?</h3>
+      <p class="small">Oui, tous les élèves doivent avoir un ordinateur portable. Nous utiliserons Mac OS X et travaillerons avec Xcode l'environnement de développement d'Apple.<br>⚠️ Les Surfaces ou les iPads sont des tablettes, pas des ordinateurs. Il est impossible de suivre la formation avec un tel appareil.</p>
+    </li>
+    <li class="col-12-12 margin-bottom-1">
+      <h3 class="sourceSans">J’ai plus de 40 ans, puis-je postuler ?</h3>
+      <p class="small">Il n'y a pas d'âge pour apprendre la programmation. Tout dépend uniquement de votre curiosité et de votre motivation !</p>
+    </li>
+    <li class="col-12-12 margin-bottom-1">
+      <h3 class="sourceSans">Dois-je venir avec un projet ?</h3>
+      <p class="small">Durant les 9 semaines, une journée Pitch est organisée où chacun pourra présenter son projet. Les élèves se mettent ensuite en groupe durant les deux dernières semaines. Si vous n'avez pas de projet, vous pourrez intégrer le projet d'un autre élève.<br>Le but de ces deux semaines est avant tout pédagogique. L'objectif central reste d'apprendre à coder dans une équipe. Si à l'issue de votre pitch, vous n'avez pas trouvé suffisamment d'élèves pour former un groupe, vous ne pourrez pas travailler seul sur votre projet. Ce n'est pas grave, après ce bootcamp, vous êtes capables de coder vos idées en autonomie !</p>
+    </li>
+    <li class="col-12-12 margin-bottom-1">
+      <h3 class="sourceSans">Dois-je parler français ? anglais ? les deux ?</h3>
+      <p class="small">Toutes nos formations sont données en français. C'est-à-dire que le cours du matin et la correction en live-code du soir sont en français. Le matériel pédagogique (cours, exercices, etc.) ainsi que toute la documentation technique (Apple Developer Docs, etc.) est en anglais. Le rythme de la formation étant très soutenu, il vaut mieux maîtriser l'anglais.</p>
+    </li>
+    <li class="col-12-12 margin-bottom-1">
+      <h3 class="sourceSans">Proposez-vous le logement et la restauration ?</h3>
+      <p class="small">Nous ne proposons pas ce type de service. Le prix du programme Développeur iOS/Swift comprend uniquement les cours ainsi que l'accès à vie à notre plateforme de formation.</p>
+    </li>
+    <li class="col-12-12 margin-bottom-1">
+      <h3 class="sourceSans">Est-il possible de s'inscrire sur une liste d'attente ?</h3>
+      <p class="small">En cas de désistement nous vous ferons signe ! Il faut toutefois vous inscrire et suivre le processus de recrutement dans son intégralité.</p>
+    </li></ul>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide whiteSlide">
+<div class="content">
+<div class="container">
+<div class="wrap">
+<div class="fix-10-12">
+<h2 class="ae-1">Être averti des Bootcamps et des Workshops à venir.</h2>
+<div class="ae-2">
+<p>Inscrivez-vous sur notre newsletter. Nous vous informerons par e-mail chaque fois que nous organisons une nouvelle formation ou nouvel atelier/workshop.</p>
+</div>
+<form action="#" autocomplete="off">
+<input type="email" class="ae-5 fromLeft input-13" name="email" placeholder="Adresse email"/>
+<input type="submit" class="button red ae-5 fromRight" name="submit" value="Me tenir informé"/>
+</form>
+</div>
+</div>
+</div>
+</div>
+</section><section class="slide fade kenBurns">
+<div class="content">
+<div class="container">
+<div class="wrap">
+<div class="fix-10-12">
+<h1 class="huge ae-1">Où nous trouver.</h1>
+</div>
+<div class="fix-12-12 margin-top-6 box-57">
+<ul class="grid fixedSpaces">
+<li class="col-4-12 ae-3">
+<h2 class="small uppercase margin-bottom-0">Espace Hermès</h2>
+<p class="opaque playfair">10 Cité Joly, 75011 Paris</p>
+<h3 class="small uppercase margin-bottom-0">Comment s'y rendre</h3>
+<p class="opaque">A 5 min à pied du métro Père Lachaise</p>
+</li>
+<li class="col-4-12 ae-4">
+<h3 class="small uppercase margin-bottom-0">Pour nous contacter</h3>
+<p><a href="mailto:contact@shuttlecoder.academy">contact@shuttlecoder.academy</a></p>
+<h3 class="small uppercase margin-bottom-0">Pour nous appeler</h3>
+<p><a href="tel:+33652216173">(+33)0652216173</a></p>
+</li>
+<li class="col-4-12 ae-5">
+<h3 class="margin-bottom-1">Nous trouver sur les réseaux</h3>
+<ul class="social-circles">
+<li><a class="button roundButton facebook" target="_blank" href="https://www.facebook.com/ShuttleCoder/"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#facebook"></use></svg></a></li>
+<li><a class="button roundButton twitter" target="_blank" href="https://twitter.com/ShuttleCode"><svg><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#twitter"></use></svg></a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="background" style="background-image:url(../assets/img/training-room.jpg)"></div>
+</section><nav class="panel bottom">
+<div class="sections">
+<div class="center">
+<a href="../index.html">Shuttle <svg style="width:31px;height:20px;"><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#logo-icon"></use></svg> Coder</a>
+</div>
+</div>
+</nav><div class="popup" data-popup-id="redirect-eventbrite">
+<div class="close">
+<svg>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use>
+</svg>
+</div>
+<div class="content">
+<div class="container">
+<div class="wrap">
+<h1 class="small ae-1">Proceed to Payment</h1>
+<p>You'll now be redirected to Eventbrite, which helps us process the payment.<br>You can either pay by Paypal or your preferred credit cards.<br>Once you're in Eventbrite, simply click <em>Get Tickets</em> to proceed.</p>
+<a href="https://" class="button uppercase round red">Continue to Eventbrite</a>
+<p class="tiny">If you have any questions, please contact us at support@shuttlecoder.academy<br> or call us at .</p>
+</div>
+</div>
+</div>
+</div>
+<div class="popup" data-popup-id="redirect-form-inscription">
+<div class="close">
+<svg>
+<use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#close"></use>
+</svg>
+</div>
+<div class="content">
+<div class="container">
+<div class="wrap">
+<h1 class="small ae-1">Pour devenir développeur, ça commence ici</h1>
+    <p>Vous souhaitez intégrer notre école et devenir développeur d'application mobile iOS/Swift ?<br>Pour cela, il vous faudra démontrer que vous disposez des prérequis.</p><a href="../devenir-etudiant.html" class="button uppercase round red">Continuer vers le formulaire d'inscription</a>
+</div>
+</div>
+</div>
+</div><script src="https://my.hellobar.com/97a816d1be713c55784cabcf8e33c2c02acbd1d8.js" type="text/javascript" charset="utf-8" async="async"></script>
+  </body>
+</html>

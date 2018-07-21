@@ -50,12 +50,15 @@ html(dir="ltr" lang="fr")
 					block maincontent
 
 			block footer
-				footer#footer.footer(data-bg-color="#20232E")
-					block prefooter
-						+prefooter(path)
-					block footer-bottom
-						+footer(path)
-					<a class="scrollToTop" href="#"><i class="fas fa-angle-up fa-2x" data-fa-transform="down-5"></i></a>
+				footer.footer
+					include ./includes/fr/footer/_footer-top.pug
+					include ./includes/fr/footer/_footer-bottom.pug
+				//- footer#footer.footer(data-bg-color="#20232E")
+				//- 	block prefooter
+				//- 		+prefooter(path)
+				//- 	block footer-bottom
+				//- 		+footer(path)
+				//- 	<a class="scrollToTop" href="#"><i class="fas fa-angle-up fa-2x" data-fa-transform="down-5"></i></a>
 
 		block scripts
 			script(src=path+"js/custom.js")

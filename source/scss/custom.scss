@@ -1,0 +1,21 @@
+//
+//	TEXT
+//
+h2.huge {
+	font-size: 100px;
+}
+
+h2.small.uppercase {
+	font-size: 18px;
+}
+
+h3.small.uppercase {
+	font-size: 13px;
+}
+
+.underline-orange {
+	text-decoration: underline;
+	text-decoration-color: orange;
+	text-decoration-skip: spaces;
+	text-decoration-style: solid;
+}

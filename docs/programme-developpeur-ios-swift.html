@@ -30,7 +30,9 @@
     <link href="./css/preloader.css" rel="stylesheet" type="text/css">
     <link href="./css/custom-bootstrap-margin-padding.css" rel="stylesheet" type="text/css">
     <link href="./css/responsive.css" rel="stylesheet" type="text/css">
-    <link href="./css/colors/theme-skin-color-set2.css" rel="stylesheet" type="text/css">
+    <link href="./css/colors/colors.css" rel="stylesheet" type="text/css">
+    <link href="//cdn-images.mailchimp.com/embedcode/horizontal-slim-10_7.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
     <script src="./js/jquery-2.2.4.min.js"></script>
     <script src="./js/jquery-ui.min.js"></script>
     <script src="./js/bootstrap.min.js"></script>
@@ -45,43 +47,13 @@
         <div class="header-nav navbar-sticky navbar-sticky-animated">
           <div class="header-nav-wrapper">
             <div class="container">
-              <nav class="menuzord default no-bg" id="menuzord-right"><a class="menuzord-brand switchable-logo pull-left flip mb-15" href="./"><img class="logo-default" src="./images/logo-white.png" alt=""><img class="logo-scrolled-to-fixed" src="./images/logo-color.png" alt=""></a>
-                <ul class="menuzord-menu sm-padding">
-                  <li><a class="hvr-underline-reveal" href="./index.html">Accueil</a></li>
-                  <li><a href="javascript:void(0)">Les programmes</a>
-<div class="megamenu">
-<div class="megamenu-row">
-                    <div class="col2"></div>
-                    <div class="col3">
-                      <ul class="list-unstyled">
-                        <li>
-                          <h4 class="text-uppercase">En présentiel</h4>
-                        </li>
-                        <li><a class="btn btn-xl btn-flat btn-dark mt-15 mt-sm-10 pt-10 pb-10" href="./programme-developpeur-ios-swift.html">iOS/Swift (9 semaines)</a></li>
-                      </ul>
-                    </div>
-                    <div class="col3">
-                      <ul class="list-unstyled">
-                        <li>
-                          <h4 class="text-uppercase">En ateliers</h4>
-                        </li>
-                      </ul>
-                    </div>
-                    <div class="col3 list-unstyled">
-                      <ul class="list-unstyled">
-                        <li>
-                          <h4 class="text-uppercase">En ligne</h4>
-                        </li>
-                        <li>&nbsp;</li>
-                      </ul>
-                    </div>
-                    <div class="col1"></div></div>
-                    <div class="megamenu-row">
-                      <div class="col12 text-center"><a class="btn btn-xl btn-flat btn-blue mt-15 mt-sm-10 pt-10 pb-10" href="./nos-formations.html">Toutes nos formations</a></div>
-                    </div></div>
-                  </li>
-                  <li class="list-inline-item"><a class="btn btn-xl btn-colored btn-theme-colored" href="./devenir-etudiant.html">Je m'inscris</a></li>
+              <nav class="menuzord no-bg" id="menuzord"><a class="menuzord-brand switchable-logo pull-left flip mb-15" href="./index.html"><img class="logo-default" src="./images/logo-white.png" alt=""><img class="logo-scrolled-to-fixed" src="./images/logo-color.png" alt=""></a>
+                <ul class="menuzord-menu">
+                  <li><a class="link-nav" href="./bootcamps.html">Formations</a></li>
+                  <li><a class="link-nav" href="./workshops.html">Workshops</a></li>
+                  <li><a class="link-nav" href="https://ondemand.shuttlecoder.academy">En ligne</a></li>
                 </ul>
+                <div class="pull-right sm-pull-none mb-sm-15"><a class="btn btn-xl btn-colored btn-theme-colored mt-15 mr-15 ml-15" href="devenir-etudiant.html">Je Postule</a></div>
               </nav>
             </div>
           </div>
@@ -174,45 +146,75 @@
         <!--include includes/fr/_cv.pug-->
         <!--include includes/fr/_journee-type.pug-->
       </div>
-      <footer class="footer" id="footer" data-bg-color="#20232E">
-        <div class="container pt-60 pb-20">
-          <div class="col-md-12">
-            <h2 class="text-center text-uppercase">Devenir développeur en 2 mois</h2>
-          </div>
-          <div class="col-md-6 col-md-offset-1">
-            <div class="widget-dark">
-              <p class="mt-20">Shuttle Coder vous propose une aventure de 2 mois, soit plus de 360h de formation.</p>
-              <p>La formation peut être financée grâce à de nombreux dispositifs : AIF de Pôle Emploi, fonds d'assurance formation, régions, les OPCA selon votre branche d'activité. Les coûts de la formation sont de 4500 euros, et peuvent être pris en charge partiellement ou intégralement sur étude de votre dossier.</p>
-              <p>Pour faire le point sur votre situation, savoir si vous êtes fait pour notre formation et étudier vos possibilités de financement, <a href="mailto:contact@shuttlecoder.academy">contactez la team Shuttle Coder</a>.</p>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <h3>Nos date de formation</h3>
-            <ul class="list-unstyled">
-              <li><span>9 juillet 2018 - 7 septembre 2018</span></li>
-              <li><span>1 octobre 2018 - 30 novembre 2018</span></li>
+      <footer class="footer">
+        <div class="top-footer pt-40 pb-40">
+          <div class="footer-section">
+            <ul class="trainings">
+              <li>
+                <h4>Bootcamps</h4>
+              </li>
+              <li><a href="/bootcamps/developpeur-ios-swift.html">Développeur d'application iOS</a></li>
+            </ul>
+            <ul class="tuts">
+              <li>
+                <h4>Tutoriels</h4>
+              </li>
+              <li><a href="https://ondemand.shuttlecoder.academy/p/apprendre-la-programmation-avec-swift" target="_blank">Swift</a></li>
+              <li><a href="">Bootcamps preparation</a></li>
+              <li></li>
             </ul>
           </div>
-          <div class="col-md-12 text-center"><a class="btn btn-colored btn-theme-colored btn-xl text-uppercase mt-15 mt-sm-10 pt-10 pb-10" href="./devenir-etudiant.html">ça m'intéresse</a></div>
+          <div class="footer-section">
+            <ul class="aboutus">
+              <li>
+                <h4>A propos de nous</h4>
+              </li>
+              <li><a href="/aboutus.html">Shuttle Coder c’est quoi ?</a></li>
+            </ul>
+            <ul class="terms">
+              <li>
+                <h4>Terms & Policies</h4>
+              </li>
+              <li><a href="/terms.html">Conditions d’utilisation</a></li>
+              <li><a href="/policies.html">Privacy Policy</a></li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <ul class="community">
+              <li>
+                <h4>Communauté</h4>
+              </li>
+              <li><a target="_blank" href="https://twitter.com/ShuttleCoder"><i class="fab fa-twitter"></i> Twitter</a></li>
+              <li><a target="_blank" href="https://www.facebook.com/ShuttleCoder/"><i class="fab fa-facebook"></i> Facebook</a></li>
+              <li><a target="_blank" href="https://www.youtube.com/channel/UCnO-Z3556StzLIWtr3DxJiQ"><i class="fab fa-youtube"></i> YouTube Channel</a></li>
+              <li><a target="_blank" href="https://github.com/ShuttleCoder"><i class="fab fa-github"></i> GitHub</a></li>
+            </ul>
+          </div>
+          <div class="newsletter">
+            <h4>S'inscrire à notre newsletter</h4>
+            <p>Les dernières infos sur nos bootcamps et workshops<br>envoyées directement dans votre boite mail chaque mois.</p><div id="mc_embed_signup_newsletter">
+<form action="https://academy.us13.list-manage.com/subscribe/post?u=ea96d70b3f684de68c404b9cb&amp;id=362b089047" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+<div id="mc_embed_signup_scroll_newsletter">
+<input type="email" value="" name="EMAIL" class="email form-control form-control-lg" id="mce-EMAIL" placeholder="Votre adresse mail" required>
+<div style="position: absolute; left: -5000px;" aria-hidden="true">
+<input type="text" name="b_ea96d70b3f684de68c404b9cb_362b089047" tabindex="-1" value="">
+</div>
+<div class="clear"><input type="submit" value="S'inscrire" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-lg btn-default"></div>
+</div>
+</form>
+</div>
+          </div>
         </div>
-        <div class="footer-bottom" data-bg-color="#1B1D26">
-          <div class="container pt-20 pb-20">
-            <div class="row">
-              <div class="col-md-6">
-                <ul class="list-unstyled">
-                  <li><img alt="logo de shuttle coder" src="./images/logo-full-white.png"></li>
-                </ul>
+        <div class="bottom-footer">
+          <div class="container">
+            <div class="row pt-40 pb-40">
+              <div class="col-md-6 col-md-offset-3 text-center">
+                <h4><i class="fas fa-heart"></i></h4>
               </div>
-              <div class="col-md-6 text-right">
-                <div class="widget no-border m-0">
-                  <ul class="list-inline sm-text-center mt-5 font-14">
-                    <li><a class="btn btn-secondary" href="" data-toggle="tooltip" data-placement="top" title="Pour trouver toutes nos actus"><i class="fab fa-facebook-f fa-2x"></i></a><a class="btn btn-secondary" href="" data-toggle="tooltip" data-placement="top" title="Pour nous suivre ? @ShuttleCoder"><i class="fab fa-twitter fa-2x"></i></a></li>
-                  </ul>
-                </div>
-              </div>
+              <div class="col-sm-12 col-md-3 copyright"><span>Copyright © 2018 Shuttle Coder</span></div>
             </div>
           </div>
-        </div><a class="scrollToTop" href="#"><i class="fas fa-angle-up fa-2x" data-fa-transform="down-5"></i></a>
+        </div>
       </footer>
     </div>
     <script src="./js/custom.js"></script>
