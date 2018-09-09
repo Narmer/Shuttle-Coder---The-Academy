@@ -1,4 +1,6 @@
 include ../mixins/workshops/_hero.pug
+include ../mixins/workshops/_navigation.pug
+
 
 doctype
 html
@@ -23,7 +25,7 @@ html
 		include ../includes/fr/slides/_svg-library.pug
 
 		//- Navigation
-		include ../includes/fr/slides/dev-ios-swift/_navigation.pug
+		+navigation()
 
 		//- Sidebar
 		include ../includes/fr/slides/dev-ios-swift/_sidebar.pug
