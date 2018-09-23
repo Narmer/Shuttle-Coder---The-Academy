@@ -1,10 +1,11 @@
 include ../mixins/workshops/_hero.pug
 include ../mixins/workshops/_navigation.pug
-
+include ../mixins/_metas.pug
 
 doctype
 html
 	head
+		+metas("Atelier: Créez votre première application iPhone", "Atelier de programmation pour les parfaits débutants, créez votre première app iPhone")
 		include ../includes/fr/slides/_metas.pug
 
 		//- Page Title
