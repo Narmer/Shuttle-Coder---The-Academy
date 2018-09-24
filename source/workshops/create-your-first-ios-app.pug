@@ -1,0 +1,85 @@
+include ../mixins/workshops/_hero.pug
+include ../mixins/workshops/_navigation.pug
+include ../mixins/_metas.pug
+
+doctype
+html
+	head
+		+metas("Atelier: Créez votre première application iPhone", "Atelier de programmation pour les parfaits débutants, créez votre première app iPhone")
+		include ../includes/fr/slides/_metas.pug
+
+		//- Page Title
+		title Workshop Créez votre première app iPhone
+
+		//- Fonts and Material Icons
+		include ../includes/fr/slides/_fonts-icons.pug
+
+		//- Styles -->
+		include ../includes/slides/_css.pug
+
+		//- Scripts -->
+		include ../includes/slides/_js.pug
+
+	body(class="slides scroll noPreload")
+
+		//- SVG Library -->
+		include ../includes/fr/slides/_svg-library.pug
+
+		//- Navigation
+		+navigation()
+
+		//- Your Slides and Other Stuff -->
+
+		//- Notifications
+		//-include ../includes/fr/slides/dev-ios-swift/_notifications.pug
+
+		//- Hero Slide (#20)
+		+hero("Atelier: Créez votre première app iPhone", "Spécialement conçu pour les débutants en programmation, vous allez apprendre à programmer en Swift, comprendre le processus de développement iOS et créer votre première application iPhone grâce à cet atelier d'une journée", "https://res.cloudinary.com/shuttlecoder/image/upload/c_scale,w_1920/c_crop,g_south,w_1920,y_24/l_Overlays:Black_Overlay,o_20/v1536946296/ShuttleCoder/Workshops/workshops-classes.jpg")
+
+		//- Description (#25)
+		include ../includes/fr/slides/first-ios-app/_description.pug
+
+		//- Details (#25)
+		include ../includes/fr/slides/first-ios-app/_about.pug
+
+		//- App created
+		include ../includes/fr/slides/first-ios-app/_app-created.pug
+
+		//- Pour qui ?
+		//-include ../includes/fr/slides/dev-ios-swift/_for-who.pug
+
+		//- Les modules
+		//-include ../includes/fr/slides/dev-ios-swift/_what-learned.pug
+
+		//- Les outils
+		include ../includes/fr/slides/first-ios-app/_tools.pug
+
+		//- Pourquoi Swift
+		include ../includes/fr/slides/workshops/_instructor.pug
+
+		//- Design
+		//-include ../includes/fr/slides/dev-ios-swift/_design-app.pug
+
+		//- Dates des sessions
+		//-include ../includes/fr/slides/dev-ios-swift/_sessions-dates.pug
+
+		//- Inscriptions (#54)
+		include ../includes/fr/slides/first-ios-app/_pricing.pug
+
+		//- FAQ
+		include ../includes/fr/slides/workshops/_faq.pug
+
+		//- Sessions Newsletter Update
+		include ../includes/fr/slides/workshops/_dates-notifications.pug
+
+		//- Infos contact
+		include ../includes/fr/slides/workshops/_infos-contact.pug
+
+		//- Footer
+		//-include ../includes/fr/slides/dev-ios-swift/_footer.pug
+
+		//- Popup Eventbrite
+		include ../includes/fr/slides/first-ios-app/_popup-inscription.pug
+
+		//- HelloBar
+		//-include ../includes/fr/slides/dev-ios-swift/_hello-bar.pug
