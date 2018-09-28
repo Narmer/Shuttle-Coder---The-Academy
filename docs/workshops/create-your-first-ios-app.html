@@ -1,45 +1,29 @@
-<!DOCTYPE html>
-<html>
-  <head><meta charset="utf-8">
-    <title>Atelier: Créez votre première application iPhone</title><meta name="description" content=""+description+"">
+<!DOCTYPE html><html><head><meta charset="utf-8"><title>Atelier: Créez votre première application iPhone</title><meta name="description" content=""+description+"">
 <meta name="robots" content="index, follow">
-<meta name="author" content="Shuttle Coder">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta name="apple-mobile-web-app-capable" content="yes" />
-    <title>Workshop Créez votre première app iPhone</title>
-    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700|Material+Icons" rel="stylesheet" type="text/css">
-    <link href="../assets/css/slides.css" rel="stylesheet" type="text/css">
-    <link href="../assets/css/custom.css" rel="stylesheet" type="text/css">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-    <script src="../assets/js/slides.min.js" type="text/javascript" name="main-scripts"></script>
-    <script>
-      "use strict";
-      
-      !function() {
-      	var t = window.driftt = window.drift = window.driftt || [];
-      	if (!t.init) {
-      		if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
-      		t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
-      		t.factory = function(e) {
-      			return function() {
-      				var n = Array.prototype.slice.call(arguments);
-      				return n.unshift(e), t.push(n), t;
-      			};
-      		}, t.methods.forEach(function(e) {
-      			t[e] = t.factory(e);
-      		}), t.load = function(t) {
-      			var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
-      			o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
-      			var i = document.getElementsByTagName("script")[0];
-      			i.parentNode.insertBefore(o, i);
-      		};
-      	}
-      }();
-      drift.SNIPPET_VERSION = '0.3.1';
-      drift.load('eitw9tstg3zk');
-    </script>
-  </head>
-  <body class="slides scroll noPreload"><svg xmlns="http://www.w3.org/2000/svg" style="display:none">
+<meta name="author" content="Shuttle Coder"><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"><meta name="apple-mobile-web-app-capable" content="yes" /><title>Workshop Créez votre première app iPhone</title><link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700|Material+Icons" rel="stylesheet" type="text/css"><link href="../assets/css/slides.css" rel="stylesheet" type="text/css"><link href="../assets/css/custom.css" rel="stylesheet" type="text/css"><script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script><script src="../assets/js/slides.min.js" type="text/javascript" name="main-scripts"></script><script>"use strict";
+
+!function() {
+	var t = window.driftt = window.drift = window.driftt || [];
+	if (!t.init) {
+		if (t.invoked) return void (window.console && console.error && console.error("Drift snippet included twice."));
+		t.invoked = !0, t.methods = [ "identify", "config", "track", "reset", "debug", "show", "ping", "page", "hide", "off", "on" ],
+		t.factory = function(e) {
+			return function() {
+				var n = Array.prototype.slice.call(arguments);
+				return n.unshift(e), t.push(n), t;
+			};
+		}, t.methods.forEach(function(e) {
+			t[e] = t.factory(e);
+		}), t.load = function(t) {
+			var e = 3e5, n = Math.ceil(new Date() / e) * e, o = document.createElement("script");
+			o.type = "text/javascript", o.async = !0, o.crossorigin = "anonymous", o.src = "https://js.driftt.com/include/" + n + "/" + t + ".js";
+			var i = document.getElementsByTagName("script")[0];
+			i.parentNode.insertBefore(o, i);
+		};
+	}
+}();
+drift.SNIPPET_VERSION = '0.3.1';
+drift.load('eitw9tstg3zk');</script></head><body class="slides scroll noPreload"><svg xmlns="http://www.w3.org/2000/svg" style="display:none">
 <symbol id="logo" viewBox="0 0 267 32" xmlns="http://www.w3.org/2000/svg"><text transform="translate(-1 0)" font-size="32" font-family="Righteous-Regular, Righteous"><tspan x="0" y="41">Shuttle Coder</tspan></text></symbol>
 <symbol id="logo-icon" viewBox="0 0 86 78" xmlns="http://www.w3.org/2000/svg"><text font-family="Ubuntu" font-size="80" transform="translate(-386 -104) translate(383 92)"><tspan x="0" y="75">{</tspan></text><text font-family="Ubuntu" font-size="80" transform="translate(-386 -104) translate(383 92)"><tspan x="65" y="75">}</tspan></text><g><path d="M44.083 59c.177.409.283.935.283 1.613 0 2.414-1.867 5.487-1.867 5.487s-1.863-3.073-1.863-5.487c0-.678.104-1.205.282-1.613-1.113.676-1.917 2.127-1.917 4.7 0 4.531 3.499 10.3 3.499 10.3s3.501-5.769 3.501-10.3c0-2.573-.803-4.025-1.917-4.7z"/><path d="M42.5 17c2.486 0 4.5 2.014 4.5 4.5 0 2.485-2.014 4.5-4.5 4.5-2.485 0-4.5-2.016-4.5-4.5 0-2.485 2.015-4.5 4.5-4.5z"/><path d="M52.884 51.263l2.948 5.704 3.403.058 3.87-18.586-7.194-6.478c-1.105 9.513-2.574 17.078-3.027 19.302"/><path d="M21.895 38.438l3.868 18.587 3.405-.058 2.948-5.704c-.454-2.225-1.924-9.79-3.027-19.302l-7.194 6.477"/><path d="M48.156 58l1.844-6h-15l1.846 6h11.31"/><path d="M42.5 31c1.934 0 3.5 1.567 3.5 3.5s-1.566 3.5-3.5 3.5c-1.933 0-3.5-1.568-3.5-3.5 0-1.933 1.567-3.5 3.5-3.5zm.045-15.992c3.572 0 6.465 2.894 6.465 6.465 0 3.57-2.893 6.466-6.465 6.466-3.571 0-6.466-2.896-6.466-6.466 0-3.571 2.895-6.465 6.466-6.465zm8.612 35.175c1.824-5.009 2.934-11.614 2.934-18.858 0-15.643-5.17-28.325-11.546-28.325-6.376 0-11.545 12.682-11.545 28.325 0 7.244 1.11 13.849 2.932 18.858h17.225z"/></g></symbol>
 <symbol id="close" viewBox="0 0 30 30"><path d="M15 0c-8.3 0-15 6.7-15 15s6.7 15 15 15 15-6.7 15-15-6.7-15-15-15zm5.7 19.3c.4.4.4 1 0 1.4-.2.2-.4.3-.7.3s-.5-.1-.7-.3l-4.3-4.3-4.3 4.3c-.2.2-.4.3-.7.3s-.5-.1-.7-.3c-.4-.4-.4-1 0-1.4l4.3-4.3-4.3-4.3c-.4-.4-.4-1 0-1.4s1-.4 1.4 0l4.3 4.3 4.3-4.3c.4-.4 1-.4 1.4 0s.4 1 0 1.4l-4.3 4.3 4.3 4.3z"/></symbol>
@@ -121,16 +105,13 @@
 <div class="content">
 <div class="container">
 <div class="wrap">
-<div class="fix-10-12">
-    <h1 class="ae-1 big">Atelier: Créez votre première app iPhone</h1>
-    <p class="hero ae-2 fix-9-12"><span class="opacity-8">Spécialement conçu pour les débutants en programmation, vous allez apprendre à programmer en Swift, comprendre le processus de développement iOS et créer votre première application iPhone grâce à cet atelier d'une journée</span></p><div class="margin-top-6">
+<div class="fix-10-12"><h1 class="ae-1 big">Atelier: Créez votre première app iPhone</h1><p class="hero ae-2 fix-9-12"><span class="opacity-8">Spécialement conçu pour les débutants en programmation, vous allez apprendre à programmer en Swift, comprendre le processus de développement iOS et créer votre première application iPhone grâce à cet atelier d'une journée</span></p><div class="margin-top-6">
 <a class="button red gradient ae-5 uppercase fromCenter" href="#description">Le workshop en détail</a>
 </div>
 </div>
 </div>
 </div>
-</div>
-    <div class="background" style="background-image:url(https://res.cloudinary.com/shuttlecoder/image/upload/c_scale,w_1920/c_crop,g_south,w_1920,y_24/l_Overlays:Black_Overlay,o_20/v1536946296/ShuttleCoder/Workshops/workshops-classes.jpg"></div></section><section data-name="description" data-title="Les dates de l'atelier" class="slide fade-6 kenBurns whiteSlide">
+</div><div class="background" style="background-image:url(https://res.cloudinary.com/shuttlecoder/image/upload/c_scale,w_1920/c_crop,g_south,w_1920,y_24/l_Overlays:Black_Overlay,o_20/v1536946296/ShuttleCoder/Workshops/workshops-classes.jpg"></div></section><section data-name="description" data-title="Les dates de l'atelier" class="slide fade-6 kenBurns whiteSlide">
 <div class="content">
 <div class="container">
 <div class="wrap">
@@ -145,12 +126,7 @@
 </li>
 <li class="col-5-12">
 <div class="fix-4-12 center">
-<ul class="slider clickable ae-1 fromAbove" data-slider-id="26-7">
-    <li class="selected"><img src="https://res.cloudinary.com/shuttlecoder/image/upload/c_scale,w_320/v1537374985/ShuttleCoder/Dates/samedi_17_novembre_2019.png" alt="Apple Watch Thumbnail"></li>
-    <li><img src="https://res.cloudinary.com/shuttlecoder/image/upload/c_scale,w_320/v1537374985/ShuttleCoder/Dates/samedi_19_janvier_2019.png" alt="Apple Watch Thumbnail"></li>
-    <li><img src="https://res.cloudinary.com/shuttlecoder/image/upload/c_scale,w_320/v1537374985/ShuttleCoder/Dates/samedi_20_avril_2019.png" alt="Apple Watch Thumbnail"></li>
-    <li><img src="https://res.cloudinary.com/shuttlecoder/image/upload/c_scale,w_320/v1537374985/ShuttleCoder/Dates/samedi_20_juillet_2019.png" alt="Apple Watch Thumbnail"></li>
-    <li><img src="https://res.cloudinary.com/shuttlecoder/image/upload/c_scale,w_320/v1537374986/ShuttleCoder/Dates/samedi_26_octobre_2019.png" alt="Apple Watch Thumbnail"></li></ul>
+<ul class="slider clickable ae-1 fromAbove" data-slider-id="26-7"><li class="selected"><img src="https://res.cloudinary.com/shuttlecoder/image/upload/c_scale,w_320/v1537374985/ShuttleCoder/Dates/samedi_17_novembre_2019.png" alt="Apple Watch Thumbnail"></li><li><img src="https://res.cloudinary.com/shuttlecoder/image/upload/c_scale,w_320/v1537374985/ShuttleCoder/Dates/samedi_19_janvier_2019.png" alt="Apple Watch Thumbnail"></li><li><img src="https://res.cloudinary.com/shuttlecoder/image/upload/c_scale,w_320/v1537374985/ShuttleCoder/Dates/samedi_20_avril_2019.png" alt="Apple Watch Thumbnail"></li><li><img src="https://res.cloudinary.com/shuttlecoder/image/upload/c_scale,w_320/v1537374985/ShuttleCoder/Dates/samedi_20_juillet_2019.png" alt="Apple Watch Thumbnail"></li><li><img src="https://res.cloudinary.com/shuttlecoder/image/upload/c_scale,w_320/v1537374986/ShuttleCoder/Dates/samedi_26_octobre_2019.png" alt="Apple Watch Thumbnail"></li></ul>
 <ul class="controller dots ae-3 fromCenter margin-top-3" data-slider-id="26-7">
 <li class="dot selected"></li>
 <li class="dot"></li>
@@ -166,19 +142,9 @@
 <div class="ae-2"><p class="margin-bottom-3 opacity-8">La journée en détail</p></div>
 <ul class="grid">
 <li class="col-6-12 left ae-3 fromLeft">
-<p class="opacity-6">Lors de la session du matin, nous commencerons par vous présenter Xcode, l'outil de développement d'Apple pour développer des applications iOS. Juste après avoir appris les bases, vous commencerez à écrire votre première application dans Swift.</p>
-    <p class="opacity-6">1. Les composants de base de votre app</p>
-    <p class="opacity-6">2. Connecter les éléments de l'interface graphique</p>
-    <p class="opacity-6">3. Les bases de la programmation avec Swift 4</p>
-    <p class="opacity-6">4. Entrainement à la programmation</p>
-    <p class="opacity-6">5. Créer votre super interface graphique</p></li>
+<p class="opacity-6">Lors de la session du matin, nous commencerons par vous présenter Xcode, l'outil de développement d'Apple pour développer des applications iOS. Juste après avoir appris les bases, vous commencerez à écrire votre première application dans Swift.</p><p class="opacity-6">1. Les composants de base de votre app</p><p class="opacity-6">2. Connecter les éléments de l'interface graphique</p><p class="opacity-6">3. Les bases de la programmation avec Swift 4</p><p class="opacity-6">4. Entrainement à la programmation</p><p class="opacity-6">5. Créer votre super interface graphique</p></li>
 <li class="col-6-12 left ae-4 fromLeft">
-<p class="opacity-6">Dans la session de l'après-midi, on enchainera avec la réalisation de votre deuxième app qui sera complètement différente. Nous réaliserons une application de liste de tache à partir de <strong>Table View</strong>, un des aspects fondamentaux d'iOS.</p>
-    <p class="opacity-6">1. Création de notre app de liste de taches</p>
-    <p class="opacity-6">2. MVC, comment structurer son code</p>
-    <p class="opacity-6">3. Ajouter et supprimer des éléments de notre liste</p>
-    <p class="opacity-6">4. Modifier les éléments de notre liste</p>
-    <p class="opacity-6">5. Quelques autres fonctionnalités des listes</p></li>
+<p class="opacity-6">Dans la session de l'après-midi, on enchainera avec la réalisation de votre deuxième app qui sera complètement différente. Nous réaliserons une application de liste de tache à partir de <strong>Table View</strong>, un des aspects fondamentaux d'iOS.</p><p class="opacity-6">1. Création de notre app de liste de taches</p><p class="opacity-6">2. MVC, comment structurer son code</p><p class="opacity-6">3. Ajouter et supprimer des éléments de notre liste</p><p class="opacity-6">4. Modifier les éléments de notre liste</p><p class="opacity-6">5. Quelques autres fonctionnalités des listes</p></li>
 </ul>
 </div>
 </div>
@@ -191,20 +157,7 @@
 <div class="wrap">
 <div class="fix-12-12">
 <h2 class="huge ae-1 fromCenter margin-bottom-6">À propos de l'atelier</h2>
-<div class="left cropBottom ae-3">
-    <p>Avez-vous déjà pensé apprendre à programmer, toujours voulu créer une application, mais n'avez jamais pu sauter le pas ou vous y mettre pour n'importe quelle raison.</p>
-    <p>Il y a plusieurs façons d'apprendre à programmer. Certains préfèrent apprendre des livres de programmation. D'autres aiment regarder des cours en ligne. Ou bien pour certaines personnes, les cours en présentiels sont la manière la plus efficace et la plus intéressante d'apprendre.</p>
-    <p>Nous ouvrons des ateliers en présentiels tout au long de l'année pour enseigner à quiconque est intéressé à apprendre le développement d'app en Swift sur iOS.</p>
-    <h3 class="uppercase">L'apprentissage par la pratique</h3>
-    <p class="light">Vous apprendrez la programmation en pratiquant, en "faisant" et pas seulement en écoutant un cours. Nos ateliers sont conçus pour mêler théorie et surtout beaucoup de pratique.</p>
-    <h3 class="uppercase">Conçu pour les débutants</h3>
-    <p>Cet atelier est conçu pour les complets débutants souhaitant apprendre à développer des applications en Swift pour iOS. Même si vous n'avez aucune expérience préalable de la programmation, vous apprendrez à créer une application iOS et à comprendre les bases de Swift à la fin de la formation.</p>
-    <h3 class="uppercase">Des classes à taille humaine</h3>
-    <p class="light">La taille de chaque session est réduite afin de maximiser les interactions entre les instructeurs et les étudiants. L'atelier est <strong>limité à 10 places</strong>.</p>
-    <h3 class="uppercase">Apportez votre Mac</h3>
-    <p class="light">Tout ce dont vous avez besoin est d'<strong>apporter votre propre Mac</strong> avec la <strong>dernière version de Xcode installée</strong> pour assister à la formation. Vous ne savez pas comment installer Xcode ? Pas de soucis, nous vous fournirons un guide simple pour vous aider à démarrer avant la formation et <strong>la première heure de la formation est consacrée à l'installation des outils et à leur découverte</strong>.</p>
-    <h3 class="uppercase">Maintenant ouvert en Guadeloupe</h3>
-    <p>Nos ateliers sont disponible en Guadeloupe. A partir de 2019, nous allons ouvrir dans d'autres villes. Si vous voulez savoir quand nos ateliers seront disponibles dans votre ville, <a href="" class="customHover">laissez-nous votre mail</a>. Nous vous alerterons quand nous ouvrirons dans votre ville.</p></div>
+<div class="left cropBottom ae-3"><p>Avez-vous déjà pensé apprendre à programmer, toujours voulu créer une application, mais n'avez jamais pu sauter le pas ou vous y mettre pour n'importe quelle raison.</p><p>Il y a plusieurs façons d'apprendre à programmer. Certains préfèrent apprendre des livres de programmation. D'autres aiment regarder des cours en ligne. Ou bien pour certaines personnes, les cours en présentiels sont la manière la plus efficace et la plus intéressante d'apprendre.</p><p>Nous ouvrons des ateliers en présentiels tout au long de l'année pour enseigner à quiconque est intéressé à apprendre le développement d'app en Swift sur iOS.</p><h3 class="uppercase">L'apprentissage par la pratique</h3><p class="light">Vous apprendrez la programmation en pratiquant, en "faisant" et pas seulement en écoutant un cours. Nos ateliers sont conçus pour mêler théorie et surtout beaucoup de pratique.</p><h3 class="uppercase">Conçu pour les débutants</h3><p>Cet atelier est conçu pour les complets débutants souhaitant apprendre à développer des applications en Swift pour iOS. Même si vous n'avez aucune expérience préalable de la programmation, vous apprendrez à créer une application iOS et à comprendre les bases de Swift à la fin de la formation.</p><h3 class="uppercase">Des classes à taille humaine</h3><p class="light">La taille de chaque session est réduite afin de maximiser les interactions entre les instructeurs et les étudiants. L'atelier est <strong>limité à 10 places</strong>.</p><h3 class="uppercase">Apportez votre Mac</h3><p class="light">Tout ce dont vous avez besoin est d'<strong>apporter votre propre Mac</strong> avec la <strong>dernière version de Xcode installée</strong> pour assister à la formation. Vous ne savez pas comment installer Xcode ? Pas de soucis, nous vous fournirons un guide simple pour vous aider à démarrer avant la formation et <strong>la première heure de la formation est consacrée à l'installation des outils et à leur découverte</strong>.</p><h3 class="uppercase">Maintenant ouvert en Guadeloupe</h3><p>Nos ateliers sont disponible en Guadeloupe. A partir de 2019, nous allons ouvrir dans d'autres villes. Si vous voulez savoir quand nos ateliers seront disponibles dans votre ville, <a href="" class="customHover">laissez-nous votre mail</a>. Nous vous alerterons quand nous ouvrirons dans votre ville.</p></div>
 </div>
 </div>
 </div>
@@ -263,14 +216,12 @@
 <ul class="grid later">
 <li class="col-6-12">
 <img class="ae-3 fromCenter margin-bottom-3 margin-top-5" src="../assets/img/xcode.png" height="200" alt="Xcode logo"/>
-<div class="fix-3-12 ae-4">
-    <h3 class="center">Xcode 10</h3><p class="small center">Vous vous familiariserez avec les outils de développement pour iOS qui incluent <strong>Xcode</strong>, <strong>Interface Builder</strong> pour créer vos interfaces visuelles et <strong>Playgrounds</strong></p>
+<div class="fix-3-12 ae-4"><h3 class="center">Xcode 10</h3><p class="small center">Vous vous familiariserez avec les outils de développement pour iOS qui incluent <strong>Xcode</strong>, <strong>Interface Builder</strong> pour créer vos interfaces visuelles et <strong>Playgrounds</strong></p>
 </div>
 </li>
 <li class="col-6-12">
 <img class="ae-6 fromCenter margin-bottom-3 margin-top-5" src="../assets/img/swift-logo.png" height="200" alt="Apple Swift logo"/>
-<div class="fix-3-12 ae-7">
-    <h3 class="center">Swift 4.x</h3><p class="small center">Apprenez le développement d'apps sur iOS avec le nouveau langage de programmation moderne d'Apple. Nous utiliserons lors de cet atelier la dernière version de Swift.</p>
+<div class="fix-3-12 ae-7"><h3 class="center">Swift 4.x</h3><p class="small center">Apprenez le développement d'apps sur iOS avec le nouveau langage de programmation moderne d'Apple. Nous utiliserons lors de cet atelier la dernière version de Swift.</p>
 </div>
 </li>
 </ul>
@@ -301,10 +252,7 @@
 <div class="container">
 <div class="wrap">
 <div class="fix-8-12">
-<h1 class="ae-1">Prêt à vous lancer?</h1>
-    <p>
-      Le 17 Novembre 2018 (Sam) 09:30 - 17:30 (avec 1h de pause déjeuner)<br>Lieu: …<br>(Pour vous y rendre…)</p>
-    <p>Veuillez noter que cet atelier sera présenté en français avec du matériel d'apprentissage en anglais et en français. Vous devrez apporter votre propre Mac (MacOS 10.13.2 ou version ultérieure) pour participer à l'atelier.</p><p>Inscrivez-vous avant le 15 octobre pour économiser jusqu'à 150 €</p>
+<h1 class="ae-1">Prêt à vous lancer?</h1><p>Le 17 Novembre 2018 (Sam) 09:30 - 17:30 (avec 1h de pause déjeuner)<br>Lieu: …<br>(Pour vous y rendre…)</p><p>Veuillez noter que cet atelier sera présenté en français avec du matériel d'apprentissage en anglais et en français. Vous devrez apporter votre propre Mac (MacOS 10.13.2 ou version ultérieure) pour participer à l'atelier.</p><p>Inscrivez-vous avant le 15 octobre pour économiser jusqu'à 150 €</p>
 <ul class="grid grid-85 equal margin-top-5 ae-2 fromCenter" data-equal-collapse-width="767">
 <li class="margin-bottom-2 col-5-12 col-tablet-1-2 col-phablet-1-1 ae-3">
 <div class="pad" style="background: #F5FBFE">
@@ -396,10 +344,7 @@
 <p>Si pour n'importe quelle raison vous ne pouvez pas assister à cet atelier, laissez nous votre mail, nous vous informerons chaque fois que nous organiserons un nouvel atelier.</p>
 </div>
 <div class="ae-2">
-<form action="#" autocomplete="off" class="slides-form margin-bottom-3">
-<input type="email" class="ae-2 fromLeft" name="email" placeholder="Votre addresse mail"/>
-<button type="submit" class="button red gradient ae-3 fromRight" name="submit">Être averti</button>
-</form>
+<script async data-uid="556780ba85" src="https://f.convertkit.com/556780ba85/9e41acc149.js"></script>
 <p class="tiny ae-4"><span class="opacity-8"><a herf="">Conditions d'utilisation</a> &nbsp;&bull;&nbsp; <a herf="">Politique de confidentialité</a></span></p>
 </div>
 </div>
@@ -483,11 +428,8 @@
 <div class="content">
 <div class="container">
 <div class="wrap">
-<h1 class="small ae-1">Pour devenir développeur, ça commence ici</h1>
-    <p>Vous souhaitez intégrer notre école et devenir développeur d'application mobile iOS/Swift ?<br>Pour cela, il vous faudra démontrer que vous disposez des prérequis.</p><a href="../devenir-etudiant.html" class="button uppercase round red">Continuer vers le formulaire d'inscription</a>
+<h1 class="small ae-1">Pour devenir développeur, ça commence ici</h1><p>Vous souhaitez intégrer notre école et devenir développeur d'application mobile iOS/Swift ?<br>Pour cela, il vous faudra démontrer que vous disposez des prérequis.</p><a href="../devenir-etudiant.html" class="button uppercase round red">Continuer vers le formulaire d'inscription</a>
 </div>
 </div>
 </div>
-</div>
-  </body>
-</html>
+</div></body></html>
