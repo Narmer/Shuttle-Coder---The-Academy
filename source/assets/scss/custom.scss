@@ -1,3 +1,30 @@
+$red: rgb(244, 67, 54);
+
+//
+// TEXT
+//
+.underlined {
+	text-decoration: underline;
+	text-decoration-skip: spaces;
+}
+
+.underlinedOrange {
+	text-decoration-color: orange;
+}
+
+.underlinedRed {
+	text-decoration-color: $red;
+}
+
+.underlinedBlue {
+	text-decoration-color: blue;
+}
+
+.underlinedSolid {
+	text-decoration-style: solid;
+}
+
+
 .customHover {
 	 position:relative;
 }
@@ -6,15 +33,13 @@
 	position:absolute;
 	bottom:0;
 	left:0;
-	 width:100%;
-	height:3px;
-	background:#CCC;
+	width:100%;
 	z-index:-1;
 	-webkit-transition:0.35s;
 	transition:0.35s;
 }
 .customHover:hover:before {
-	background:rgba(60,125,255,1.00);
+	background:$red;
 	-webkit-transition:height 0.15s, width 0.35s 0.15s cubic-bezier(0.23, 2.01, 0.43, 0.66), -webkit-transform 0.35s 0.15s cubic-bezier(0.23, 2.01, 0.43, 0.66), color 0.35s;
 	transition:height 0.15s, width 0.35s 0.15s cubic-bezier(0.23, 2.01, 0.43, 0.66), transform 0.35s 0.15s cubic-bezier(0.23, 2.01, 0.43, 0.66), color 0.35s;
 	height:100%;
