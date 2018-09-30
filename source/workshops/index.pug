@@ -1,0 +1,39 @@
+include ../mixins/_hero.pug
+include ../mixins/_metas.pug
+
+doctype
+html
+	head
+		+metas("Atelier: Créez votre première application iPhone", "Atelier de programmation pour les parfaits débutants, créez votre première app iPhone")
+		include ../includes/fr/slides/_metas.pug
+
+		//- Page Title
+		title Workshop Créez votre première app iPhone
+
+		//- Fonts and Material Icons
+		include ../includes/fr/slides/_fonts-icons.pug
+
+		//- Styles -->
+		include ../includes/slides/_css.pug
+
+		//- Scripts -->
+		include ../includes/slides/_js.pug
+
+	body(class="slides scroll noPreload")
+
+		//- SVG Library -->
+		include ../includes/fr/slides/_svg-library.pug
+
+		//- Navigation
+		include ../includes/fr/_standard-nav.pug
+
+		//- Your Slides and Other Stuff -->
+
+		//- Notifications
+		//-include ../includes/fr/slides/dev-ios-swift/_notifications.pug
+
+		//- Hero Slide (#20)
+		+hero-standard("Atelier: Créez votre première app iPhone", "Spécialement conçu pour les débutants en programmation, vous allez apprendre à programmer en Swift, comprendre le processus de développement iOS et créer votre première application iPhone grâce à cet atelier d'une journée", "https://res.cloudinary.com/shuttlecoder/image/upload/c_scale,w_1920/c_crop,g_south,w_1920,y_24/l_Overlays:Black_Overlay,o_20/v1536946296/ShuttleCoder/Workshops/workshops-classes.jpg")
+
+		//- Description (#25)
+		include ../includes/fr/slides/_workshops-listing.pug
