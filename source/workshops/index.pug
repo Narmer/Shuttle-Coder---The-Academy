@@ -1,5 +1,6 @@
 include ../mixins/_hero.pug
 include ../mixins/_metas.pug
+include ../mixins/_standard-nav.pug
 
 doctype
 html
@@ -25,7 +26,8 @@ html
 		include ../includes/fr/slides/_svg-library.pug
 
 		//- Navigation
-		include ../includes/fr/_standard-nav.pug
+		+standard-nav('../')
+		//- include ../includes/fr/_standard-nav.pug
 
 		//- Your Slides and Other Stuff -->
 
