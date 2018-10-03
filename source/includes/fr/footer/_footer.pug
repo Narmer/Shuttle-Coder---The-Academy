@@ -1,27 +1,19 @@
-//- Last Slide
-//- <section class="slide fade-6 kenBurns">
-//- 	<div class="content">
-//- 		<div class="container">
-//- 			<div class="wrap">
-//- 			</div>
-//- 		</div>
-//- 	</div>
-//- 	<div class="background" style="background-image:url(assets/img/background/img-01.jpg)"></div>
-//- </section>
-
-footer.slide.fade-6.whiteSlide
-	.content
+footer.slide
+	.content.footer
 		.container
-			.fix-12-12
-				ul.grid.grid-77.later.equal.left.margin-top-3
+			.top-footer
+				.fix-8-12.margin-top-5.fromCenter
+						script(async data-uid="b3bed7a875" src="https://f.convertkit.com/b3bed7a875/ed9d972db0.js")
+			.middle-footer
+				ul.grid.fixedSpaces.equal.left.margin-top-5.margin-bottom-5
 					li.col-3-12
 						.footer-section
-							ul.trainings
+							ul.grid.noSpaces.trainings
 								li
 									h4 Bootcamps
 								li
 									a(href="/bootcamps/developpeur-ios-swift.html") Développeur d'application iOS
-							ul.tuts
+							ul.grid.noSpaces.tuts
 								li
 									h4 Tutoriels
 								//-li
@@ -60,7 +52,7 @@ footer.slide.fade-6.whiteSlide
 									a(href="/terms.html") Conditions d’utilisation
 								li
 									a(href="/policies.html") Privacy Policy
-					li.col-3-12
+					li.col-2-12
 						.footer-section
 							ul.community
 								li
@@ -105,24 +97,9 @@ footer.slide.fade-6.whiteSlide
 									a(target="_blank" href="https://blog.shuttlecoder.academy")
 										i.fas.fa-rss-square
 										|  Blog
-					li.col-3-12
-						.newsletter
-							h4 S'inscrire à notre newsletter
-							p
-								| Les dernières infos sur nos bootcamps et workshops
-								br
-								| envoyées directement dans votre boite mail chaque mois.
-							include ../_form-newsletter.pug
-	//- .content
-	//- 	.container
-	//- 		.fix-4-12
-	//- 			h4
-	//- 				i.fas.fa-heart
-	.background(style="background:#fff")
-			//- include ./_footer-top.pug
-			//- include ./_footer-bottom.pug
-
-//- <nav class="panel bottom lastSlideOnly">
-//- 	<div class="sections">
-//- 	</div>
-//- </nav>
+		.content
+			.bottom-footer
+				.fix-4-12.margin-top-6.margin-bottom-6.fromCenter
+					h4
+						i.fas.fa-heart
+	.background(style="background:#fcfcfc")
