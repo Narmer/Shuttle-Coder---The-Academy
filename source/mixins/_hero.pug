@@ -16,14 +16,12 @@ mixin hero(title, image, path)
 							.pt-60
 								a(class="btn btn-xl btn-transparent btn-default btn-lg mt-15 mr-15 pr-40 pl-40" href="./devenir-etudiant.html") Postuler pour 9 semaines de formation
 
-mixin hero-standard(title, description, image)
+mixin hero-standard(title, description, imagebg)
 	section(data-name="hero" data-title="" class="exclude slide fade-6 kenBurns fromRight")
 		.content
 			.container
 				.wrap
-					.fix-12-12
-						.fix-6-12.left.toLeft
-							h1.ae-1.big= title
-							p.ae-2
-							span.opacity-8= description
+					.fix-7-12.toLeft.left.ae-1
+						h1.ae-2.crop.margin-bottom-2= title
+						p.opacity-7= description
 		div(class="background" style="background-image:url("+imagebg+")")
