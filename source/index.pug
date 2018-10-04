@@ -1,63 +1,40 @@
-extends ./_layout.pug
+include ./mixins/_hero.pug
+include ./mixins/_metas.pug
+include ./mixins/_standard-nav.pug
 
-include mixins/_hero.pug
-include mixins/_testimonials.pug
+doctype
+html
+	head
+		+metas("L'initiation à la programmation pour tous", "")
+		include ./includes/fr/slides/_metas.pug
 
-append meta
-	meta(name="description" content="")
-	meta(name="keywords" content="")
+		//- Page Title
+		title L'initiation à la programmation pour tous - Shuttle Coder
 
-block title
-	title L'initiation à la programmation pour tous - Shuttle Coder
+		//- Fonts and Material Icons
+		include ./includes/fr/slides/_fonts-icons.pug
 
-prepend favicons
-	- var path = './'
+		//- Styles -->
+		include ./includes/slides/_css.pug
 
-prepend css
-	- var path = './'
+		//- Scripts -->
+		include ./includes/slides/_js.pug
 
+	body(class="slides scroll noPreload")
 
-prepend head-scripts
-	- var path = './'
+		//- SVG Library -->
+		include ./includes/fr/slides/_svg-library.pug
 
-prepend header
-	- var path = './'
+		//- Navigation
+		+standard-nav('./')
 
-prepend hero
-	- var title = 'Mentions légales'
-	- var image = 'home-cover.jpg'
-	- var path = './images/bgs/'
+		//- Hero Slide (#20)
+		+hero-main('https://res.cloudinary.com/shuttlecoder/image/upload/c_scale,w_1920/c_crop,g_south,w_1920,y_24/l_Overlays:Black_Overlay,o_20/v1536946296/ShuttleCoder/Workshops/workshops-classes.jpg')
 
-block hero
-	+hero(title, 'home-cover.jpg', './images/bgs/')
+		//- Description (#25)
+		include ./includes/fr/slides/_features.pug
+		include ./includes/fr/slides/_testimonials.pug
 
-prepend maincontent
-	- var array[["Premier text", "Hary Govindin", "Graphiste", ""], ["Deuxième texte", "Hervé Rabenjason", "chef de projets Java", ""], ["troisième", "Ursula", "Chargée de comm", ""]]
+		include ./includes/fr/footer/_footer.pug
 
-block maincontent
-	include includes/fr/home/_features.pug
-	+testimonials(array)
-
-prepend footer
-	- var path = './'
-
-//-block scripts
-	//- Footer Scripts -->
-	//- JS | Chart-->
-	//-<script src="js/chart.js"></script>
-	//- JS | Custom script for all pages -->
-	//<script src="js/custom.js"></script>
-
-	//- SLIDER REVOLUTION 5.0 EXTENSIONS
-			//-(Load Extensions only on Local File Systems !
-			//-The following part can be removed on Server for On Demand Loading) -->
-	//-<script src="js/revolution-slider/js/extensions/revolution.extension.actions.min.js"></script>
-	//-<script src="js/revolution-slider/js/extensions/revolution.extension.carousel.min.js"></script>
-	//-<script src="js/revolution-slider/js/extensions/revolution.extension.kenburn.min.js"></script>
-	//-<script src="js/revolution-slider/js/extensions/revolution.extension.layeranimation.min.js"></script>
-	//-<script src="js/revolution-slider/js/extensions/revolution.extension.migration.min.js"></script>
-	//-<script src="js/revolution-slider/js/extensions/revolution.extension.parallax.min.js"></script>
-	//-<script src="js/revolution-slider/js/extensions/revolution.extension.slideanims.min.js"></script>
-	//-<script src="js/revolution-slider/js/extensions/revolution.extension.video.min.js"></script>
-
-
+		include ./includes/fr/slides/_panel-bottom.pug
