@@ -1,42 +1,83 @@
-extends ./_layout.pug
+include ./mixins/_hero.pug
+include ./mixins/_metas.pug
+include ./mixins/_standard-nav.pug
 
-include mixins/_hero-alt.pug
+doctype
+html
+	head
+		+metas("L'initiation à la programmation pour tous", "")
+		include ./includes/fr/slides/_metas.pug
 
-append meta
-	meta(name="description" content="")
-	meta(name="keywords" content="")
+		//- Page Title
+		title L'initiation à la programmation pour tous - Shuttle Coder
 
-block title
-	title Shuttle Coder - Formation Développeur iOS - Coding Bootcamp Swift
+		//- Fonts and Material Icons
+		include ./includes/fr/slides/_fonts-icons.pug
 
-prepend favicons
-	- var path = './'
+		//- Styles -->
+		include ./includes/slides/_css.pug
 
-prepend css
-	- var path = './'
+		//- Scripts -->
+		include ./includes/slides/_js.pug
+
+	body(class="slides scroll noPreload")
+
+		//- SVG Library -->
+		include ./includes/fr/slides/_svg-library.pug
+
+		//- Navigation
+		+standard-nav('./')
+
+		//- Hero Slide (#20)
+		+hero-standard("Pour devenir développeur, ça commence ici", "", 'https://res.cloudinary.com/shuttlecoder/image/upload/c_scale,w_1920/c_crop,g_south,w_1920,y_24/l_Overlays:Black_Overlay,o_20/v1536946296/ShuttleCoder/Workshops/workshops-classes.jpg')
+
+		//- Description (#25)
+		include includes/fr/_form-postuler.pug
+
+		include ./includes/fr/footer/_footer.pug
+
+		include ./includes/fr/slides/_panel-bottom.pug
 
 
-prepend head-scripts
-	- var path = './'
+//- extends ./_layout.pug
 
-prepend header
-	- var path = './'
+//- include mixins/_hero-alt.pug
 
-block header
-	header(id="header" class="header header-floating")
-		.header-nav.navbar-sticky.navbar-sticky-animated
-			.header-nav-wrapper
-				.container
-					+navigation(path)
+//- append meta
+//- 	meta(name="description" content="")
+//- 	meta(name="keywords" content="")
 
-prepend hero
-	- var title = 'Devenir étudiant'
-	- var image = 'cover.jpg'
-	- var path = './images/bgs/'
+//- block title
+//- 	title Shuttle Coder - Formation Développeur iOS - Coding Bootcamp Swift
 
-block maincontent
-	include includes/fr/_form-postuler.pug
+//- prepend favicons
+//- 	- var path = './'
 
-prepend footer
-	- var path = './'
-	block prefooter
+//- prepend css
+//- 	- var path = './'
+
+
+//- prepend head-scripts
+//- 	- var path = './'
+
+//- prepend header
+//- 	- var path = './'
+
+//- block header
+//- 	header(id="header" class="header header-floating")
+//- 		.header-nav.navbar-sticky.navbar-sticky-animated
+//- 			.header-nav-wrapper
+//- 				.container
+//- 					+navigation(path)
+
+//- prepend hero
+//- 	- var title = 'Devenir étudiant'
+//- 	- var image = 'cover.jpg'
+//- 	- var path = './images/bgs/'
+
+//- block maincontent
+//- 	include includes/fr/_form-postuler.pug
+
+//- prepend footer
+//- 	- var path = './'
+//- 	block prefooter

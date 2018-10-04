@@ -1,3 +1,36 @@
+$main-color: #1592B4;
+$aboutus-color: #7ED321;
+$tutorials-color: #f4b737;
+$trainings-color: #ff5607;
+$terms-color: #1592b4;
+$community-color: #6236ff;
+$red: rgb(244, 67, 54);
+
+//
+// TEXT
+//
+.underlined {
+	text-decoration: underline;
+	text-decoration-skip: spaces;
+}
+
+.underlinedOrange {
+	text-decoration-color: orange;
+}
+
+.underlinedRed {
+	text-decoration-color: $red;
+}
+
+.underlinedBlue {
+	text-decoration-color: blue;
+}
+
+.underlinedSolid {
+	text-decoration-style: solid;
+}
+
+
 .customHover {
 	 position:relative;
 }
@@ -6,15 +39,13 @@
 	position:absolute;
 	bottom:0;
 	left:0;
-	 width:100%;
-	height:3px;
-	background:#CCC;
+	width:100%;
 	z-index:-1;
 	-webkit-transition:0.35s;
 	transition:0.35s;
 }
 .customHover:hover:before {
-	background:rgba(60,125,255,1.00);
+	background:$red;
 	-webkit-transition:height 0.15s, width 0.35s 0.15s cubic-bezier(0.23, 2.01, 0.43, 0.66), -webkit-transform 0.35s 0.15s cubic-bezier(0.23, 2.01, 0.43, 0.66), color 0.35s;
 	transition:height 0.15s, width 0.35s 0.15s cubic-bezier(0.23, 2.01, 0.43, 0.66), transform 0.35s 0.15s cubic-bezier(0.23, 2.01, 0.43, 0.66), color 0.35s;
 	height:100%;
@@ -33,3 +64,238 @@
 .panel .sections .menu.uppercase li {
 	font-size: 17px;
 }
+
+//
+// FOOTER
+//
+.top-footer,
+.middle-footer,
+.bottom-footer {
+	display: table-cell;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.top-footer {
+	background-color: #fcfcfc;
+}
+
+.middle-footer {
+	background-color: #fcfcfc;
+}
+
+.bottom-footer {
+	background-color: #e1e1e1;
+}
+
+.footer-section {
+	-webkit-order: 0;
+	-ms-flex-order: 0;
+	order: 0;
+	-webkit-flex: 0 1 auto;
+	-ms-flex: 0 1 auto;
+	flex: 0 1 auto;
+	-webkit-align-self: auto;
+	-ms-flex-item-align: auto;
+	align-self: auto;
+	ul {
+		&:nth-child(2n+0) {
+			margin-top: 20px;
+		}
+	}
+}
+
+.tuts,
+.trainings,
+.aboutus,
+.terms,
+.community,
+.cities {
+	h4 {
+		font-size: 12px;
+		font-weight: normal;
+		text-transform: uppercase;
+	}
+	li {
+		margin-bottom: 10px;
+		a {
+			line-height: 1.2rem;
+			padding: 0.2rem 0;
+			&:link,
+			&:visited {
+				color: #a9a9a9;
+			}
+		}
+		a.disabled {
+			color: #eee;
+			&:hover {
+				color: #aaa;
+			}
+		}
+	}
+}
+
+.tuts {
+	h4 {
+		color: $tutorials-color;
+	}
+	li {
+		a {
+			&:hover,
+			&:active {
+				color: $tutorials-color;
+			}
+		}
+	}
+}
+
+.trainings {
+	h4 {
+		color: $trainings-color;
+	}
+	li {
+		a {
+			&:hover,
+			&:active {
+				color: $trainings-color;
+			}
+		}
+	}
+}
+.aboutus {
+	h4 {
+		color: $aboutus-color;
+	}
+	li {
+		a {
+			&:hover,
+			&:active {
+				color: $aboutus-color;
+			}
+		}
+	}
+}
+.terms {
+	h4 {
+		color: $terms-color;
+	}
+	li {
+		a {
+			&:hover,
+			&:active {
+				color: $terms-color;
+			}
+		}
+	}
+}
+
+.community {
+	h4 {
+		color: $community-color;
+	}
+	li {
+		a {
+			&:hover,
+			&:active {
+				color: $community-color;
+			}
+		}
+	}
+}
+
+// FORM NEWSLETTER
+//
+.footer {
+	display: block;
+	position: relative !important;
+	opacity: 1;
+	height: auto;
+	overflow: hidden;
+	position: absolute;
+	-webkit-backface-visibility: hidden;
+	backface-visibility: hidden;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100vh;
+	z-index: 100;
+	-webkit-overflow-scrolling: touch;
+}
+
+.top-footer,
+.middle-footer,
+.bottom-footer {
+	position: relative !important;
+	height: auto;
+	opacity: 1;
+	display: table;
+	table-layout: fixed;
+	position: relative;
+	width: 100%;
+	padding-left: calc(8% + 15px);
+	padding-right: calc(8% + 15px);
+}
+
+.bottom-footer {
+	// height-max: 120px;
+	h4 {
+		color: #1592b4;
+		font-weight: normal;
+		font-size: 1em;
+		text-transform: uppercase;
+		&::before {
+			content: "Coded with love ";
+		}
+		&::after {
+			content: " in Paris";
+		}
+		i,
+		svg {
+			color: #f4b737;
+		}
+	}
+}
+
+.copyright {
+	font-size: 0.8em;
+	text-align: right;
+	span {
+		max-width: 130px;
+	}
+}
+
+
+@media (max-width: 640px) {
+	.footer {
+	}
+}
+
+@media only screen and (max-width: 992px) {
+	.footer {
+	}
+}
+
+@media only screen and (min-width: 992px) {
+	.menuzord-menu {
+		li {
+			&:hover {
+				a {
+					background-color: transparent;
+					border-bottom: solid 3px $main-color;
+					color: #404040;
+					padding-bottom: 2px;
+					//text-transform: underline;
+				}
+			}
+			a.btn {
+				background-color: $main-color;
+				color: #fff;
+				text-transform: capitalize;
+				font-weight: bold;
+				font-size: 1.2rem;
+				line-height: 1.2rem;
+			}
+		}
+	}
+}
+

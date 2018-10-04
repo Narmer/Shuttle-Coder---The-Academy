@@ -1,0 +1,39 @@
+include ../mixins/_hero.pug
+include ../mixins/_metas.pug
+include ../mixins/_standard-nav.pug
+
+doctype
+html
+	head
+		+metas("Nos Bootcamps et formations", "Les formations pour devenir développeur d'applications")
+		include ../includes/fr/slides/_metas.pug
+
+		//- Page Title
+		title Nos Bootcamps et formations
+
+		//- Fonts and Material Icons
+		include ../includes/fr/slides/_fonts-icons.pug
+
+		//- Styles -->
+		include ../includes/slides/_css.pug
+
+		//- Scripts -->
+		include ../includes/slides/_js.pug
+
+	body(class="slides scroll noPreload")
+
+		//- SVG Library -->
+		include ../includes/fr/slides/_svg-library.pug
+
+		//- Navigation
+		+standard-nav('../')
+
+		//- Hero Slide (#20)
+		+hero-standard("Nos Formations", "Embarquez dans notre programme intensif pour devenir développeur", 'https://res.cloudinary.com/shuttlecoder/image/upload/c_scale,w_1920/c_crop,g_south,w_1920,y_24/l_Overlays:Black_Overlay,o_20/v1536946296/ShuttleCoder/Workshops/workshops-classes.jpg')
+
+		//- Description (#25)
+		include ../includes/fr/slides/_bootcamps-listing.pug
+
+		include ../includes/fr/footer/_footer.pug
+
+		include ../includes/fr/slides/_panel-bottom.pug
